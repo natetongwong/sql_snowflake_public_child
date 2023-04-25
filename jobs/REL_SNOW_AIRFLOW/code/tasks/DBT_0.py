@@ -9,7 +9,7 @@ def DBT_0():
 
     return BashOperator(
         task_id = "DBT_0",
-        bash_command = "set -euxo pipefail; tmpDir=`mktemp -d`; git clone https://github.com/abhisheks-prophecy/sql_snowflake_public_child_1 --branch main --single-branch $tmpDir; cd $tmpDir/; dbt run --profile run_profile_snowflake; dbt test --profile run_profile_snowflake; ",
+        bash_command = "set -euxo pipefail; tmpDir=`mktemp -d`; git clone https://github.com/abhisheks-prophecy/sql_snowflake_public_child_1 --branch main --single-branch $tmpDir; cd $tmpDir/; dbt deps --profile run_profile_snowflake; dbt seed --profile run_profile_snowflake; dbt run --profile run_profile_snowflake; ",
         env = envs,
         append_env = True,
         retry_exponential_backoff = True, 
