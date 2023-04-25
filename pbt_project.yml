@@ -9,30 +9,6 @@ pipelines: {}
 datasets: {}
 templates: {}
 jobs:
-  jobs/REL_SNOW_Databricks:
-    name: REL_SNOW_Databricks
-    description: ''
-    fabricUID: 2068
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0 * * ? 2090
-    timeout: null
-    alerting:
-      emails: abhisheks@prophecy.io,abhisheks@simpledatalabs.com
-      onStart: false
-      onSuccess: true
-      onFailure: false
-    pipelines: []
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: null
-    createdAt: '2023-04-21 13:48:09'
-    modifiedAt: '2023-04-21 13:50:59'
-    author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_AIRFLOW:
     name: REL_SNOW_AIRFLOW
     description: ''
@@ -55,7 +31,7 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2023-04-21 13:53:13'
-    modifiedAt: '2023-04-21 13:56:20'
+    modifiedAt: '2023-04-25 16:04:45'
     author: abhisheks+shared@prophecy.io
 functions:
   author: null

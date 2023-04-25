@@ -70,7 +70,7 @@
         "vars" : null,
         "noPrint" : null,
         "quiet" : null,
-        "projectId" : "23133",
+        "projectId" : "24116",
         "runOnlyModel" : false,
         "favorState" : null,
         "failFast" : true,
@@ -81,7 +81,7 @@
         "fullRefresh" : true,
         "noCacheSelectedOnly" : null,
         "noFavorState" : null,
-        "profile" : null,
+        "profile" : "run_profile_snowflake",
         "noVersionCheck" : null,
         "noWriteJson" : false,
         "printerWidth" : null,
@@ -97,33 +97,8 @@
         "targetPath" : null,
         "threads" : null,
         "warnError" : null,
-        "currentProjectModels" : [ {
-          "label" : "tpcds_1_env_uitesting_shared",
-          "value" : "tpcds_1_env_uitesting_shared",
-          "id" : "23133/.prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared",
-          "name" : "tpcds_1_env_uitesting_shared"
-        }, {
-          "label" : "env_uitesting_shared_useallmodel_1",
-          "value" : "env_uitesting_shared_useallmodel_1",
-          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1",
-          "name" : "env_uitesting_shared_useallmodel_1"
-        }, {
-          "label" : "env_uitesting_shared_child_model_1",
-          "value" : "env_uitesting_shared_child_model_1",
-          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1",
-          "name" : "env_uitesting_shared_child_model_1"
-        }, {
-          "label" : "env_uitesting_shared_mid_model_1",
-          "value" : "env_uitesting_shared_mid_model_1",
-          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1",
-          "name" : "env_uitesting_shared_mid_model_1"
-        }, {
-          "label" : "env_uitesting_shared_parent_model_1",
-          "value" : "env_uitesting_shared_parent_model_1",
-          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1",
-          "name" : "env_uitesting_shared_parent_model_1"
-        } ],
-        "profilesDir" : null,
+        "currentProjectModels" : "",
+        "profilesDir" : "/home/airflow/gcs/data",
         "taskId" : null,
         "logPath" : null,
         "storeFailures" : null
