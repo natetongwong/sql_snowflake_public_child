@@ -1,0 +1,198 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "5295",
+    "jobId" : "jobs/REL_SNOW_AIRFLOW",
+    "name" : "REL_SNOW_AIRFLOW",
+    "dagName" : "uitesting_shared_team_SQL_SnowflakeSharedBasic_REL_SNOW_AIRFLOW",
+    "schedule" : "0 0 17 * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "5295",
+      "name" : "dev_airflow"
+    } ],
+    "catchup" : true
+  },
+  "processes" : {
+    "AOvMbF8Q8Q4feQNnbPjHp$$x6jB7wObb4MI7Ys7281fL" : {
+      "id" : "AOvMbF8Q8Q4feQNnbPjHp$$x6jB7wObb4MI7Ys7281fL",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : 140,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gnns3Z9UWb8uxFa4TBq1x$$AbqgrLI899WiTdoTGwPla",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "7NEhHt9jNFkWYPjLoqxNR$$ohbuGDlNJt1jh3eobCQBU",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "retries" : 1,
+        "retry_exponential_backoff" : true
+      },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : false,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "warnErrorOptions" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "23133",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : true,
+        "noStaticParser" : null,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : null,
+        "gitEntityValue" : "main",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "models" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : false,
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "tpcds_1_env_uitesting_shared",
+          "value" : "tpcds_1_env_uitesting_shared",
+          "id" : "23133/.prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared",
+          "name" : "tpcds_1_env_uitesting_shared"
+        }, {
+          "label" : "env_uitesting_shared_useallmodel_1",
+          "value" : "env_uitesting_shared_useallmodel_1",
+          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1",
+          "name" : "env_uitesting_shared_useallmodel_1"
+        }, {
+          "label" : "env_uitesting_shared_child_model_1",
+          "value" : "env_uitesting_shared_child_model_1",
+          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1",
+          "name" : "env_uitesting_shared_child_model_1"
+        }, {
+          "label" : "env_uitesting_shared_mid_model_1",
+          "value" : "env_uitesting_shared_mid_model_1",
+          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1",
+          "name" : "env_uitesting_shared_mid_model_1"
+        }, {
+          "label" : "env_uitesting_shared_parent_model_1",
+          "value" : "env_uitesting_shared_parent_model_1",
+          "id" : "23133/.prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1",
+          "name" : "env_uitesting_shared_parent_model_1"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      }
+    },
+    "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt" : {
+      "id" : "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 280,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "W109QJjGfw_eVy1pxr8X_$$_vE3EmtZR2vYzmJTyeHML",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "kLmNcYH2GGhQvCpS-fTRt$$4dwSvod550OrtReyox2EL",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "print(\"hi\")",
+        "language" : "python",
+        "taskId" : null
+      }
+    },
+    "VPLuoM1yW6Um1SfQy-VoU$$r2Niz1E__81IQcU_uxC4N" : {
+      "id" : "VPLuoM1yW6Um1SfQy-VoU$$r2Niz1E__81IQcU_uxC4N",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_2",
+        "slug" : "Script_2",
+        "x" : 420,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "i_Qh4r5tuyhgtglTpP1qE$$gFpxQzc0I-z-f1c7znI6r",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "cK5ye8qiqq81ha3gBwPON$$X9yRIQGCByxsuL5r0ubwx",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "date",
+        "language" : "bash",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "wdWXvCuxj0NJqbRRl-Bqa",
+    "source" : "AOvMbF8Q8Q4feQNnbPjHp$$x6jB7wObb4MI7Ys7281fL",
+    "target" : "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt",
+    "sourcePort" : "7NEhHt9jNFkWYPjLoqxNR$$ohbuGDlNJt1jh3eobCQBU",
+    "targetPort" : "W109QJjGfw_eVy1pxr8X_$$_vE3EmtZR2vYzmJTyeHML"
+  }, {
+    "id" : "-ST20WKWWdzg4JeDjBw93",
+    "source" : "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt",
+    "target" : "VPLuoM1yW6Um1SfQy-VoU$$r2Niz1E__81IQcU_uxC4N",
+    "sourcePort" : "kLmNcYH2GGhQvCpS-fTRt$$4dwSvod550OrtReyox2EL",
+    "targetPort" : "i_Qh4r5tuyhgtglTpP1qE$$gFpxQzc0I-z-f1c7znI6r"
+  } ]
+}

@@ -1,0 +1,859 @@
+{
+  "id" : "env_uitesting_shared_child_model_1",
+  "metainfo" : {
+    "label" : "env_uitesting_shared_child_model_1",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    }
+  },
+  "processes" : {
+    "env_uitesting_shared_mid_model_1##QZwUaBWh" : {
+      "id" : "env_uitesting_shared_mid_model_1##QZwUaBWh",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "env_uitesting_shared_mid_model_1",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "env_uitesting_shared_mid_model_1",
+          "sourceType" : "Model"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "R3i9jwKD",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Reformat_1##jOeXTK9f" : {
+      "id" : "Reformat_1##jOeXTK9f",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "x" : 320,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NUDLcAC4",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "s5sG07v4",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "env_uitesting_shared_child_model_1##jlGGdUo6" : {
+      "id" : "env_uitesting_shared_child_model_1##jlGGdUo6",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "env_uitesting_shared_child_model_1",
+        "x" : 520,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Reformat_1\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ugNH4acK",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "Reformat_1"
+        } ],
+        "outputs" : [ {
+          "id" : "yGDEhcHG",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "oVwYJ37Q",
+    "source" : "env_uitesting_shared_mid_model_1##QZwUaBWh",
+    "sourcePort" : "R3i9jwKD",
+    "target" : "Reformat_1##jOeXTK9f",
+    "targetPort" : "NUDLcAC4"
+  }, {
+    "id" : "teBY7QQh",
+    "source" : "Reformat_1##jOeXTK9f",
+    "sourcePort" : "s5sG07v4",
+    "target" : "env_uitesting_shared_child_model_1##jlGGdUo6",
+    "targetPort" : "ugNH4acK"
+  } ],
+  "component" : "Model"
+}

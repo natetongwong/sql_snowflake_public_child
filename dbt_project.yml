@@ -1,0 +1,40 @@
+# ==================
+# Project Details
+# ==================
+name: "SQL_SnowflakeSharedBasic"
+config-version: 2
+require-dbt-version:
+- ">=1.0.0"
+- "<2.0.0"
+version: "0.1"
+profile: "prophecy-default"
+
+# ==================
+# File Path Configs
+# ==================
+clean-targets:
+- "target"
+- "dbt_modules"
+- "logs"
+seed-paths:
+- "seeds"
+model-paths:
+- "models"
+- "prophecy-sources"
+macro-paths:
+- "macros"
+target-path: "target"
+
+# ==================
+# Variable Configs
+# ==================
+vars:
+  v_p_int: "11"
+  v_p_dict: "{'a': 10, 'b': 20}"
+  v_p_complex_dict: "{'a': [1,2,3,4], 'b': ['hello', 'sir']}"
+  v_p_float: "-213213.23213"
+
+# ============
+# Misc
+# ============
+dispatch: []

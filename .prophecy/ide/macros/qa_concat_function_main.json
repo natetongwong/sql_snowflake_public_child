@@ -1,0 +1,28 @@
+{
+  "macro_w4ir3VXg" : {
+    "name" : "qa_concat_function_main",
+    "macroId" : "macro_w4ir3VXg",
+    "macroType" : "expression",
+    "definition" : "concat({{param_1}}, {{param_2}})",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "param_1",
+        "kind" : {
+          "type" : "unknown"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false
+      }, {
+        "name" : "param_2",
+        "kind" : {
+          "type" : "unknown",
+          "value" : "'hello'"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false
+      } ]
+    },
+    "staleState" : "none"
+  }
+}

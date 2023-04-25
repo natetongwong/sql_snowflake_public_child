@@ -1,0 +1,2186 @@
+{
+  "id" : "tpcds_1_env_uitesting_shared",
+  "metainfo" : {
+    "label" : "tpcds_1_env_uitesting_shared",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "modelConfig" : {
+        "materialized" : "table"
+      },
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    }
+  },
+  "processes" : {
+    "SQLStatement_5##BzfUpivM" : {
+      "id" : "SQLStatement_5##BzfUpivM",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_5",
+        "x" : 60,
+        "y" : 1060,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "select  \n   sum(ws_ext_discount_amt)  as Excess_Discount_Amount\nfrom \n    web_sales \n   ,item \n   ,date_dim\nwhere\ni_manufact_id = 939\nand i_item_sk = ws_item_sk \nand d_date between '2002-02-16' and \n        dateadd(day,90,to_date('2002-02-16'))\nand d_date_sk = ws_sold_date_sk \nand ws_ext_discount_amt  \n     > ( \n         SELECT \n            1.3 * avg(ws_ext_discount_amt) \n         FROM \n            web_sales \n           ,date_dim\n         WHERE \n              ws_item_sk = i_item_sk \n          and d_date between '2002-02-16' and\n                             dateadd(day,90,to_date('2002-02-16'))\n          and d_date_sk = ws_sold_date_sk \n      ) \norder by sum(ws_ext_discount_amt)\nlimit 100"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "YBtPx3ey",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "EXCESS_DISCOUNT_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Join_2##mI1HHu8p" : {
+      "id" : "Join_2##mI1HHu8p",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_2",
+        "x" : 260,
+        "y" : 780,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.I_ITEM_ID!=in1.S_STORE_NAME"
+          },
+          "joinType" : "INNER"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.S_STORE_NAME"
+          },
+          "alias" : "S_STORE_NAME"
+        }, {
+          "expression" : {
+            "expression" : "in1.\"SUM(SS_NET_PROFIT)\""
+          },
+          "alias" : "SS_NET_PROFIT"
+        }, {
+          "expression" : {
+            "expression" : "in0.ITEMREVENUE"
+          },
+          "alias" : "ITEMREVENUE"
+        } ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "TZgEZj4F##I_ITEM_ID", "DAZJIOHm##S_STORE_NAME", "DAZJIOHm##S_STORE_NAME", "TZgEZj4F##ITEMREVENUE" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TZgEZj4F",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "DAZJIOHm",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "S_STORE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUM(SS_NET_PROFIT)",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "k75DBJu9",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "S_STORE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SS_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "tpcds_1_env_uitesting_shared##wmn2S9Qx" : {
+      "id" : "tpcds_1_env_uitesting_shared##wmn2S9Qx",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "tpcds_1_env_uitesting_shared",
+        "x" : 920,
+        "y" : 820,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Join_7\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nWAbtYHu",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "Join_7"
+        } ],
+        "outputs" : [ {
+          "id" : "E6AXdkMj",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Join_7##dkcSRFGl" : {
+      "id" : "Join_7##dkcSRFGl",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_7",
+        "x" : 720,
+        "y" : 820,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.I_CURRENT_PRICE!=in1.ORDER_COUNT"
+          },
+          "joinType" : "INNER"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.I_ITEM_ID"
+          },
+          "alias" : "I_ITEM_ID"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_ITEM_DESC"
+          },
+          "alias" : "I_ITEM_DESC"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_CATEGORY"
+          },
+          "alias" : "I_CATEGORY"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_CLASS"
+          },
+          "alias" : "I_CLASS"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_CURRENT_PRICE"
+          },
+          "alias" : "I_CURRENT_PRICE"
+        }, {
+          "expression" : {
+            "expression" : "in0.ITEMREVENUE"
+          },
+          "alias" : "ITEMREVENUE"
+        }, {
+          "expression" : {
+            "expression" : "in0.REVENUERATIO"
+          },
+          "alias" : "REVENUERATIO"
+        }, {
+          "expression" : {
+            "expression" : "in0.SM_TYPE"
+          },
+          "alias" : "SM_TYPE"
+        }, {
+          "expression" : {
+            "expression" : "in0.CC_NAME"
+          },
+          "alias" : "CC_NAME"
+        } ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "T1VVGsQQ##I_CURRENT_PRICE", "cCqp47jK##ORDER_COUNT", "T1VVGsQQ##I_ITEM_ID", "T1VVGsQQ##I_ITEM_DESC", "T1VVGsQQ##I_CATEGORY", "T1VVGsQQ##I_CLASS", "T1VVGsQQ##I_CURRENT_PRICE", "T1VVGsQQ##ITEMREVENUE", "T1VVGsQQ##REVENUERATIO", "T1VVGsQQ##SM_TYPE", "T1VVGsQQ##CC_NAME" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "T1VVGsQQ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "cCqp47jK",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SHIPPING_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "EXCESS_DISCOUNT_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "FMq5Dkal",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Join_3##G7sq96FE" : {
+      "id" : "Join_3##G7sq96FE",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_3",
+        "x" : 260,
+        "y" : 920,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.ORDER_COUNT!=in1.EXCESS_DISCOUNT_AMOUNT"
+          },
+          "joinType" : "INNER"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.ORDER_COUNT"
+          },
+          "alias" : "ORDER_COUNT"
+        }, {
+          "expression" : {
+            "expression" : "in0.TOTAL_SHIPPING_COST"
+          },
+          "alias" : "TOTAL_SHIPPING_COST"
+        }, {
+          "expression" : {
+            "expression" : "in0.TOTAL_NET_PROFIT"
+          },
+          "alias" : "TOTAL_NET_PROFIT"
+        }, {
+          "expression" : {
+            "expression" : "in1.EXCESS_DISCOUNT_AMOUNT"
+          },
+          "alias" : "EXCESS_DISCOUNT_AMOUNT"
+        } ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "iF9dbf84##ORDER_COUNT", "oNcjwpyZ##EXCESS_DISCOUNT_AMOUNT", "iF9dbf84##ORDER_COUNT", "iF9dbf84##TOTAL_SHIPPING_COST", "iF9dbf84##TOTAL_NET_PROFIT", "oNcjwpyZ##EXCESS_DISCOUNT_AMOUNT" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "iF9dbf84",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SHIPPING_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "oNcjwpyZ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "EXCESS_DISCOUNT_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "gztaAhr6",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SHIPPING_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "EXCESS_DISCOUNT_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQLStatement_3##blpGNJdt" : {
+      "id" : "SQLStatement_3##blpGNJdt",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_3",
+        "x" : 40,
+        "y" : 480,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "select i_item_id\n      ,i_item_desc \n      ,i_category \n      ,i_class \n      ,i_current_price\n      ,sum(ss_ext_sales_price) as itemrevenue \n      ,sum(ss_ext_sales_price)*100/sum(sum(ss_ext_sales_price)) over\n          (partition by i_class) as revenueratio\nfrom\t\n\tstore_sales\n    \t,item \n    \t,date_dim\nwhere \n\tss_item_sk = i_item_sk \n  \tand i_category in ('Women', 'Electronics', 'Shoes')\n  \tand ss_sold_date_sk = d_date_sk\n\tand d_date between cast('2002-05-27' as date) \n\t\t\t\tand dateadd(day,30,to_date('2002-05-27'))\ngroup by \n\ti_item_id\n        ,i_item_desc \n        ,i_category\n        ,i_class\n        ,i_current_price\norder by \n\ti_category\n        ,i_class\n        ,i_item_id\n        ,i_item_desc\n        ,revenueratio"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "A4YrsjMS",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQLStatement_6##NxzeSalb" : {
+      "id" : "SQLStatement_6##NxzeSalb",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_6",
+        "x" : 60,
+        "y" : 1340,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "SELECT \n  w_warehouse_name,\n  w_warehouse_sq_ft,\n  w_city,\n  w_county,\n  w_state,\n  w_country,\n  ship_carriers,\n  year,\n  sum(jan_sales) AS jan_sales,\n  sum(feb_sales) AS feb_sales,\n  sum(mar_sales) AS mar_sales,\n  sum(apr_sales) AS apr_sales,\n  sum(may_sales) AS may_sales,\n  sum(jun_sales) AS jun_sales,\n  sum(jul_sales) AS jul_sales,\n  sum(aug_sales) AS aug_sales,\n  sum(sep_sales) AS sep_sales,\n  sum(oct_sales) AS oct_sales,\n  sum(nov_sales) AS nov_sales,\n  sum(dec_sales) AS dec_sales,\n  sum(jan_sales / w_warehouse_sq_ft) AS jan_sales_per_sq_foot,\n  sum(feb_sales / w_warehouse_sq_ft) AS feb_sales_per_sq_foot,\n  sum(mar_sales / w_warehouse_sq_ft) AS mar_sales_per_sq_foot,\n  sum(apr_sales / w_warehouse_sq_ft) AS apr_sales_per_sq_foot,\n  sum(may_sales / w_warehouse_sq_ft) AS may_sales_per_sq_foot,\n  sum(jun_sales / w_warehouse_sq_ft) AS jun_sales_per_sq_foot,\n  sum(jul_sales / w_warehouse_sq_ft) AS jul_sales_per_sq_foot,\n  sum(aug_sales / w_warehouse_sq_ft) AS aug_sales_per_sq_foot,\n  sum(sep_sales / w_warehouse_sq_ft) AS sep_sales_per_sq_foot,\n  sum(oct_sales / w_warehouse_sq_ft) AS oct_sales_per_sq_foot,\n  sum(nov_sales / w_warehouse_sq_ft) AS nov_sales_per_sq_foot,\n  sum(dec_sales / w_warehouse_sq_ft) AS dec_sales_per_sq_foot,\n  sum(jan_net) AS jan_net,\n  sum(feb_net) AS feb_net,\n  sum(mar_net) AS mar_net,\n  sum(apr_net) AS apr_net,\n  sum(may_net) AS may_net,\n  sum(jun_net) AS jun_net,\n  sum(jul_net) AS jul_net,\n  sum(aug_net) AS aug_net,\n  sum(sep_net) AS sep_net,\n  sum(oct_net) AS oct_net,\n  sum(nov_net) AS nov_net,\n  sum(dec_net) AS dec_net\n\nFROM (\n  SELECT \n    w_warehouse_name,\n    w_warehouse_sq_ft,\n    w_city,\n    w_county,\n    w_state,\n    w_country,\n    'GREAT EASTERN' || ',' || 'UPS' AS ship_carriers,\n    d_year AS year,\n    sum(CASE\n      WHEN d_moy = 1\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS jan_sales,\n    sum(CASE\n      WHEN d_moy = 2\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS feb_sales,\n    sum(CASE\n      WHEN d_moy = 3\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS mar_sales,\n    sum(CASE\n      WHEN d_moy = 4\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS apr_sales,\n    sum(CASE\n      WHEN d_moy = 5\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS may_sales,\n    sum(CASE\n      WHEN d_moy = 6\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS jun_sales,\n    sum(CASE\n      WHEN d_moy = 7\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS jul_sales,\n    sum(CASE\n      WHEN d_moy = 8\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS aug_sales,\n    sum(CASE\n      WHEN d_moy = 9\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS sep_sales,\n    sum(CASE\n      WHEN d_moy = 10\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS oct_sales,\n    sum(CASE\n      WHEN d_moy = 11\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS nov_sales,\n    sum(CASE\n      WHEN d_moy = 12\n        THEN ws_ext_sales_price * ws_quantity\n      ELSE 0\n    END) AS dec_sales,\n    sum(CASE\n      WHEN d_moy = 1\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS jan_net,\n    sum(CASE\n      WHEN d_moy = 2\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS feb_net,\n    sum(CASE\n      WHEN d_moy = 3\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS mar_net,\n    sum(CASE\n      WHEN d_moy = 4\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS apr_net,\n    sum(CASE\n      WHEN d_moy = 5\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS may_net,\n    sum(CASE\n      WHEN d_moy = 6\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS jun_net,\n    sum(CASE\n      WHEN d_moy = 7\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS jul_net,\n    sum(CASE\n      WHEN d_moy = 8\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS aug_net,\n    sum(CASE\n      WHEN d_moy = 9\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS sep_net,\n    sum(CASE\n      WHEN d_moy = 10\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS oct_net,\n    sum(CASE\n      WHEN d_moy = 11\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS nov_net,\n    sum(CASE\n      WHEN d_moy = 12\n        THEN ws_net_paid * ws_quantity\n      ELSE 0\n    END) AS dec_net\n  \n  FROM web_sales, warehouse, date_dim, time_dim, ship_mode\n  \n  WHERE ws_warehouse_sk = w_warehouse_sk and ws_sold_date_sk = d_date_sk and ws_sold_time_sk = t_time_sk and ws_ship_mode_sk = sm_ship_mode_sk and d_year = 1998 and t_time BETWEEN 46866 and 46866 + 28800 and sm_carrier IN ('GREAT EASTERN', 'UPS')\n  \n  GROUP BY \n    w_warehouse_name, w_warehouse_sq_ft, w_city, w_county, w_state, w_country, d_year\n  \n  UNION ALL\n  \n  SELECT \n    w_warehouse_name,\n    w_warehouse_sq_ft,\n    w_city,\n    w_county,\n    w_state,\n    w_country,\n    'GREAT EASTERN' || ',' || 'UPS' AS ship_carriers,\n    d_year AS year,\n    sum(CASE\n      WHEN d_moy = 1\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS jan_sales,\n    sum(CASE\n      WHEN d_moy = 2\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS feb_sales,\n    sum(CASE\n      WHEN d_moy = 3\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS mar_sales,\n    sum(CASE\n      WHEN d_moy = 4\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS apr_sales,\n    sum(CASE\n      WHEN d_moy = 5\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS may_sales,\n    sum(CASE\n      WHEN d_moy = 6\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS jun_sales,\n    sum(CASE\n      WHEN d_moy = 7\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS jul_sales,\n    sum(CASE\n      WHEN d_moy = 8\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS aug_sales,\n    sum(CASE\n      WHEN d_moy = 9\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS sep_sales,\n    sum(CASE\n      WHEN d_moy = 10\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS oct_sales,\n    sum(CASE\n      WHEN d_moy = 11\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS nov_sales,\n    sum(CASE\n      WHEN d_moy = 12\n        THEN cs_sales_price * cs_quantity\n      ELSE 0\n    END) AS dec_sales,\n    sum(CASE\n      WHEN d_moy = 1\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS jan_net,\n    sum(CASE\n      WHEN d_moy = 2\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS feb_net,\n    sum(CASE\n      WHEN d_moy = 3\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS mar_net,\n    sum(CASE\n      WHEN d_moy = 4\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS apr_net,\n    sum(CASE\n      WHEN d_moy = 5\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS may_net,\n    sum(CASE\n      WHEN d_moy = 6\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS jun_net,\n    sum(CASE\n      WHEN d_moy = 7\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS jul_net,\n    sum(CASE\n      WHEN d_moy = 8\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS aug_net,\n    sum(CASE\n      WHEN d_moy = 9\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS sep_net,\n    sum(CASE\n      WHEN d_moy = 10\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS oct_net,\n    sum(CASE\n      WHEN d_moy = 11\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS nov_net,\n    sum(CASE\n      WHEN d_moy = 12\n        THEN cs_net_paid * cs_quantity\n      ELSE 0\n    END) AS dec_net\n  \n  FROM catalog_sales, warehouse, date_dim, time_dim, ship_mode\n  \n  WHERE cs_warehouse_sk = w_warehouse_sk and cs_sold_date_sk = d_date_sk and cs_sold_time_sk = t_time_sk and cs_ship_mode_sk = sm_ship_mode_sk and d_year = 1998 and t_time BETWEEN 46866 and 46866 + 28800 and sm_carrier IN ('GREAT EASTERN', 'UPS')\n  \n  GROUP BY \n    w_warehouse_name, w_warehouse_sq_ft, w_city, w_county, w_state, w_country, d_year\n ) AS x\n\nGROUP BY \n  w_warehouse_name, w_warehouse_sq_ft, w_city, w_county, w_state, w_country, ship_carriers, year\n\nORDER BY w_warehouse_name\n\nLIMIT 100\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "yPof7vYq",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SHIP_CARRIERS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "YEAR",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FEB_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAR_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "APR_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAY_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUL_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AUG_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SEP_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "OCT_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NOV_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DEC_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FEB_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAR_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "APR_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAY_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUN_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUL_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AUG_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SEP_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "OCT_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NOV_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DEC_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FEB_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAR_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "APR_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAY_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUN_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUL_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AUG_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SEP_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "OCT_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NOV_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DEC_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Join_5##YG07qHYR" : {
+      "id" : "Join_5##YG07qHYR",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_5",
+        "x" : 500,
+        "y" : 920,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.ORDER_COUNT!=in1.JAN_SALES"
+          },
+          "joinType" : "INNER"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.ORDER_COUNT"
+          },
+          "alias" : "ORDER_COUNT"
+        }, {
+          "expression" : {
+            "expression" : "in0.TOTAL_SHIPPING_COST"
+          },
+          "alias" : "TOTAL_SHIPPING_COST"
+        }, {
+          "expression" : {
+            "expression" : "in0.TOTAL_NET_PROFIT"
+          },
+          "alias" : "TOTAL_NET_PROFIT"
+        }, {
+          "expression" : {
+            "expression" : "in0.EXCESS_DISCOUNT_AMOUNT"
+          },
+          "alias" : "EXCESS_DISCOUNT_AMOUNT"
+        }, {
+          "expression" : {
+            "expression" : "in1.W_WAREHOUSE_NAME"
+          },
+          "alias" : "W_WAREHOUSE_NAME"
+        }, {
+          "expression" : {
+            "expression" : "in1.W_WAREHOUSE_SQ_FT"
+          },
+          "alias" : "W_WAREHOUSE_SQ_FT"
+        }, {
+          "expression" : {
+            "expression" : "in1.JAN_SALES"
+          },
+          "alias" : "JAN_SALES"
+        } ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "kb55VVKE##ORDER_COUNT", "h1m89FAu##JAN_SALES", "kb55VVKE##ORDER_COUNT", "kb55VVKE##TOTAL_SHIPPING_COST", "kb55VVKE##TOTAL_NET_PROFIT", "kb55VVKE##EXCESS_DISCOUNT_AMOUNT", "h1m89FAu##W_WAREHOUSE_NAME", "h1m89FAu##W_WAREHOUSE_SQ_FT", "h1m89FAu##JAN_SALES" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kb55VVKE",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SHIPPING_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "EXCESS_DISCOUNT_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "h1m89FAu",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "ilcQNe82",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SHIPPING_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "EXCESS_DISCOUNT_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQLStatement_2##LRaQarT7" : {
+      "id" : "SQLStatement_2##LRaQarT7",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_2",
+        "x" : 60,
+        "y" : 760,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "SELECT \n  s_store_name,\n  sum(ss_net_profit)\n\nFROM store_sales, date_dim, store, (\n  SELECT ca_zip\n  \n  FROM (\n    SELECT substr(ca_zip, 1, 5) AS ca_zip\n    \n    FROM customer_address\n    \n    WHERE substr(ca_zip, 1, 5) IN \n    (  '10338',\n      '56623',\n      '51423',\n      '26456',\n      '19500',\n      '65832',\n      '17178',\n      '68879',\n      '49935',\n      '49849',\n      '93956',\n      '71765',\n      '45100',\n      '50587',\n      '68389',\n      '41899',\n      '98316',\n      '56217',\n      '94686',\n      '59350',\n      '32857',\n      '14925',\n      '31266',\n      '37817',\n      '27519',\n      '20787',\n      '26967',\n      '49045',\n      '39397',\n      '32010',\n      '23144',\n      '53580',\n      '15491',\n      '74151',\n      '18442',\n      '51916',\n      '17730',\n      '22824',\n      '28290',\n      '21657',\n      '45460',\n      '39386',\n      '21133',\n      '35017',\n      '19894',\n      '21759',\n      '79293',\n      '86733',\n      '76777',\n      '41688',\n      '13810',\n      '49053',\n      '17992',\n      '13395',\n      '19869',\n      '40785',\n      '63897',\n      '65049',\n      '27388',\n      '94701',\n      '41482',\n      '97923',\n      '23951',\n      '88284',\n      '61718',\n      '94317',\n      '72294',\n      '63544',\n      '31306',\n      '41242',\n      '28830',\n      '75535',\n      '86189',\n      '88177',\n      '16147',\n      '12902',\n      '48271',\n      '54036',\n      '20936',\n      '27802',\n      '96741',\n      '70286',\n      '75710',\n      '16034',\n      '90285',\n      '22058',\n      '52590',\n      '40584',\n      '62441',\n      '64039',\n      '68999',\n      '64327',\n      '33844',\n      '52497',\n      '88495',\n      '25989',\n      '67814',\n      '13767',\n      '83194',\n      '99395',\n      '35524',\n      '89640',\n      '48834',\n      '51875',\n      '71073',\n      '25383',\n      '19129',\n      '57805',\n      '47962',\n      '61905',\n      '19557',\n      '74159',\n      '98032',\n      '13917',\n      '50936',\n      '47993',\n      '41606',\n      '17592',\n      '11470',\n      '28216',\n      '19732',\n      '97958',\n      '60997',\n      '85688',\n      '96863',\n      '16605',\n      '10898',\n      '31340',\n      '71340',\n      '72902',\n      '98949',\n      '74440',\n      '53057',\n      '30323',\n      '76166',\n      '27195',\n      '11204',\n      '32771',\n      '38189',\n      '83221',\n      '22295',\n      '15325',\n      '20844',\n      '65549',\n      '69207',\n      '71903',\n      '63929',\n      '56922',\n      '25733',\n      '75482',\n      '14986',\n      '79223',\n      '73692',\n      '98769',\n      '70275',\n      '33793',\n      '13057',\n      '30142',\n      '95737',\n      '30072',\n      '32097',\n      '25845',\n      '50282',\n      '19289',\n      '92221',\n      '59533',\n      '37375',\n      '29706',\n      '48186',\n      '22385',\n      '55809',\n      '17416',\n      '10592',\n      '55385',\n      '71829',\n      '91975',\n      '73557',\n      '38036',\n      '10448',\n      '95252',\n      '51386',\n      '14190',\n      '15247',\n      '39907',\n      '79438',\n      '78053',\n      '66623',\n      '27720',\n      '84139',\n      '74147',\n      '58637',\n      '11434',\n      '36573',\n      '10081',\n      '53536',\n      '41724',\n      '97898',\n      '36752',\n      '50384',\n      '87352',\n      '35696',\n      '69486',\n      '50026',\n      '27837',\n      '42592',\n      '58865',\n      '80523',\n      '53682',\n      '65423',\n      '77611',\n      '98529',\n      '13909',\n      '13727',\n      '52190',\n      '36152',\n      '48355',\n      '62496',\n      '16527',\n      '18143',\n      '98830',\n      '75198',\n      '73043',\n      '64043',\n      '63042',\n      '67797',\n      '50656',\n      '27700',\n      '60687',\n      '57905',\n      '94404',\n      '15733',\n      '80809',\n      '74562',\n      '84493',\n      '67977',\n      '11213',\n      '19125',\n      '84496',\n      '16435',\n      '97510',\n      '46040',\n      '33968',\n      '20256',\n      '42332',\n      '16480',\n      '54277',\n      '82819',\n      '93799',\n      '69101',\n      '57689',\n      '42821',\n      '68073',\n      '49342',\n      '46915',\n      '25825',\n      '92332',\n      '20219',\n      '96577',\n      '49463',\n      '19221',\n      '35814',\n      '64783',\n      '97303',\n      '52061',\n      '24357',\n      '58167',\n      '56286',\n      '64474',\n      '99847',\n      '53626',\n      '39703',\n      '24880',\n      '24365',\n      '50652',\n      '29611',\n      '90638',\n      '59246',\n      '27171',\n      '30483',\n      '11708',\n      '38630',\n      '81914',\n      '48269',\n      '11720',\n      '88662',\n      '68844',\n      '54838',\n      '93795',\n      '38102',\n      '33481',\n      '97546',\n      '49306',\n      '97216',\n      '49032',\n      '14270',\n      '72418',\n      '32540',\n      '53208',\n      '15588',\n      '29990',\n      '10407',\n      '92334',\n      '48543',\n      '51495',\n      '77996',\n      '53686',\n      '14827',\n      '30978',\n      '30482',\n      '86296',\n      '48869',\n      '59600',\n      '29495',\n      '24775',\n      '34645',\n      '19763',\n      '98602',\n      '20456',\n      '10468',\n      '13887',\n      '65714',\n      '74740',\n      '37096',\n      '96240',\n      '44111',\n      '54109',\n      '62693',\n      '87874',\n      '64295',\n      '62027',\n      '86027',\n      '54341',\n      '68582',\n      '67809',\n      '44159',\n      '97913',\n      '79150',\n      '38974',\n      '64754',\n      '73946',\n      '20840',\n      '16138',\n      '58939',\n      '20428',\n      '19890',\n      '70842',\n      '78648',\n      '55576',\n      '37267',\n      '40470',\n      '12957',\n      '57553',\n      '53593',\n      '34067',\n      '22555',\n      '79719',\n      '25809',\n      '28496',\n      '11083',\n      '87624',\n      '83622',\n      '84898',\n      '28678',\n      '14297',\n      '79461',\n      '22910',\n      '87129',\n      '49941',\n      '64817',\n      '93905',\n      '39721',\n      '81837',\n      '18753',\n      '86432',\n      '67821',\n      '66080',\n      '28246',\n      '13466',\n      '16363',\n      '56950',\n      '35446',\n      '58326',\n      '11760',\n      '33962',\n      '28399',\n      '45848',\n      '52560',\n      '66894',\n      '15169',\n      '20988',\n      '85925',\n      '38582',\n      '34825',\n      '94227',\n      '56758',\n      '24801',\n      '14128',\n      '14012',\n      '35824',\n      '49784'\n    )\n    \n    INTERSECT\n    \n    SELECT ca_zip\n    \n    FROM (\n      SELECT \n        substr(ca_zip, 1, 5) AS ca_zip,\n        count(*) AS cnt\n      \n      FROM customer_address, customer\n      \n      WHERE ca_address_sk = c_current_addr_sk and\n                                                            c_preferred_cust_flag = 'Y'\n      \n      GROUP BY ca_zip\n      \n      HAVING count(*) > 10\n     ) AS A1\n   ) AS A2\n ) AS V1\n\nWHERE ss_store_sk = s_store_sk and ss_sold_date_sk = d_date_sk and d_qoy = 1 and d_year = 2002 and (substr(s_zip, 1, 2) = substr(V1.ca_zip, 1, 2))\n\nGROUP BY s_store_name\n\nORDER BY s_store_name\n\nLIMIT 100\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "WeQDLPnS",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "S_STORE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUM(SS_NET_PROFIT)",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Join_1##fEQboaro" : {
+      "id" : "Join_1##fEQboaro",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "x" : 280,
+        "y" : 620,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.SM_TYPE != in1.I_ITEM_DESC"
+          },
+          "joinType" : "INNER"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.I_ITEM_ID"
+          },
+          "alias" : "I_ITEM_ID"
+        }, {
+          "expression" : {
+            "expression" : "in1.I_ITEM_DESC"
+          },
+          "alias" : "I_ITEM_DESC"
+        }, {
+          "expression" : {
+            "expression" : "in1.I_CATEGORY"
+          },
+          "alias" : "I_CATEGORY"
+        }, {
+          "expression" : {
+            "expression" : "in1.I_CLASS"
+          },
+          "alias" : "I_CLASS"
+        }, {
+          "expression" : {
+            "expression" : "in1.I_CURRENT_PRICE"
+          },
+          "alias" : "I_CURRENT_PRICE"
+        }, {
+          "expression" : {
+            "expression" : "in1.ITEMREVENUE"
+          },
+          "alias" : "ITEMREVENUE"
+        }, {
+          "expression" : {
+            "expression" : "in1.REVENUERATIO"
+          },
+          "alias" : "REVENUERATIO"
+        }, {
+          "expression" : {
+            "expression" : "in0.SM_TYPE"
+          },
+          "alias" : "SM_TYPE"
+        }, {
+          "expression" : {
+            "expression" : "in0.CC_NAME"
+          },
+          "alias" : "CC_NAME"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "g5OSRC93##SM_TYPE", "t0XGeRvR##I_ITEM_DESC", "t0XGeRvR##I_ITEM_ID", "t0XGeRvR##I_ITEM_DESC", "t0XGeRvR##I_CATEGORY", "t0XGeRvR##I_CLASS", "t0XGeRvR##I_CURRENT_PRICE", "t0XGeRvR##ITEMREVENUE", "t0XGeRvR##REVENUERATIO", "g5OSRC93##SM_TYPE", "g5OSRC93##CC_NAME" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "g5OSRC93",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUBSTR(W_WAREHOUSE_NAME, 1, 20)",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "30 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "31-60 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "61-90 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "91-120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : ">120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "t0XGeRvR",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "NsjWFJsf",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQLStatement_7##MGr4Kk2W" : {
+      "id" : "SQLStatement_7##MGr4Kk2W",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_7",
+        "x" : 60,
+        "y" : 1200,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "SELECT sum(ss_quantity)\n\nFROM store_sales, store, customer_demographics, customer_address, date_dim\n\nWHERE s_store_sk = ss_store_sk and  ss_sold_date_sk = d_date_sk and d_year = 2001 and  \n       ((cd_demo_sk = ss_cdemo_sk and \n         cd_marital_status = 'D' and \n         cd_education_status = 'Secondary' and \n         ss_sales_price BETWEEN 100.0 and 150.0) or\n        (cd_demo_sk = ss_cdemo_sk and \n         cd_marital_status = 'W' and \n         cd_education_status = '2 yr Degree' and \n         ss_sales_price BETWEEN 50.0 and 100.0) or \n       (cd_demo_sk = ss_cdemo_sk and \n         cd_marital_status = 'U' and \n         cd_education_status = 'Unknown' and \n         ss_sales_price BETWEEN 150.0 and 200.0)) and\n       ((ss_addr_sk = ca_address_sk and\n        ca_country = 'United States' and\n        ca_state IN ('VA', 'MI', 'FL') and ss_net_profit BETWEEN 0 and 2000) or\n        (ss_addr_sk = ca_address_sk and\n        ca_country = 'United States' and\n        ca_state IN ('SC', 'GA', 'MN') and ss_net_profit BETWEEN 150 and 3000) or\n        (ss_addr_sk = ca_address_sk and\n        ca_country = 'United States' and\n        ca_state IN ('OK', 'IA', 'TX') and ss_net_profit BETWEEN 50 and 25000))\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "p7rwqpb7",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUM(SS_QUANTITY)",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQLStatement_1##SCdGZcue" : {
+      "id" : "SQLStatement_1##SCdGZcue",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_1",
+        "x" : 60,
+        "y" : 620,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "select i_item_id\n      ,i_item_desc \n      ,i_category \n      ,i_class \n      ,i_current_price\n      ,sum(ss_ext_sales_price) as itemrevenue \n      ,sum(ss_ext_sales_price)*100/sum(sum(ss_ext_sales_price)) over\n          (partition by i_class) as revenueratio\nfrom\t\n\tstore_sales\n    \t,item \n    \t,date_dim\nwhere \n\tss_item_sk = i_item_sk \n  \tand i_category in ('Women', 'Electronics', 'Shoes')\n  \tand ss_sold_date_sk = d_date_sk\n\tand d_date between cast('2002-05-27' as date) \n\t\t\t\tand dateadd(day,30,to_date('2002-05-27'))\ngroup by \n\ti_item_id\n        ,i_item_desc \n        ,i_category\n        ,i_class\n        ,i_current_price\norder by \n\ti_category\n        ,i_class\n        ,i_item_id\n        ,i_item_desc\n        ,revenueratio"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "jUschuFD",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQLStatement_0##O6Jh1wks" : {
+      "id" : "SQLStatement_0##O6Jh1wks",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_0",
+        "x" : 40,
+        "y" : 340,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "select  \n   substr(w_warehouse_name,1,20)\n  ,sm_type\n  ,cc_name\n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk <= 30 ) then 1 else 0 end)  as \"30 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 30) and \n                 (cs_ship_date_sk - cs_sold_date_sk <= 60) then 1 else 0 end )  as \"31-60 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 60) and \n                 (cs_ship_date_sk - cs_sold_date_sk <= 90) then 1 else 0 end)  as \"61-90 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 90) and\n                 (cs_ship_date_sk - cs_sold_date_sk <= 120) then 1 else 0 end)  as \"91-120 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk  > 120) then 1 else 0 end)  as \">120 days\" \nfrom\n   catalog_sales\n  ,warehouse\n  ,ship_mode\n  ,call_center\n  ,date_dim\nwhere\n    d_month_seq between 1200 and 1200 + 11\nand cs_ship_date_sk   = d_date_sk\nand cs_warehouse_sk   = w_warehouse_sk\nand cs_ship_mode_sk   = sm_ship_mode_sk\nand cs_call_center_sk = cc_call_center_sk\ngroup by\n   substr(w_warehouse_name,1,20)\n  ,sm_type\n  ,cc_name\norder by substr(w_warehouse_name,1,20)\n        ,sm_type\n        ,cc_name\nlimit 100"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xu2Zqbcr",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUBSTR(W_WAREHOUSE_NAME, 1, 20)",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "30 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "31-60 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "61-90 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "91-120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : ">120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Join_6##P5zChshB" : {
+      "id" : "Join_6##P5zChshB",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_6",
+        "x" : 500,
+        "y" : 780,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.I_CATEGORY!=in1.S_STORE_NAME"
+          },
+          "joinType" : "INNER"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.I_ITEM_ID"
+          },
+          "alias" : "I_ITEM_ID"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_ITEM_DESC"
+          },
+          "alias" : "I_ITEM_DESC"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_CATEGORY"
+          },
+          "alias" : "I_CATEGORY"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_CLASS"
+          },
+          "alias" : "I_CLASS"
+        }, {
+          "expression" : {
+            "expression" : "in0.I_CURRENT_PRICE"
+          },
+          "alias" : "I_CURRENT_PRICE"
+        }, {
+          "expression" : {
+            "expression" : "in0.ITEMREVENUE"
+          },
+          "alias" : "ITEMREVENUE"
+        }, {
+          "expression" : {
+            "expression" : "in0.REVENUERATIO"
+          },
+          "alias" : "REVENUERATIO"
+        }, {
+          "expression" : {
+            "expression" : "in0.SM_TYPE"
+          },
+          "alias" : "SM_TYPE"
+        }, {
+          "expression" : {
+            "expression" : "in0.CC_NAME"
+          },
+          "alias" : "CC_NAME"
+        } ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "OkmbbYfw##I_CATEGORY", "ADZbCNev##S_STORE_NAME", "OkmbbYfw##I_ITEM_ID", "OkmbbYfw##I_ITEM_DESC", "OkmbbYfw##I_CATEGORY", "OkmbbYfw##I_CLASS", "OkmbbYfw##I_CURRENT_PRICE", "OkmbbYfw##ITEMREVENUE", "OkmbbYfw##REVENUERATIO", "OkmbbYfw##SM_TYPE", "OkmbbYfw##CC_NAME" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OkmbbYfw",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "ADZbCNev",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "S_STORE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SS_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "G5ldwK3e",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "I_ITEM_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_ITEM_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "I_CURRENT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ITEMREVENUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "REVENUERATIO",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "SQLStatement_4##neB1TJR2" : {
+      "id" : "SQLStatement_4##neB1TJR2",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_4",
+        "x" : 60,
+        "y" : 920,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "",
+          "id" : "",
+          "language" : "sql",
+          "content" : "select  \n   count(distinct ws_order_number) as order_count\n  ,sum(ws_ext_ship_cost) as total_shipping_cost\n  ,sum(ws_net_profit) as total_net_profit\nfrom\n   web_sales ws1\n  ,date_dim\n  ,customer_address\n  ,web_site\nwhere\n    d_date between '2002-2-01' and \n           dateadd(day,60,to_date('2002-2-01'))\nand ws1.ws_ship_date_sk = d_date_sk\nand ws1.ws_ship_addr_sk = ca_address_sk\nand ca_state = 'CA'\nand ws1.ws_web_site_sk = web_site_sk\nand web_company_name = 'pri'\nand exists (select *\n            from web_sales ws2\n            where ws1.ws_order_number = ws2.ws_order_number\n              and ws1.ws_warehouse_sk <> ws2.ws_warehouse_sk)\nand not exists(select *\n               from web_returns wr1\n               where ws1.ws_order_number = wr1.wr_order_number)\norder by count(distinct ws_order_number)\nlimit 100"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xmneTUTq",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SHIPPING_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Join_4##V3Vka7ae" : {
+      "id" : "Join_4##V3Vka7ae",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_4",
+        "x" : 280,
+        "y" : 1100,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.\"SUM(SS_QUANTITY)\" != in1.W_WAREHOUSE_SQ_FT"
+          },
+          "joinType" : "INNER"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.W_WAREHOUSE_NAME"
+          },
+          "alias" : "W_WAREHOUSE_NAME"
+        }, {
+          "expression" : {
+            "expression" : "in1.W_WAREHOUSE_SQ_FT"
+          },
+          "alias" : "W_WAREHOUSE_SQ_FT"
+        }, {
+          "expression" : {
+            "expression" : "in1.JAN_SALES"
+          },
+          "alias" : "JAN_SALES"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "CLSERNq7##W_WAREHOUSE_NAME", "CLSERNq7##W_WAREHOUSE_SQ_FT", "CLSERNq7##JAN_SALES" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "K9Q6Wxow",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUM(SS_QUANTITY)",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "CLSERNq7",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SHIP_CARRIERS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "YEAR",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FEB_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAR_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "APR_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAY_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUL_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AUG_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SEP_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "OCT_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NOV_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DEC_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FEB_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAR_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "APR_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAY_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUN_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUL_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AUG_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SEP_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "OCT_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NOV_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DEC_SALES_PER_SQ_FOOT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FEB_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAR_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "APR_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAY_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUN_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JUL_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AUG_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SEP_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "OCT_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NOV_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DEC_NET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "R7CavOVe",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "JAN_SALES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "LRegG8PW",
+    "source" : "SQLStatement_0##O6Jh1wks",
+    "sourcePort" : "xu2Zqbcr",
+    "target" : "Join_1##fEQboaro",
+    "targetPort" : "g5OSRC93"
+  }, {
+    "id" : "TLGggURy",
+    "source" : "SQLStatement_3##blpGNJdt",
+    "sourcePort" : "A4YrsjMS",
+    "target" : "Join_1##fEQboaro",
+    "targetPort" : "t0XGeRvR"
+  }, {
+    "id" : "Kdv8KArc",
+    "source" : "SQLStatement_1##SCdGZcue",
+    "sourcePort" : "jUschuFD",
+    "target" : "Join_2##mI1HHu8p",
+    "targetPort" : "TZgEZj4F"
+  }, {
+    "id" : "V1xBqG5S",
+    "source" : "SQLStatement_2##LRaQarT7",
+    "sourcePort" : "WeQDLPnS",
+    "target" : "Join_2##mI1HHu8p",
+    "targetPort" : "DAZJIOHm"
+  }, {
+    "id" : "zwjDm0Tj",
+    "source" : "SQLStatement_4##neB1TJR2",
+    "sourcePort" : "xmneTUTq",
+    "target" : "Join_3##G7sq96FE",
+    "targetPort" : "iF9dbf84"
+  }, {
+    "id" : "zMykNj1B",
+    "source" : "SQLStatement_5##BzfUpivM",
+    "sourcePort" : "YBtPx3ey",
+    "target" : "Join_3##G7sq96FE",
+    "targetPort" : "oNcjwpyZ"
+  }, {
+    "id" : "Gy9amxOS",
+    "source" : "SQLStatement_7##MGr4Kk2W",
+    "sourcePort" : "p7rwqpb7",
+    "target" : "Join_4##V3Vka7ae",
+    "targetPort" : "K9Q6Wxow"
+  }, {
+    "id" : "VS1Z9oo1",
+    "source" : "SQLStatement_6##NxzeSalb",
+    "sourcePort" : "yPof7vYq",
+    "target" : "Join_4##V3Vka7ae",
+    "targetPort" : "CLSERNq7"
+  }, {
+    "id" : "fqIDpkLk",
+    "source" : "Join_3##G7sq96FE",
+    "sourcePort" : "gztaAhr6",
+    "target" : "Join_5##YG07qHYR",
+    "targetPort" : "kb55VVKE"
+  }, {
+    "id" : "pynp4G4v",
+    "source" : "Join_4##V3Vka7ae",
+    "sourcePort" : "R7CavOVe",
+    "target" : "Join_5##YG07qHYR",
+    "targetPort" : "h1m89FAu"
+  }, {
+    "id" : "F9L0hINi",
+    "source" : "Join_1##fEQboaro",
+    "sourcePort" : "NsjWFJsf",
+    "target" : "Join_6##P5zChshB",
+    "targetPort" : "OkmbbYfw"
+  }, {
+    "id" : "NzSNiDGa",
+    "source" : "Join_2##mI1HHu8p",
+    "sourcePort" : "k75DBJu9",
+    "target" : "Join_6##P5zChshB",
+    "targetPort" : "ADZbCNev"
+  }, {
+    "id" : "YevN2K4v",
+    "source" : "Join_6##P5zChshB",
+    "sourcePort" : "G5ldwK3e",
+    "target" : "Join_7##dkcSRFGl",
+    "targetPort" : "T1VVGsQQ"
+  }, {
+    "id" : "erqmX9yk",
+    "source" : "Join_5##YG07qHYR",
+    "sourcePort" : "ilcQNe82",
+    "target" : "Join_7##dkcSRFGl",
+    "targetPort" : "cCqp47jK"
+  }, {
+    "id" : "JQVxkkDq",
+    "source" : "Join_7##dkcSRFGl",
+    "sourcePort" : "FMq5Dkal",
+    "target" : "tpcds_1_env_uitesting_shared##wmn2S9Qx",
+    "targetPort" : "nWAbtYHu"
+  } ],
+  "component" : "Model"
+}

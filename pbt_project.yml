@@ -1,0 +1,189 @@
+name: SQL_SnowflakeSharedBasic
+description: ''
+version: 0.0.1
+author: null
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs:
+  jobs/REL_SNOW_Databricks:
+    name: REL_SNOW_Databricks
+    description: ''
+    fabricUID: 2068
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0 * * ? 2090
+    timeout: null
+    alerting:
+      emails: abhisheks@prophecy.io,abhisheks@simpledatalabs.com
+      onStart: false
+      onSuccess: true
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-04-21 13:48:09'
+    modifiedAt: '2023-04-21 13:50:59'
+    author: abhisheks+shared@prophecy.io
+  jobs/REL_SNOW_AIRFLOW:
+    name: REL_SNOW_AIRFLOW
+    description: ''
+    fabricUID: 5295
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 17 * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-04-21 13:53:13'
+    modifiedAt: '2023-04-21 13:56:20'
+    author: abhisheks+shared@prophecy.io
+functions:
+  author: null
+  createdAt: '2023-04-12 10:10:10'
+  modifiedAt: '2023-04-12 10:10:10'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1:
+    name: env_uitesting_shared_useallmodel_1
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/main_shared/env_uitesting_shared_useallmodel_1.sql
+    - .prophecy/ide/models/env_uitesting_shared_useallmodel_1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-12 11:39:43'
+    modifiedAt: '2023-04-12 11:39:43'
+  .prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1:
+    name: env_uitesting_shared_parent_model_1
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/main_shared/env_uitesting_shared_parent_model_1.sql
+    - .prophecy/ide/models/env_uitesting_shared_parent_model_1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-12 10:12:50'
+    modifiedAt: '2023-04-12 10:12:50'
+  .prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1:
+    name: env_uitesting_shared_child_model_1
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/main_shared/env_uitesting_shared_child_model_1.sql
+    - .prophecy/ide/models/env_uitesting_shared_child_model_1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-12 11:24:53'
+    modifiedAt: '2023-04-12 11:24:53'
+  .prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1:
+    name: env_uitesting_shared_mid_model_1
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/main_shared/env_uitesting_shared_mid_model_1.sql
+    - .prophecy/ide/models/env_uitesting_shared_mid_model_1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-12 10:14:29'
+    modifiedAt: '2023-04-12 10:14:29'
+  .prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared:
+    name: tpcds_1_env_uitesting_shared
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/main_shared/tpcds_1_env_uitesting_shared.sql
+    - .prophecy/ide/models/tpcds_1_env_uitesting_shared.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-12 17:14:50'
+    modifiedAt: '2023-04-12 17:14:50'
+sqlMacros:
+  .prophecy/metadata/sqlmacros/qa_concat_function_main:
+    name: qa_concat_function_main
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/functions/qa_concat_function_main.sql
+    - .prophecy/ide/macros/qa_concat_function_main.json
+    createdAt: '2023-04-12 10:11:18'
+    modifiedAt: '2023-04-12 10:11:18'
+  .prophecy/metadata/sqlmacros/qa_select_all_not_null_gem:
+    name: qa_select_all_not_null_gem
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/gem_based/qa_select_all_not_null_gem.sql
+    - .prophecy/ide/macros/qa_select_all_not_null_gem.json
+    createdAt: '2023-04-12 10:11:54'
+    modifiedAt: '2023-04-12 10:11:54'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/raw_customers:
+    name: raw_customers
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - seeds/raw/raw_customers.csv
+    createdAt: '2023-04-12 10:12:13'
+    modifiedAt: '2023-04-12 10:12:13'
+sqlSources:
+  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SIMPLE_SCHEMA:
+    name: QA_DATABASE.QA_SIMPLE_SCHEMA
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-04-12 10:13:07'
+    modifiedAt: '2023-04-12 10:13:07'
+    tables:
+    - name: ALL_TYPE_TABLE_SMALLER
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2023-04-12 10:13:07'
+      modifiedAt: '2023-04-12 10:13:07'
+    - name: TABLE_COMPLEX_TYPES_1
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-04-21 17:46:30'
+      modifiedAt: '2023-04-21 17:46:30'
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: abhisheks+e2etests@prophecy.io
+  createdAt: '2023-04-12 10:10:10'
+  modifiedAt: '2023-04-12 10:10:10'
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}

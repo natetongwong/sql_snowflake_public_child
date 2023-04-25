@@ -1,0 +1,27 @@
+{
+  "macro_GYBtK3lW" : {
+    "name" : "qa_select_all_not_null_gem",
+    "macroId" : "macro_GYBtK3lW",
+    "macroType" : "query",
+    "definition" : "\nselect * from {{model}} where {{col}} is not null",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "unknown"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false
+      }, {
+        "name" : "col",
+        "kind" : {
+          "type" : "unknown"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false
+      } ]
+    },
+    "staleState" : "none"
+  }
+}

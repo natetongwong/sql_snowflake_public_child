@@ -1,0 +1,148 @@
+---
+version: 2
+sources:
+- name: "QA_DATABASE.QA_SIMPLE_SCHEMA"
+  database: "QA_DATABASE"
+  schema: "QA_SIMPLE_SCHEMA"
+  config:
+    enabled: true
+  tables:
+  - name: "ALL_TYPE_TABLE_SMALLER"
+    columns:
+    - name: "C_NUM"
+      dataType:
+        type: "Number"
+    - name: "C_NUM10"
+      dataType:
+        type: "Number"
+    - name: "C_DEC"
+      dataType:
+        type: "Number"
+    - name: "C_NUMERIC"
+      dataType:
+        type: "Number"
+    - name: "C_INT"
+      dataType:
+        type: "Number"
+    - name: "C_INTEGER"
+      dataType:
+        type: "Number"
+    - name: "C_DOUBLE"
+      dataType:
+        type: "Float"
+    - name: "C_FLOAT"
+      dataType:
+        type: "Float"
+    - name: "C_COUBLE_PRECISION"
+      dataType:
+        type: "Float"
+    - name: "C_REAL"
+      dataType:
+        type: "Float"
+    - name: "C_VARCHAR"
+      dataType:
+        type: "String"
+    - name: "C_VARCHAR50"
+      dataType:
+        type: "String"
+    - name: "C_CHAR"
+      dataType:
+        type: "String"
+    - name: "C_CHAR10"
+      dataType:
+        type: "String"
+    - name: "C_STRING"
+      dataType:
+        type: "String"
+    - name: "C_STRING20"
+      dataType:
+        type: "String"
+    - name: "C_TEXT"
+      dataType:
+        type: "String"
+    - name: "C_TEXT30"
+      dataType:
+        type: "String"
+    - name: "C_BINARY"
+      dataType:
+        type: "Binary"
+    - name: "C_BINARY100"
+      dataType:
+        type: "Binary"
+    - name: "C_VARBINARY"
+      dataType:
+        type: "Binary"
+    - name: "C_BOOL"
+      dataType:
+        type: "Boolean"
+    - name: "C_TIMESTAMP"
+      dataType:
+        type: "Timestamp"
+    - name: "C_DATE"
+      dataType:
+        type: "Date"
+    - name: "C_DATETIME"
+      dataType:
+        type: "Timestamp"
+    - name: "C_TIME"
+      dataType:
+        type: "Time"
+    - name: "C_ARRAY"
+      dataType:
+        type: "Array"
+    - name: "C_OBJECT"
+      dataType:
+        type: "Object"
+    - name: "C_GEOGRAPHY"
+      dataType:
+        type: "Geography"
+  - name: "TABLE_COMPLEX_TYPES_1"
+    columns:
+    - name: "C_ARRAY_INT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_FLOAT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_STRING"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_OBJECT"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_ARRAY"
+      dataType:
+        type: "Array"
+    - name: "C_ARRAY_VARIANT"
+      dataType:
+        type: "Array"
+    - name: "C_OBJECT_1"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_2"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_3"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_4"
+      dataType:
+        type: "Object"
+    - name: "C_OBJECT_5"
+      dataType:
+        type: "Object"
+    - name: "C_VARIANT_1"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_2"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_3"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_4"
+      dataType:
+        type: "Variant"
+    - name: "C_VARIANT_5"
+      dataType:
+        type: "Variant"
