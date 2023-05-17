@@ -6,7 +6,7 @@
     "name" : "REL_SNOW_AIRFLOW",
     "dagName" : "uitesting_shared_team_SQL_SnowflakeSharedBasic_REL_SNOW_AIRFLOW",
     "schedule" : "0 0 17 * *",
-    "enabled" : false,
+    "enabled" : true,
     "alerting" : {
       "emails" : "",
       "onStart" : false,
