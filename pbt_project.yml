@@ -1,6 +1,6 @@
 name: SQL_SnowflakeSharedBasic
 description: ''
-version: 0.0.1
+version: v3.0.1.0
 author: null
 language: sql
 buildSystem: ''
