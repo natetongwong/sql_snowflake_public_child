@@ -5821,7 +5821,7 @@
   },
   "dependenciesContainer" : {
     "prophecyProjectDependencies" : {
-      "https://github.com/abhisheks-prophecy/test_repo_sql_public.git" : "23243"
+      "https://github.com/abhisheks-prophecy/sql_snowflake_public_parent" : "24113"
     }
   },
   "frontEndLanguage" : "sql"

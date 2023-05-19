@@ -481,6 +481,16 @@
               "dataType" : {
                 "type" : "String"
               }
+            }, {
+              "name" : "CAUSE",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "CITY",
+              "dataType" : {
+                "type" : "Variant"
+              }
             } ]
           },
           "slug" : "in1"
@@ -1467,6 +1477,16 @@
             "expression" : "concat('a', 'b')"
           },
           "alias" : "C_STR_UTILS"
+        }, {
+          "expression" : {
+            "expression" : "C_VARIANT_1['problems_6']['another_problem']['root']['cause']"
+          },
+          "alias" : "cause"
+        }, {
+          "expression" : {
+            "expression" : "C_VARIANT_4['address']['city']"
+          },
+          "alias" : "city"
         } ]
       },
       "ports" : {
@@ -1647,6 +1667,16 @@
               "dataType" : {
                 "type" : "String"
               }
+            }, {
+              "name" : "CAUSE",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "CITY",
+              "dataType" : {
+                "type" : "Variant"
+              }
             } ]
           },
           "slug" : "out"
@@ -1791,6 +1821,8 @@
         }, {
           "name" : "max_value",
           "value" : "15"
+        }, {
+          "name" : "inclusive"
         } ],
         "projectName" : "dbt_utils"
       },
@@ -2791,8 +2823,8 @@
       "metadata" : {
         "label" : "env_uitesting_main_model_snow_1",
         "slug" : "env_uitesting_main_model_snow_1",
-        "x" : -120,
-        "y" : 760,
+        "x" : -180,
+        "y" : 780,
         "phase" : 0
       },
       "properties" : {
