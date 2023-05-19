@@ -153,7 +153,15 @@ sqlSources:
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-04-21 17:46:30'
       modifiedAt: '2023-04-21 17:46:30'
-sqlUnreferencedSources: {}
+sqlUnreferencedSources:
+  .prophecy/metadata/sqlunreferencedsources/qa_database_qa_simple_schema_ungrouped_customers:
+    name: qa_database.qa_simple_schema.ungrouped_customers
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - prophecy-sources/unreferencedSources.yml
+    createdAt: '2023-05-19 06:30:31'
+    modifiedAt: '2023-05-19 06:30:31'
 sqlPipeline:
   name: sqlPipeline
   description: null
