@@ -11,7 +11,8 @@
       "userDefinedConfig" : {
         "vars" : {
           "v_int" : "22",
-          "v_bool" : "True"
+          "v_bool" : "True",
+          "v_expression" : "\"concat(C_VARCHAR, C_TEXT, C_ARRAY[0], C_OBJECT['outer_key2']['inner_key2'])\""
         }
       }
     }
@@ -2997,8 +2998,8 @@
       "component" : "Model",
       "metadata" : {
         "label" : "env_uitesting_shared_parent_model_1",
-        "x" : 340,
-        "y" : 880,
+        "x" : 200,
+        "y" : 860,
         "phase" : 0
       },
       "properties" : {
@@ -3179,13 +3180,13 @@
         "conditions" : [ {
           "alias" : "in1",
           "expression" : {
-            "expression" : "in0.C_STRING != in1.C_CONCAT_EXPRESSION"
+            "expression" : "in0.C_STRING != in1.c_string"
           },
           "joinType" : "inner"
         }, {
           "alias" : "in2",
           "expression" : {
-            "expression" : "in1.C_STRING!=in2.NZHSC_LEVEL_1"
+            "expression" : "in1.c_string!=in2.NZHSC_LEVEL_1"
           },
           "joinType" : "inner"
         }, {
@@ -3212,7 +3213,7 @@
           "alias" : "C_DEC"
         }, {
           "expression" : {
-            "expression" : "in1.C_NUMERIC"
+            "expression" : "in0.C_NUMERIC"
           },
           "alias" : "C_NUMERIC"
         }, {
@@ -3341,8 +3342,8 @@
           },
           "alias" : "C_GEOGRAPHY"
         } ],
-        "activeTab" : "conditions",
-        "columnsSelector" : [ "WRVtUOJJ##C_STRING", "bR7FFoGP##C_CONCAT_EXPRESSION", "bR7FFoGP##C_STRING", "pWb6v6ouDyl-UhRJdJipR$$_mVg_lY1cligHsFfEPbhc##NZHSC_LEVEL_1", "vN1MoCgoLOFSU9NWdN8wE$$AF-z9UJQtaBJxzIcz2Zmb##C_STR_UTILS", "WRVtUOJJ##C_NUM", "WRVtUOJJ##C_NUM10", "WRVtUOJJ##C_DEC", "bR7FFoGP##C_NUMERIC", "WRVtUOJJ##C_INT", "WRVtUOJJ##C_INTEGER", "WRVtUOJJ##C_DOUBLE", "WRVtUOJJ##C_FLOAT", "WRVtUOJJ##C_COUBLE_PRECISION", "WRVtUOJJ##C_REAL", "WRVtUOJJ##C_VARCHAR", "WRVtUOJJ##C_VARCHAR50", "WRVtUOJJ##C_CHAR", "WRVtUOJJ##C_CHAR10", "WRVtUOJJ##C_STRING", "WRVtUOJJ##C_STRING20", "WRVtUOJJ##C_TEXT", "WRVtUOJJ##C_TEXT30", "WRVtUOJJ##C_BINARY", "WRVtUOJJ##C_BINARY100", "WRVtUOJJ##C_VARBINARY", "WRVtUOJJ##C_BOOL", "WRVtUOJJ##C_TIMESTAMP", "WRVtUOJJ##C_DATE", "WRVtUOJJ##C_DATETIME", "WRVtUOJJ##C_TIME", "WRVtUOJJ##C_ARRAY", "WRVtUOJJ##C_OBJECT", "WRVtUOJJ##C_GEOGRAPHY" ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "WRVtUOJJ##C_STRING", "bR7FFoGP##c_string", "pWb6v6ouDyl-UhRJdJipR$$_mVg_lY1cligHsFfEPbhc##NZHSC_LEVEL_1", "vN1MoCgoLOFSU9NWdN8wE$$AF-z9UJQtaBJxzIcz2Zmb##C_STR_UTILS", "WRVtUOJJ##C_NUM", "WRVtUOJJ##C_NUM10", "WRVtUOJJ##C_DEC", "WRVtUOJJ##C_NUMERIC", "WRVtUOJJ##C_INT", "WRVtUOJJ##C_INTEGER", "WRVtUOJJ##C_DOUBLE", "WRVtUOJJ##C_FLOAT", "WRVtUOJJ##C_COUBLE_PRECISION", "WRVtUOJJ##C_REAL", "WRVtUOJJ##C_VARCHAR", "WRVtUOJJ##C_VARCHAR50", "WRVtUOJJ##C_CHAR", "WRVtUOJJ##C_CHAR10", "WRVtUOJJ##C_STRING", "WRVtUOJJ##C_STRING20", "WRVtUOJJ##C_TEXT", "WRVtUOJJ##C_TEXT30", "WRVtUOJJ##C_BINARY", "WRVtUOJJ##C_BINARY100", "WRVtUOJJ##C_VARBINARY", "WRVtUOJJ##C_BOOL", "WRVtUOJJ##C_TIMESTAMP", "WRVtUOJJ##C_DATE", "WRVtUOJJ##C_DATETIME", "WRVtUOJJ##C_TIME", "WRVtUOJJ##C_ARRAY", "WRVtUOJJ##C_OBJECT", "WRVtUOJJ##C_GEOGRAPHY" ],
         "headAlias" : "in0"
       },
       "ports" : {
@@ -3503,124 +3504,29 @@
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
-              "name" : "C_ADD_EXPRESSION",
+              "name" : "C_ANY_VALUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_AVG",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_CORR",
               "dataType" : {
                 "type" : "Float"
               }
             }, {
-              "name" : "C_CONCAT_EXPRESSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_BOOL_EXPRESSION",
-              "dataType" : {
-                "type" : "Boolean"
-              }
-            }, {
-              "name" : "C_NUM",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NUM10",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_DEC",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NUMERIC",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_INT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_INTEGER",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_DOUBLE",
+              "name" : "C_MIN",
               "dataType" : {
                 "type" : "Float"
               }
             }, {
-              "name" : "C_FLOAT",
+              "name" : "C_COVARPOP",
               "dataType" : {
                 "type" : "Float"
-              }
-            }, {
-              "name" : "C_COUBLE_PRECISION",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "C_REAL",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "C_VARCHAR",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_VARCHAR50",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CHAR",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CHAR10",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_STRING",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_STRING20",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_TEXT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_TEXT30",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_BINARY",
-              "dataType" : {
-                "type" : "Binary"
-              }
-            }, {
-              "name" : "C_BINARY100",
-              "dataType" : {
-                "type" : "Binary"
-              }
-            }, {
-              "name" : "C_VARBINARY",
-              "dataType" : {
-                "type" : "Binary"
               }
             }, {
               "name" : "C_BOOL",
@@ -3628,82 +3534,12 @@
                 "type" : "Boolean"
               }
             }, {
-              "name" : "C_TIMESTAMP",
-              "dataType" : {
-                "type" : "Timestamp"
-              }
-            }, {
-              "name" : "C_DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "C_DATETIME",
-              "dataType" : {
-                "type" : "Timestamp"
-              }
-            }, {
-              "name" : "C_TIME",
-              "dataType" : {
-                "type" : "Time"
-              }
-            }, {
-              "name" : "C_ARRAY",
-              "dataType" : {
-                "type" : "Array"
-              }
-            }, {
-              "name" : "C_OBJECT",
+              "name" : "C_TOP_2_ACCUMULATE",
               "dataType" : {
                 "type" : "Object"
               }
             }, {
-              "name" : "C_GEOGRAPHY",
-              "dataType" : {
-                "type" : "Geography"
-              }
-            }, {
-              "name" : "COL_FOR_1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "COL_FOR_2",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "COL_FOR_3",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "COL_FOR_4",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_IF",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_MACRO_1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_MACRO_FROM_DEPENDENT_PROJECTS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_MACRO_LANGUAGE_SPECIFIC_CONCAT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_DBT_DATE_CALL",
+              "name" : "C_STRING",
               "dataType" : {
                 "type" : "String"
               }
@@ -4066,21 +3902,361 @@
         "isCustomOutputSchema" : false
       }
     },
+    "GZCiYFjPqrJbMNWqZR4F3$$J1_odAZ_I2NHvzq2jyRS_" : {
+      "id" : "GZCiYFjPqrJbMNWqZR4F3$$J1_odAZ_I2NHvzq2jyRS_",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Aggregate_1",
+        "slug" : "Aggregate_1",
+        "x" : 620,
+        "y" : 900,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "ANY_VALUE(c_int)"
+          },
+          "alias" : "c_any_value"
+        }, {
+          "expression" : {
+            "expression" : "AVG(c_int)"
+          },
+          "alias" : "c_avg"
+        }, {
+          "expression" : {
+            "expression" : "CORR(c_int, c_num)"
+          },
+          "alias" : "c_corr"
+        }, {
+          "expression" : {
+            "expression" : "APPROX_PERCENTILE(c_int, 0.1)+regr_slope(c_int, c_num)+REGR_AVGX(c_int, c_num)+bitand_agg(c_int)+bitand_agg(c_int)+min(c_int)+median(c_int)+max(c_int)+COUNT(DISTINCT c_int)+STDDEV(c_int)+var_samp(c_int)"
+          },
+          "alias" : "c_min"
+        }, {
+          "expression" : {
+            "expression" : "COVAR_POP(c_int, c_num)"
+          },
+          "alias" : "c_covarpop"
+        }, {
+          "expression" : {
+            "expression" : "boolor_agg(c_bool) or boolor_agg(c_bool)"
+          },
+          "alias" : "c_bool"
+        }, {
+          "expression" : {
+            "expression" : "approx_top_k_accumulate(c_int, 2)"
+          },
+          "alias" : "c_top_2_accumulate"
+        }, {
+          "expression" : {
+            "expression" : "ANY_VALUE(c_string)"
+          },
+          "alias" : "c_string"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : "c_avg > 0"
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "NWE7notIq91XtuQcYvu1-$$4QFBvMAi4FZqMDiIMSTcf##c_bool", "NWE7notIq91XtuQcYvu1-$$4QFBvMAi4FZqMDiIMSTcf##c_int", "NWE7notIq91XtuQcYvu1-$$4QFBvMAi4FZqMDiIMSTcf##c_num", "NWE7notIq91XtuQcYvu1-$$4QFBvMAi4FZqMDiIMSTcf##c_string" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "c_bool"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NWE7notIq91XtuQcYvu1-$$4QFBvMAi4FZqMDiIMSTcf",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ADD_EXPRESSION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_CONCAT_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BOOL_EXPRESSION",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            }, {
+              "name" : "COL_FOR_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COL_FOR_2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COL_FOR_3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COL_FOR_4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_IF",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACRO_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACRO_FROM_DEPENDENT_PROJECTS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_MACRO_LANGUAGE_SPECIFIC_CONCAT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_DBT_DATE_CALL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CONFIG_VALUE_IN_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNCTION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "OyVRwXKDQ_YQO6Kl1ji_E$$2e3qzuTkKMUFOhlzbHuC0",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_ANY_VALUE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_AVG",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_CORR",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_MIN",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COVARPOP",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TOP_2_ACCUMULATE",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
     "iD-WEsnVkmi7QvEVgXI4L$$yNRk3V9YYVHFTIS9qTYcq" : {
       "id" : "iD-WEsnVkmi7QvEVgXI4L$$yNRk3V9YYVHFTIS9qTYcq",
       "component" : "Reformat",
       "metadata" : {
         "label" : "AllStunningOne",
-        "x" : 620,
+        "x" : 420,
         "y" : 880,
         "phase" : 0,
         "macroDependencies" : [ "SQL_SnowflakeSharedBasic.qa_concat_function_main", "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column", "SQL_SnoflakeMainProject.qa_concat_macro_column", "SQL_SnoflakeMainProject.snowflake__language_specific_concat", "dbt_date.snowflake__day_name" ]
       },
       "properties" : {
-        "columnsSelector" : [ "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUM", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUM10", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DEC", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUMERIC", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_INT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_INTEGER", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DOUBLE", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_FLOAT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_COUBLE_PRECISION", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_REAL", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARCHAR", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARCHAR50", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_CHAR", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_CHAR10", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_STRING", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_STRING20", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TEXT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TEXT30", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BINARY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BINARY100", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARBINARY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BOOL", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TIMESTAMP", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DATE", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DATETIME", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TIME", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_ARRAY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_OBJECT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_GEOGRAPHY" ],
+        "columnsSelector" : [ "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUM", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUM10", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DEC", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUMERIC", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_INT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_INTEGER", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DOUBLE", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_FLOAT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_COUBLE_PRECISION", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_REAL", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARCHAR", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TEXT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_ARRAY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_OBJECT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARCHAR50", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_CHAR", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_CHAR10", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_STRING", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_STRING20", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TEXT30", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BINARY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BINARY100", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARBINARY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BOOL", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TIMESTAMP", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DATE", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DATETIME", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TIME", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_GEOGRAPHY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##c_int", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##c_float" ],
         "expressions" : [ {
           "expression" : {
-            "expression" : "ST_PERIMETER(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))')) + ST_HAUSDORFFDISTANCE(ST_POINT(0, 0), ST_POINT(0, 1)) + EXTRACT(YEAR FROM TO_TIMESTAMP('2013-05-08T23:39:20.123-07:00')) + DATE_PART(QUARTER, '2013-05-08'::DATE) + abs(-10) + ceil(10.12) + floor(12.5656) + mod(10, 2) + round(-975.975, 1) + SIGN(-1.35E-10) + truncate(4.23423) + truncate(4.23423, 2) + cbrt(8) + exp(2) + factorial(1) + pow(2, 3) + power(1, 2) + sqrt(4) + square(2) + ln(10) + log(10, 10) + COS(0) + COS(PI() / 3) + COS(RADIANS(90)) + SIN(0) + SIN(PI() / 3) + SIN(RADIANS(90)) - HAVERSINE(40.7127, -74.0059, 34.05, -118.25) + DAYOFMONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP)"
+            "expression" : "CONDITIONAL_CHANGE_EVENT(c_int = 10) OVER (ORDER BY c_string) + NTH_VALUE(c_int, 2) OVER (PARTITION BY c_float ORDER BY c_string) + RANK() OVER (ORDER BY c_int DESC) + DENSE_RANK() OVER (ORDER BY c_int DESC) + ST_PERIMETER(TO_GEOGRAPHY('POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))')) + ST_HAUSDORFFDISTANCE(ST_POINT(0, 0), ST_POINT(0, 1)) + EXTRACT(YEAR FROM TO_TIMESTAMP('2013-05-08T23:39:20.123-07:00')) + DATE_PART(QUARTER, '2013-05-08'::DATE) + abs(-10) + ceil(10.12) + floor(12.5656) + mod(10, 2) + round(-975.975, 1) + SIGN(-1.35E-10) + truncate(4.23423) + truncate(4.23423, 2) + cbrt(8) + exp(2) + factorial(1) + pow(2, 3) + power(1, 2) + sqrt(4) + square(2) + ln(10) + log(10, 10) + COS(0) + COS(PI() / 3) + COS(RADIANS(90)) + SIN(0) + SIN(PI() / 3) + SIN(RADIANS(90)) - HAVERSINE(40.7127, -74.0059, 34.05, -118.25) + DAYOFMONTH('2013-05-08T23:39:20.123-07:00'::TIMESTAMP)"
           },
           "alias" : "c_add_expression"
         }, {
@@ -4145,7 +4321,7 @@
           "alias" : "C_REAL"
         }, {
           "expression" : {
-            "expression" : "C_VARCHAR"
+            "expression" : "concat(C_VARCHAR, C_TEXT, C_ARRAY[0], C_OBJECT['outer_key2']['inner_key2'], C_VARCHAR)"
           },
           "alias" : "C_VARCHAR"
         }, {
@@ -4305,6 +4481,16 @@
             "expression" : "{{ dbt_date.snowflake__day_name('c_date', 2) }}"
           },
           "alias" : "c_dbt_date_call"
+        }, {
+          "expression" : {
+            "expression" : "{{ v_expression }}"
+          },
+          "alias" : "c_config_value_in_expression"
+        }, {
+          "expression" : {
+            "expression" : "js_factorial(c_int)%MULTIPLY1(c_float, 2)"
+          },
+          "alias" : "c_call_function"
         } ]
       },
       "ports" : {
@@ -4670,6 +4856,16 @@
               "dataType" : {
                 "type" : "String"
               }
+            }, {
+              "name" : "C_CONFIG_VALUE_IN_EXPRESSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CALL_FUNCTION",
+              "dataType" : {
+                "type" : "Float"
+              }
             } ]
           },
           "slug" : "out"
@@ -5032,12 +5228,6 @@
     "target" : "iD-WEsnVkmi7QvEVgXI4L$$yNRk3V9YYVHFTIS9qTYcq",
     "targetPort" : "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd"
   }, {
-    "id" : "bN4RA0SUDLBaRPfEXlYXt",
-    "source" : "iD-WEsnVkmi7QvEVgXI4L$$yNRk3V9YYVHFTIS9qTYcq",
-    "sourcePort" : "t-v4NmQ8d0Ji4idg4Acmt$$bOwYkUGIdmrzboo-KG-Jp",
-    "target" : "Join_2##O8FQOcwx",
-    "targetPort" : "bR7FFoGP"
-  }, {
     "id" : "URPxMj-MDgzg-XhFDjU3_",
     "source" : "y6q5fcbmqjSLb838FIWbR",
     "sourcePort" : "tZUGNLhMRBdQRudNGuG41",
@@ -5109,6 +5299,18 @@
     "sourcePort" : "LaIyAyhftcaZ4fC9x4W_S$$4nSNIWPuNUdNhCxFTYdU_",
     "target" : "WuqOPfjkz-ihNfoYS1uWL$$PA3ezswES61z6reSW-rt5",
     "targetPort" : "itXBMabe5OuWi91to2Tyh$$uXoeASxh8yfyx1XQJsRza"
+  }, {
+    "id" : "YoS8jj3pUP89sXjuXu672",
+    "source" : "iD-WEsnVkmi7QvEVgXI4L$$yNRk3V9YYVHFTIS9qTYcq",
+    "sourcePort" : "t-v4NmQ8d0Ji4idg4Acmt$$bOwYkUGIdmrzboo-KG-Jp",
+    "target" : "GZCiYFjPqrJbMNWqZR4F3$$J1_odAZ_I2NHvzq2jyRS_",
+    "targetPort" : "NWE7notIq91XtuQcYvu1-$$4QFBvMAi4FZqMDiIMSTcf"
+  }, {
+    "id" : "wptQbdNBQuVgEwARYe6KQ",
+    "source" : "GZCiYFjPqrJbMNWqZR4F3$$J1_odAZ_I2NHvzq2jyRS_",
+    "sourcePort" : "OyVRwXKDQ_YQO6Kl1ji_E$$2e3qzuTkKMUFOhlzbHuC0",
+    "target" : "Join_2##O8FQOcwx",
+    "targetPort" : "bR7FFoGP"
   } ],
   "component" : "Model"
 }
