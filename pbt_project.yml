@@ -104,6 +104,16 @@ sqlModels:
     createdAt: '2023-04-12 17:14:50'
     modifiedAt: '2023-04-12 17:14:50'
 sqlMacros:
+  .prophecy/metadata/sqlmacros/combine_multiple_tables:
+    name: combine_multiple_tables
+    macroType: query
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - macros/functions/qa_concat_function_main.sql
+    - macros/functions/functions.yml
+    createdAt: '2023-05-24 13:53:36'
+    modifiedAt: '2023-05-24 13:53:36'
   .prophecy/metadata/sqlmacros/qa_concat_function_main:
     name: qa_concat_function_main
     macroType: expression

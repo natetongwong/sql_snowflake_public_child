@@ -49,6 +49,14 @@ Join_3 AS (
 
 ),
 
+tpcds_1_env_uitesting_shared AS (
+
+  SELECT * 
+  
+  FROM {{ ref('tpcds_1_env_uitesting_shared')}}
+
+),
+
 env_uitesting_main_model_snow_1 AS (
 
   SELECT * 
@@ -248,9 +256,9 @@ Join_1 AS (
   FROM env_uitesting_shared_child_model_1 AS in0
   INNER JOIN env_uitesting_shared_mid_model_1 AS in1
      ON in0.c_num = in1.c_num
-  INNER JOIN model_with_only_seed_base AS in2
+  LEFT JOIN model_with_only_seed_base AS in2
      ON in1.C_STRING != in2.CODE_1
-  INNER JOIN env_uitesting_main_model_snow_1 AS in3
+  RIGHT JOIN env_uitesting_main_model_snow_1 AS in3
      ON in1.C_INT != in3.C_NUM
 
 ),
@@ -342,49 +350,46 @@ Join_4 AS (
 
 ),
 
-Join_2 AS (
+SQLStatement_1 AS (
 
   SELECT 
-    in0.C_NUM AS C_NUM,
-    in0.C_NUM10 AS C_NUM10,
-    in0.C_DEC AS C_DEC,
-    in0.C_NUMERIC AS C_NUMERIC,
-    in0.C_INT AS C_INT,
-    in0.C_INTEGER AS C_INTEGER,
-    in0.C_DOUBLE AS C_DOUBLE,
-    in0.C_FLOAT AS C_FLOAT,
-    in0.C_COUBLE_PRECISION AS C_COUBLE_PRECISION,
-    in0.C_REAL AS C_REAL,
-    in0.C_VARCHAR AS C_VARCHAR,
-    in0.C_VARCHAR50 AS C_VARCHAR50,
-    in0.C_CHAR AS C_CHAR,
-    in0.C_CHAR10 AS C_CHAR10,
-    in0.C_STRING AS C_STRING,
-    in0.C_STRING20 AS C_STRING20,
-    in0.C_TEXT AS C_TEXT,
-    in0.C_TEXT30 AS C_TEXT30,
-    in0.C_BINARY AS C_BINARY,
-    in0.C_BINARY100 AS C_BINARY100,
-    in0.C_VARBINARY AS C_VARBINARY,
-    in0.C_BOOL AS C_BOOL,
-    in0.C_TIMESTAMP AS C_TIMESTAMP,
-    in0.C_DATE AS C_DATE,
-    in0.C_DATETIME AS C_DATETIME,
-    in0.C_TIME AS C_TIME,
-    in0.C_ARRAY AS C_ARRAY,
-    in0.C_OBJECT AS C_OBJECT,
-    in0.C_GEOGRAPHY AS C_GEOGRAPHY
+    t1.c_int1,
+    t1.c_int2,
+    t1.c_string
   
-  FROM Join_1 AS in0
-  INNER JOIN Aggregate_1 AS in1
-     ON in0.C_STRING != in1.c_string
-  INNER JOIN Join_3 AS in2
-     ON in1.c_string != in2.NZHSC_LEVEL_1
-  INNER JOIN Join_4 AS in3
-     ON in2.NZHSC_LEVEL_1 != in3.C_STR_UTILS
+  FROM (
+    SELECT *
+    
+    FROM (
+      SELECT 
+        seq2(0) AS c_int1,
+        seq1(1) AS c_int2,
+        randstr(5, random()) AS c_string
+      
+      FROM table(generator(rowCount => 132))
+     )
+    
+    ORDER BY seq2(0)
+    
+    LIMIT 100
+    
+    OFFSET 25
+   ) AS t1
+  
+  WHERE t1.c_int1 > (
+    SELECT count(*)
+    
+    FROM tpcds_1_env_uitesting_shared
+   )
+
+),
+
+combine_multiple_tables_1 AS (
+
+  {{ SQL_SnowflakeSharedBasic.combine_multiple_tables(table_1 = 'Join_1', table_2 = 'SQLStatement_1', table_3 = 'Aggregate_1', table_4 = 'Join_3', table_5 = 'Join_4', col_table_1 = 'c_int') }}
 
 )
 
 SELECT *
 
-FROM Join_2
+FROM combine_multiple_tables_1
