@@ -6,6 +6,14 @@ WITH ALL_TYPE_TABLE_SMALLER AS (
 
 ),
 
+qa_database_qa_simple_schema_ungrouped_customers AS (
+
+  SELECT * 
+  
+  FROM qa_database.qa_simple_schema.ungrouped_customers
+
+),
+
 Reformat_1 AS (
 
   SELECT * 
@@ -56,8 +64,10 @@ Join_1 AS (
     in1.C_GEOGRAPHY AS C_GEOGRAPHY
   
   FROM raw_customers AS in0
-  INNER JOIN Reformat_1 AS in1
+  RIGHT JOIN Reformat_1 AS in1
      ON in0.first_name != in1.C_STRING
+  LEFT JOIN qa_database_qa_simple_schema_ungrouped_customers AS in2
+     ON in1.C_STRING != in2.first_name
 
 )
 

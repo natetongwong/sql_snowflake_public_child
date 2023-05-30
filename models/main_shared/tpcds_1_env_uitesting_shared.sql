@@ -4,51 +4,27 @@
   })
 }}
 
-WITH SQLStatement_0 AS (
+WITH CATALOG_SALES AS (
 
-  SELECT 
-    substr(w_warehouse_name, 1, 20),
-    sm_type,
-    cc_name,
-    sum(CASE
-      WHEN (cs_ship_date_sk - cs_sold_date_sk <= 30)
-        THEN 1
-      ELSE 0
-    END) AS "30 days",
-    sum(CASE
-      WHEN (cs_ship_date_sk - cs_sold_date_sk > 30) and 
-                       (cs_ship_date_sk - cs_sold_date_sk <= 60)
-        THEN 1
-      ELSE 0
-    END) AS "31-60 days",
-    sum(CASE
-      WHEN (cs_ship_date_sk - cs_sold_date_sk > 60) and 
-                       (cs_ship_date_sk - cs_sold_date_sk <= 90)
-        THEN 1
-      ELSE 0
-    END) AS "61-90 days",
-    sum(CASE
-      WHEN (cs_ship_date_sk - cs_sold_date_sk > 90) and
-                       (cs_ship_date_sk - cs_sold_date_sk <= 120)
-        THEN 1
-      ELSE 0
-    END) AS "91-120 days",
-    sum(CASE
-      WHEN (cs_ship_date_sk - cs_sold_date_sk > 120)
-        THEN 1
-      ELSE 0
-    END) AS ">120 days"
+  SELECT * 
   
-  FROM catalog_sales, warehouse, ship_mode, call_center, date_dim
+  FROM {{ source('SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL', 'CATALOG_SALES') }}
+
+),
+
+DATE_DIM AS (
+
+  SELECT * 
   
-  WHERE d_month_seq BETWEEN 1200 and 1200 + 11 and cs_ship_date_sk = d_date_sk and cs_warehouse_sk = w_warehouse_sk and cs_ship_mode_sk = sm_ship_mode_sk and cs_call_center_sk = cc_call_center_sk
+  FROM {{ source('SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL', 'DATE_DIM') }}
+
+),
+
+CALL_CENTER AS (
+
+  SELECT * 
   
-  GROUP BY 
-    substr(w_warehouse_name, 1, 20), sm_type, cc_name
-  
-  ORDER BY substr(w_warehouse_name, 1, 20), sm_type, cc_name
-  
-  LIMIT 100
+  FROM {{ source('SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL', 'CALL_CENTER') }}
 
 ),
 
@@ -74,6 +50,83 @@ SQLStatement_3 AS (
 
 ),
 
+SHIP_MODE AS (
+
+  SELECT * 
+  
+  FROM {{ source('SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL', 'SHIP_MODE') }}
+
+),
+
+WAREHOUSE AS (
+
+  SELECT * 
+  
+  FROM {{ source('SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL', 'WAREHOUSE') }}
+
+),
+
+SQLStatement_0 AS (
+
+  SELECT 
+    substr(w_warehouse_name, 1, 20),
+    sm_type,
+    cc_name,
+    sum(CASE
+      WHEN (cs_ship_date_sk - cs_sold_date_sk <= 30)
+        THEN 1
+      ELSE 0
+    END) AS "30 days",
+    sum(
+      CASE
+        WHEN (cs_ship_date_sk - cs_sold_date_sk > 30) and
+         (cs_ship_date_sk - cs_sold_date_sk <= 60)
+          THEN 1
+        ELSE 0
+      END) AS "31-60 days",
+    sum(
+      CASE
+        WHEN (cs_ship_date_sk - cs_sold_date_sk > 60) and
+         (cs_ship_date_sk - cs_sold_date_sk <= 90)
+          THEN 1
+        ELSE 0
+      END) AS "61-90 days",
+    sum(
+      CASE
+        WHEN (cs_ship_date_sk - cs_sold_date_sk > 90) and
+         (cs_ship_date_sk - cs_sold_date_sk <= 120)
+          THEN 1
+        ELSE 0
+      END) AS "91-120 days",
+    sum(CASE
+      WHEN (cs_ship_date_sk - cs_sold_date_sk > 120)
+        THEN 1
+      ELSE 0
+    END) AS ">120 days"
+  
+  FROM CATALOG_SALES, WAREHOUSE, SHIP_MODE, CALL_CENTER, DATE_DIM
+  
+  WHERE d_month_seq BETWEEN 1200 and 1200 + 11 and cs_ship_date_sk = d_date_sk and cs_warehouse_sk = w_warehouse_sk and cs_ship_mode_sk = sm_ship_mode_sk and cs_call_center_sk = cc_call_center_sk
+  
+  GROUP BY 
+    substr(w_warehouse_name, 1, 20), sm_type, cc_name
+  
+  ORDER BY substr(w_warehouse_name, 1, 20), sm_type, cc_name
+  
+  LIMIT 100
+
+),
+
+Limit_1 AS (
+
+  SELECT * 
+  
+  FROM SQLStatement_0 AS in0
+  
+  LIMIT 10
+
+),
+
 Join_1 AS (
 
   SELECT 
@@ -87,7 +140,7 @@ Join_1 AS (
     in0.SM_TYPE AS SM_TYPE,
     in0.CC_NAME AS CC_NAME
   
-  FROM SQLStatement_0 AS in0
+  FROM Limit_1 AS in0
   INNER JOIN SQLStatement_3 AS in1
      ON in0.SM_TYPE != in1.I_ITEM_DESC
 
@@ -544,7 +597,7 @@ SQLStatement_2 AS (
         FROM customer_address, customer
         
         WHERE ca_address_sk = c_current_addr_sk and
-                                                                    c_preferred_cust_flag = 'Y'
+         c_preferred_cust_flag = 'Y'
         
         GROUP BY ca_zip
         
@@ -585,8 +638,8 @@ SQLStatement_4 AS (
   
   FROM web_sales AS ws1, date_dim, customer_address, web_site
   
-  WHERE d_date BETWEEN '2002-2-01' and 
-             dateadd(DAY, 60, to_date('2002-2-01')) and ws1.ws_ship_date_sk = d_date_sk and ws1.ws_ship_addr_sk = ca_address_sk and ca_state = 'CA' and ws1.ws_web_site_sk = web_site_sk and web_company_name = 'pri' and EXISTS
+  WHERE d_date BETWEEN '2002-2-01' and
+   dateadd(DAY, 60, to_date('2002-2-01')) and ws1.ws_ship_date_sk = d_date_sk and ws1.ws_ship_addr_sk = ca_address_sk and ca_state = 'CA' and ws1.ws_web_site_sk = web_site_sk and web_company_name = 'pri' and EXISTS
   (
     SELECT *
     
@@ -616,14 +669,14 @@ SQLStatement_5 AS (
   
   FROM web_sales, item, date_dim
   
-  WHERE i_manufact_id = 939 and i_item_sk = ws_item_sk and d_date BETWEEN '2002-02-16' and 
-          dateadd(DAY, 90, to_date('2002-02-16')) and d_date_sk = ws_sold_date_sk and ws_ext_discount_amt > (
+  WHERE i_manufact_id = 939 and i_item_sk = ws_item_sk and d_date BETWEEN '2002-02-16' and
+   dateadd(DAY, 90, to_date('2002-02-16')) and d_date_sk = ws_sold_date_sk and ws_ext_discount_amt > (
     SELECT 1.3 * avg(ws_ext_discount_amt)
     
     FROM web_sales, date_dim
     
     WHERE ws_item_sk = i_item_sk and d_date BETWEEN '2002-02-16' and
-                                 dateadd(DAY, 90, to_date('2002-02-16')) and d_date_sk = ws_sold_date_sk
+     dateadd(DAY, 90, to_date('2002-02-16')) and d_date_sk = ws_sold_date_sk
    )
   
   ORDER BY sum(ws_ext_discount_amt)
@@ -987,28 +1040,28 @@ SQLStatement_7 AS (
   
   FROM store_sales, store, customer_demographics, customer_address, date_dim
   
-  WHERE s_store_sk = ss_store_sk and  ss_sold_date_sk = d_date_sk and d_year = 2001 and  
-         ((cd_demo_sk = ss_cdemo_sk and 
-           cd_marital_status = 'D' and 
-           cd_education_status = 'Secondary' and 
-           ss_sales_price BETWEEN 100.0 and 150.0) or
-          (cd_demo_sk = ss_cdemo_sk and 
-           cd_marital_status = 'W' and 
-           cd_education_status = '2 yr Degree' and 
-           ss_sales_price BETWEEN 50.0 and 100.0) or 
-         (cd_demo_sk = ss_cdemo_sk and 
-           cd_marital_status = 'U' and 
-           cd_education_status = 'Unknown' and 
-           ss_sales_price BETWEEN 150.0 and 200.0)) and
-         ((ss_addr_sk = ca_address_sk and
-          ca_country = 'United States' and
-          ca_state IN ('VA', 'MI', 'FL') and ss_net_profit BETWEEN 0 and 2000) or
-          (ss_addr_sk = ca_address_sk and
-          ca_country = 'United States' and
-          ca_state IN ('SC', 'GA', 'MN') and ss_net_profit BETWEEN 150 and 3000) or
-          (ss_addr_sk = ca_address_sk and
-          ca_country = 'United States' and
-          ca_state IN ('OK', 'IA', 'TX') and ss_net_profit BETWEEN 50 and 25000))
+  WHERE s_store_sk = ss_store_sk and ss_sold_date_sk = d_date_sk and d_year = 2001 and
+   ((cd_demo_sk = ss_cdemo_sk and
+   cd_marital_status = 'D' and
+   cd_education_status = 'Secondary' and
+   ss_sales_price BETWEEN 100.0 and 150.0) or
+   (cd_demo_sk = ss_cdemo_sk and
+   cd_marital_status = 'W' and
+   cd_education_status = '2 yr Degree' and
+   ss_sales_price BETWEEN 50.0 and 100.0) or
+   (cd_demo_sk = ss_cdemo_sk and
+   cd_marital_status = 'U' and
+   cd_education_status = 'Unknown' and
+   ss_sales_price BETWEEN 150.0 and 200.0)) and
+   ((ss_addr_sk = ca_address_sk and
+   ca_country = 'United States' and
+   ca_state IN ('VA', 'MI', 'FL') and ss_net_profit BETWEEN 0 and 2000) or
+   (ss_addr_sk = ca_address_sk and
+   ca_country = 'United States' and
+   ca_state IN ('SC', 'GA', 'MN') and ss_net_profit BETWEEN 150 and 3000) or
+   (ss_addr_sk = ca_address_sk and
+   ca_country = 'United States' and
+   ca_state IN ('OK', 'IA', 'TX') and ss_net_profit BETWEEN 50 and 25000))
 
 ),
 

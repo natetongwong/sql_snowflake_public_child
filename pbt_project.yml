@@ -31,7 +31,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-04-21 13:53:13'
-    modifiedAt: '2023-05-17 17:20:45'
+    modifiedAt: '2023-05-30 15:24:04'
     author: abhisheks+shared@prophecy.io
 functions:
   author: null
@@ -45,6 +45,96 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1:
     name: env_uitesting_shared_useallmodel_1
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -57,6 +147,96 @@ sqlModels:
     modifiedAt: '2023-04-12 11:39:43'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1:
     name: env_uitesting_shared_parent_model_1
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -69,6 +249,96 @@ sqlModels:
     modifiedAt: '2023-04-12 10:12:50'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1:
     name: env_uitesting_shared_child_model_1
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -81,6 +351,96 @@ sqlModels:
     modifiedAt: '2023-04-12 11:24:53'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1:
     name: env_uitesting_shared_mid_model_1
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -93,6 +453,36 @@ sqlModels:
     modifiedAt: '2023-04-12 10:14:29'
   .prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared:
     name: tpcds_1_env_uitesting_shared
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: I_ITEM_ID
+        dataType:
+          type: String
+      - name: I_ITEM_DESC
+        dataType:
+          type: String
+      - name: I_CATEGORY
+        dataType:
+          type: String
+      - name: I_CLASS
+        dataType:
+          type: String
+      - name: I_CURRENT_PRICE
+        dataType:
+          type: Number
+      - name: ITEMREVENUE
+        dataType:
+          type: Number
+      - name: REVENUERATIO
+        dataType:
+          type: Number
+      - name: SM_TYPE
+        dataType:
+          type: String
+      - name: CC_NAME
+        dataType:
+          type: String
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -104,6 +494,16 @@ sqlModels:
     createdAt: '2023-04-12 17:14:50'
     modifiedAt: '2023-04-12 17:14:50'
 sqlMacros:
+  .prophecy/metadata/sqlmacros/combine_multiple_tables:
+    name: combine_multiple_tables
+    macroType: query
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - macros/functions/qa_concat_function_main.sql
+    - macros/functions/functions.yml
+    createdAt: '2023-05-24 13:53:36'
+    modifiedAt: '2023-05-24 13:53:36'
   .prophecy/metadata/sqlmacros/qa_concat_function_main:
     name: qa_concat_function_main
     macroType: expression
@@ -127,6 +527,18 @@ sqlMacros:
 sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_customers:
     name: raw_customers
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -134,6 +546,29 @@ sqlSeeds:
     createdAt: '2023-04-12 10:12:13'
     modifiedAt: '2023-04-12 10:12:13'
 sqlSources:
+  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SCHEMA:
+    name: QA_DATABASE.QA_SCHEMA
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-05-25 04:39:06'
+    modifiedAt: '2023-05-25 04:39:06'
+    tables:
+    - name: ALL_COMPLEX_COLUMN_NAMES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: c-1 comlex(1)*&^%$[#]{@!}~-= name int
+          dataType:
+            type: Number
+        - name: c-1 com[l]{ex}(1)*&^%$#@!~-= name string
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-05-25 04:39:06'
+      modifiedAt: '2023-05-25 04:39:06'
   .prophecy/metadata/sqlsources/QA_DATABASE_QA_SIMPLE_SCHEMA:
     name: QA_DATABASE.QA_SIMPLE_SCHEMA
     description: null
@@ -144,16 +579,603 @@ sqlSources:
     modifiedAt: '2023-04-12 10:13:07'
     tables:
     - name: ALL_TYPE_TABLE_SMALLER
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-12 10:13:07'
       modifiedAt: '2023-04-12 10:13:07'
     - name: TABLE_COMPLEX_TYPES_1
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_ARRAY_INT
+          dataType:
+            type: Array
+        - name: C_ARRAY_FLOAT
+          dataType:
+            type: Array
+        - name: C_ARRAY_STRING
+          dataType:
+            type: Array
+        - name: C_ARRAY_OBJECT
+          dataType:
+            type: Array
+        - name: C_ARRAY_ARRAY
+          dataType:
+            type: Array
+        - name: C_ARRAY_VARIANT
+          dataType:
+            type: Array
+        - name: C_OBJECT_1
+          dataType:
+            type: Object
+        - name: C_OBJECT_2
+          dataType:
+            type: Object
+        - name: C_OBJECT_3
+          dataType:
+            type: Object
+        - name: C_OBJECT_4
+          dataType:
+            type: Object
+        - name: C_OBJECT_5
+          dataType:
+            type: Object
+        - name: C_VARIANT_1
+          dataType:
+            type: Variant
+        - name: C_VARIANT_2
+          dataType:
+            type: Variant
+        - name: C_VARIANT_3
+          dataType:
+            type: Variant
+        - name: C_VARIANT_4
+          dataType:
+            type: Variant
+        - name: C_VARIANT_5
+          dataType:
+            type: Variant
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-04-21 17:46:30'
       modifiedAt: '2023-04-21 17:46:30'
-sqlUnreferencedSources: {}
+  .prophecy/metadata/sqlsources/SNOWFLAKE_SAMPLE_DATA_TPCDS_SF10TCL:
+    name: SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-05-25 04:41:58'
+    modifiedAt: '2023-05-25 04:41:58'
+    tables:
+    - name: CATALOG_SALES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CS_SOLD_DATE_SK
+          dataType:
+            type: Number
+        - name: CS_SOLD_TIME_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_DATE_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_CDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_HDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_ADDR_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_CDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_HDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_ADDR_SK
+          dataType:
+            type: Number
+        - name: CS_CALL_CENTER_SK
+          dataType:
+            type: Number
+        - name: CS_CATALOG_PAGE_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_MODE_SK
+          dataType:
+            type: Number
+        - name: CS_WAREHOUSE_SK
+          dataType:
+            type: Number
+        - name: CS_ITEM_SK
+          dataType:
+            type: Number
+        - name: CS_PROMO_SK
+          dataType:
+            type: Number
+        - name: CS_ORDER_NUMBER
+          dataType:
+            type: Number
+        - name: CS_QUANTITY
+          dataType:
+            type: Number
+        - name: CS_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: CS_LIST_PRICE
+          dataType:
+            type: Number
+        - name: CS_SALES_PRICE
+          dataType:
+            type: Number
+        - name: CS_EXT_DISCOUNT_AMT
+          dataType:
+            type: Number
+        - name: CS_EXT_SALES_PRICE
+          dataType:
+            type: Number
+        - name: CS_EXT_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: CS_EXT_LIST_PRICE
+          dataType:
+            type: Number
+        - name: CS_EXT_TAX
+          dataType:
+            type: Number
+        - name: CS_COUPON_AMT
+          dataType:
+            type: Number
+        - name: CS_EXT_SHIP_COST
+          dataType:
+            type: Number
+        - name: CS_NET_PAID
+          dataType:
+            type: Number
+        - name: CS_NET_PAID_INC_TAX
+          dataType:
+            type: Number
+        - name: CS_NET_PAID_INC_SHIP
+          dataType:
+            type: Number
+        - name: CS_NET_PAID_INC_SHIP_TAX
+          dataType:
+            type: Number
+        - name: CS_NET_PROFIT
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-05-25 04:41:58'
+      modifiedAt: '2023-05-25 04:41:58'
+    - name: WAREHOUSE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: W_WAREHOUSE_SK
+          dataType:
+            type: Number
+        - name: W_WAREHOUSE_ID
+          dataType:
+            type: String
+        - name: W_WAREHOUSE_NAME
+          dataType:
+            type: String
+        - name: W_WAREHOUSE_SQ_FT
+          dataType:
+            type: Number
+        - name: W_STREET_NUMBER
+          dataType:
+            type: String
+        - name: W_STREET_NAME
+          dataType:
+            type: String
+        - name: W_STREET_TYPE
+          dataType:
+            type: String
+        - name: W_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: W_CITY
+          dataType:
+            type: String
+        - name: W_COUNTY
+          dataType:
+            type: String
+        - name: W_STATE
+          dataType:
+            type: String
+        - name: W_ZIP
+          dataType:
+            type: String
+        - name: W_COUNTRY
+          dataType:
+            type: String
+        - name: W_GMT_OFFSET
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-05-25 04:42:05'
+      modifiedAt: '2023-05-25 04:42:05'
+    - name: CALL_CENTER
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CC_CALL_CENTER_SK
+          dataType:
+            type: Number
+        - name: CC_CALL_CENTER_ID
+          dataType:
+            type: String
+        - name: CC_REC_START_DATE
+          dataType:
+            type: Date
+        - name: CC_REC_END_DATE
+          dataType:
+            type: Date
+        - name: CC_CLOSED_DATE_SK
+          dataType:
+            type: Number
+        - name: CC_OPEN_DATE_SK
+          dataType:
+            type: Number
+        - name: CC_NAME
+          dataType:
+            type: String
+        - name: CC_CLASS
+          dataType:
+            type: String
+        - name: CC_EMPLOYEES
+          dataType:
+            type: Number
+        - name: CC_SQ_FT
+          dataType:
+            type: Number
+        - name: CC_HOURS
+          dataType:
+            type: String
+        - name: CC_MANAGER
+          dataType:
+            type: String
+        - name: CC_MKT_ID
+          dataType:
+            type: Number
+        - name: CC_MKT_CLASS
+          dataType:
+            type: String
+        - name: CC_MKT_DESC
+          dataType:
+            type: String
+        - name: CC_MARKET_MANAGER
+          dataType:
+            type: String
+        - name: CC_DIVISION
+          dataType:
+            type: Number
+        - name: CC_DIVISION_NAME
+          dataType:
+            type: String
+        - name: CC_COMPANY
+          dataType:
+            type: Number
+        - name: CC_COMPANY_NAME
+          dataType:
+            type: String
+        - name: CC_STREET_NUMBER
+          dataType:
+            type: String
+        - name: CC_STREET_NAME
+          dataType:
+            type: String
+        - name: CC_STREET_TYPE
+          dataType:
+            type: String
+        - name: CC_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: CC_CITY
+          dataType:
+            type: String
+        - name: CC_COUNTY
+          dataType:
+            type: String
+        - name: CC_STATE
+          dataType:
+            type: String
+        - name: CC_ZIP
+          dataType:
+            type: String
+        - name: CC_COUNTRY
+          dataType:
+            type: String
+        - name: CC_GMT_OFFSET
+          dataType:
+            type: Number
+        - name: CC_TAX_PERCENTAGE
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-05-25 04:42:16'
+      modifiedAt: '2023-05-25 04:42:16'
+    - name: DATE_DIM
+      schema:
+        providerType: snowflake
+        fields:
+        - name: D_DATE_SK
+          dataType:
+            type: Number
+        - name: D_DATE_ID
+          dataType:
+            type: String
+        - name: D_DATE
+          dataType:
+            type: Date
+        - name: D_MONTH_SEQ
+          dataType:
+            type: Number
+        - name: D_WEEK_SEQ
+          dataType:
+            type: Number
+        - name: D_QUARTER_SEQ
+          dataType:
+            type: Number
+        - name: D_YEAR
+          dataType:
+            type: Number
+        - name: D_DOW
+          dataType:
+            type: Number
+        - name: D_MOY
+          dataType:
+            type: Number
+        - name: D_DOM
+          dataType:
+            type: Number
+        - name: D_QOY
+          dataType:
+            type: Number
+        - name: D_FY_YEAR
+          dataType:
+            type: Number
+        - name: D_FY_QUARTER_SEQ
+          dataType:
+            type: Number
+        - name: D_FY_WEEK_SEQ
+          dataType:
+            type: Number
+        - name: D_DAY_NAME
+          dataType:
+            type: String
+        - name: D_QUARTER_NAME
+          dataType:
+            type: String
+        - name: D_HOLIDAY
+          dataType:
+            type: String
+        - name: D_WEEKEND
+          dataType:
+            type: String
+        - name: D_FOLLOWING_HOLIDAY
+          dataType:
+            type: String
+        - name: D_FIRST_DOM
+          dataType:
+            type: Number
+        - name: D_LAST_DOM
+          dataType:
+            type: Number
+        - name: D_SAME_DAY_LY
+          dataType:
+            type: Number
+        - name: D_SAME_DAY_LQ
+          dataType:
+            type: Number
+        - name: D_CURRENT_DAY
+          dataType:
+            type: String
+        - name: D_CURRENT_WEEK
+          dataType:
+            type: String
+        - name: D_CURRENT_MONTH
+          dataType:
+            type: String
+        - name: D_CURRENT_QUARTER
+          dataType:
+            type: String
+        - name: D_CURRENT_YEAR
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-05-25 04:42:32'
+      modifiedAt: '2023-05-25 04:42:32'
+    - name: SHIP_MODE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: SM_SHIP_MODE_SK
+          dataType:
+            type: Number
+        - name: SM_SHIP_MODE_ID
+          dataType:
+            type: String
+        - name: SM_TYPE
+          dataType:
+            type: String
+        - name: SM_CODE
+          dataType:
+            type: String
+        - name: SM_CARRIER
+          dataType:
+            type: String
+        - name: SM_CONTRACT
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-05-25 04:42:39'
+      modifiedAt: '2023-05-25 04:42:39'
+  .prophecy/metadata/sqlsources/SNOWFLAKE_SAMPLE_DATA_TPCH_SF10:
+    name: SNOWFLAKE_SAMPLE_DATA.TPCH_SF10
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-05-25 04:39:55'
+    modifiedAt: '2023-05-25 04:39:55'
+    tables:
+    - name: SUPPLIER
+      schema:
+        providerType: snowflake
+        fields:
+        - name: S_SUPPKEY
+          dataType:
+            type: Number
+        - name: S_NAME
+          dataType:
+            type: String
+        - name: S_ADDRESS
+          dataType:
+            type: String
+        - name: S_NATIONKEY
+          dataType:
+            type: Number
+        - name: S_PHONE
+          dataType:
+            type: String
+        - name: S_ACCTBAL
+          dataType:
+            type: Number
+        - name: S_COMMENT
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-05-25 04:39:55'
+      modifiedAt: '2023-05-25 04:39:55'
+sqlUnreferencedSources:
+  .prophecy/metadata/sqlunreferencedsources/qa_database_qa_simple_schema_ungrouped_customers:
+    name: qa_database.qa_simple_schema.ungrouped_customers
+    schema:
+      providerType: snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - prophecy-sources/unreferencedSources.yml
+    createdAt: '2023-05-19 06:30:31'
+    modifiedAt: '2023-05-19 06:30:31'
 sqlPipeline:
   name: sqlPipeline
   description: null

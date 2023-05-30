@@ -15,6 +15,10 @@
     },
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
+      "retries" : 1,
+      "retry_delay" : 2,
+      "retry_exponential_backoff" : true,
+      "max_retry_delay" : 2,
       "ignore_first_depends_on_past" : true,
       "do_xcom_push" : true
     },
@@ -24,8 +28,15 @@
     "availableFabrics" : [ {
       "id" : "5295",
       "name" : "dev_airflow"
+    }, {
+      "id" : "6470",
+      "name" : "airflow_composer1"
     } ],
-    "catchup" : true
+    "catchup" : true,
+    "tags" : [ "rel_snow_airflow", "snowflake" ],
+    "startDate" : "2023-01-01",
+    "endDate" : "2080-01-01",
+    "scheduleTimeZone" : "Pacific/Midway"
   },
   "processes" : {
     "AOvMbF8Q8Q4feQNnbPjHp$$x6jB7wObb4MI7Ys7281fL" : {

@@ -1,3 +1,18 @@
 ---
 version: 2
-unreferencedSources: []
+unreferencedSources:
+- name: "qa_database.qa_simple_schema.ungrouped_customers"
+  columns:
+  - name: "id"
+    description: "test"
+    tags:
+    - "test"
+    - "myid"
+    dataType:
+      type: "Number"
+  - name: "first_name"
+    dataType:
+      type: "String"
+  - name: "last_name"
+    dataType:
+      type: "String"
