@@ -146,3 +146,401 @@ sources:
     - name: "C_VARIANT_5"
       dataType:
         type: "Variant"
+- name: "QA_DATABASE.QA_SCHEMA"
+  database: "QA_DATABASE"
+  schema: "QA_SCHEMA"
+  config:
+    enabled: true
+  tables:
+  - name: "ALL_COMPLEX_COLUMN_NAMES"
+    columns:
+    - name: "c-1 comlex(1)*&^%$[#]{@!}~-= name int"
+      dataType:
+        type: "Number"
+    - name: "c-1 com[l]{ex}(1)*&^%$#@!~-= name string"
+      dataType:
+        type: "String"
+- name: "SNOWFLAKE_SAMPLE_DATA.TPCH_SF10"
+  database: "SNOWFLAKE_SAMPLE_DATA"
+  schema: "TPCH_SF10"
+  config:
+    enabled: true
+  tables:
+  - name: "SUPPLIER"
+    columns:
+    - name: "S_SUPPKEY"
+      dataType:
+        type: "Number"
+    - name: "S_NAME"
+      dataType:
+        type: "String"
+    - name: "S_ADDRESS"
+      dataType:
+        type: "String"
+    - name: "S_NATIONKEY"
+      dataType:
+        type: "Number"
+    - name: "S_PHONE"
+      dataType:
+        type: "String"
+    - name: "S_ACCTBAL"
+      dataType:
+        type: "Number"
+    - name: "S_COMMENT"
+      dataType:
+        type: "String"
+- name: "SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL"
+  database: "SNOWFLAKE_SAMPLE_DATA"
+  schema: "TPCDS_SF10TCL"
+  config:
+    enabled: true
+  tables:
+  - name: "CATALOG_SALES"
+    columns:
+    - name: "CS_SOLD_DATE_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_SOLD_TIME_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_SHIP_DATE_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_BILL_CUSTOMER_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_BILL_CDEMO_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_BILL_HDEMO_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_BILL_ADDR_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_SHIP_CUSTOMER_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_SHIP_CDEMO_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_SHIP_HDEMO_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_SHIP_ADDR_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_CALL_CENTER_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_CATALOG_PAGE_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_SHIP_MODE_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_WAREHOUSE_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_ITEM_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_PROMO_SK"
+      dataType:
+        type: "Number"
+    - name: "CS_ORDER_NUMBER"
+      dataType:
+        type: "Number"
+    - name: "CS_QUANTITY"
+      dataType:
+        type: "Number"
+    - name: "CS_WHOLESALE_COST"
+      dataType:
+        type: "Number"
+    - name: "CS_LIST_PRICE"
+      dataType:
+        type: "Number"
+    - name: "CS_SALES_PRICE"
+      dataType:
+        type: "Number"
+    - name: "CS_EXT_DISCOUNT_AMT"
+      dataType:
+        type: "Number"
+    - name: "CS_EXT_SALES_PRICE"
+      dataType:
+        type: "Number"
+    - name: "CS_EXT_WHOLESALE_COST"
+      dataType:
+        type: "Number"
+    - name: "CS_EXT_LIST_PRICE"
+      dataType:
+        type: "Number"
+    - name: "CS_EXT_TAX"
+      dataType:
+        type: "Number"
+    - name: "CS_COUPON_AMT"
+      dataType:
+        type: "Number"
+    - name: "CS_EXT_SHIP_COST"
+      dataType:
+        type: "Number"
+    - name: "CS_NET_PAID"
+      dataType:
+        type: "Number"
+    - name: "CS_NET_PAID_INC_TAX"
+      dataType:
+        type: "Number"
+    - name: "CS_NET_PAID_INC_SHIP"
+      dataType:
+        type: "Number"
+    - name: "CS_NET_PAID_INC_SHIP_TAX"
+      dataType:
+        type: "Number"
+    - name: "CS_NET_PROFIT"
+      dataType:
+        type: "Number"
+  - name: "WAREHOUSE"
+    columns:
+    - name: "W_WAREHOUSE_SK"
+      dataType:
+        type: "Number"
+    - name: "W_WAREHOUSE_ID"
+      dataType:
+        type: "String"
+    - name: "W_WAREHOUSE_NAME"
+      dataType:
+        type: "String"
+    - name: "W_WAREHOUSE_SQ_FT"
+      dataType:
+        type: "Number"
+    - name: "W_STREET_NUMBER"
+      dataType:
+        type: "String"
+    - name: "W_STREET_NAME"
+      dataType:
+        type: "String"
+    - name: "W_STREET_TYPE"
+      dataType:
+        type: "String"
+    - name: "W_SUITE_NUMBER"
+      dataType:
+        type: "String"
+    - name: "W_CITY"
+      dataType:
+        type: "String"
+    - name: "W_COUNTY"
+      dataType:
+        type: "String"
+    - name: "W_STATE"
+      dataType:
+        type: "String"
+    - name: "W_ZIP"
+      dataType:
+        type: "String"
+    - name: "W_COUNTRY"
+      dataType:
+        type: "String"
+    - name: "W_GMT_OFFSET"
+      dataType:
+        type: "Number"
+  - name: "CALL_CENTER"
+    columns:
+    - name: "CC_CALL_CENTER_SK"
+      dataType:
+        type: "Number"
+    - name: "CC_CALL_CENTER_ID"
+      dataType:
+        type: "String"
+    - name: "CC_REC_START_DATE"
+      dataType:
+        type: "Date"
+    - name: "CC_REC_END_DATE"
+      dataType:
+        type: "Date"
+    - name: "CC_CLOSED_DATE_SK"
+      dataType:
+        type: "Number"
+    - name: "CC_OPEN_DATE_SK"
+      dataType:
+        type: "Number"
+    - name: "CC_NAME"
+      dataType:
+        type: "String"
+    - name: "CC_CLASS"
+      dataType:
+        type: "String"
+    - name: "CC_EMPLOYEES"
+      dataType:
+        type: "Number"
+    - name: "CC_SQ_FT"
+      dataType:
+        type: "Number"
+    - name: "CC_HOURS"
+      dataType:
+        type: "String"
+    - name: "CC_MANAGER"
+      dataType:
+        type: "String"
+    - name: "CC_MKT_ID"
+      dataType:
+        type: "Number"
+    - name: "CC_MKT_CLASS"
+      dataType:
+        type: "String"
+    - name: "CC_MKT_DESC"
+      dataType:
+        type: "String"
+    - name: "CC_MARKET_MANAGER"
+      dataType:
+        type: "String"
+    - name: "CC_DIVISION"
+      dataType:
+        type: "Number"
+    - name: "CC_DIVISION_NAME"
+      dataType:
+        type: "String"
+    - name: "CC_COMPANY"
+      dataType:
+        type: "Number"
+    - name: "CC_COMPANY_NAME"
+      dataType:
+        type: "String"
+    - name: "CC_STREET_NUMBER"
+      dataType:
+        type: "String"
+    - name: "CC_STREET_NAME"
+      dataType:
+        type: "String"
+    - name: "CC_STREET_TYPE"
+      dataType:
+        type: "String"
+    - name: "CC_SUITE_NUMBER"
+      dataType:
+        type: "String"
+    - name: "CC_CITY"
+      dataType:
+        type: "String"
+    - name: "CC_COUNTY"
+      dataType:
+        type: "String"
+    - name: "CC_STATE"
+      dataType:
+        type: "String"
+    - name: "CC_ZIP"
+      dataType:
+        type: "String"
+    - name: "CC_COUNTRY"
+      dataType:
+        type: "String"
+    - name: "CC_GMT_OFFSET"
+      dataType:
+        type: "Number"
+    - name: "CC_TAX_PERCENTAGE"
+      dataType:
+        type: "Number"
+  - name: "DATE_DIM"
+    columns:
+    - name: "D_DATE_SK"
+      dataType:
+        type: "Number"
+    - name: "D_DATE_ID"
+      dataType:
+        type: "String"
+    - name: "D_DATE"
+      dataType:
+        type: "Date"
+    - name: "D_MONTH_SEQ"
+      dataType:
+        type: "Number"
+    - name: "D_WEEK_SEQ"
+      dataType:
+        type: "Number"
+    - name: "D_QUARTER_SEQ"
+      dataType:
+        type: "Number"
+    - name: "D_YEAR"
+      dataType:
+        type: "Number"
+    - name: "D_DOW"
+      dataType:
+        type: "Number"
+    - name: "D_MOY"
+      dataType:
+        type: "Number"
+    - name: "D_DOM"
+      dataType:
+        type: "Number"
+    - name: "D_QOY"
+      dataType:
+        type: "Number"
+    - name: "D_FY_YEAR"
+      dataType:
+        type: "Number"
+    - name: "D_FY_QUARTER_SEQ"
+      dataType:
+        type: "Number"
+    - name: "D_FY_WEEK_SEQ"
+      dataType:
+        type: "Number"
+    - name: "D_DAY_NAME"
+      dataType:
+        type: "String"
+    - name: "D_QUARTER_NAME"
+      dataType:
+        type: "String"
+    - name: "D_HOLIDAY"
+      dataType:
+        type: "String"
+    - name: "D_WEEKEND"
+      dataType:
+        type: "String"
+    - name: "D_FOLLOWING_HOLIDAY"
+      dataType:
+        type: "String"
+    - name: "D_FIRST_DOM"
+      dataType:
+        type: "Number"
+    - name: "D_LAST_DOM"
+      dataType:
+        type: "Number"
+    - name: "D_SAME_DAY_LY"
+      dataType:
+        type: "Number"
+    - name: "D_SAME_DAY_LQ"
+      dataType:
+        type: "Number"
+    - name: "D_CURRENT_DAY"
+      dataType:
+        type: "String"
+    - name: "D_CURRENT_WEEK"
+      dataType:
+        type: "String"
+    - name: "D_CURRENT_MONTH"
+      dataType:
+        type: "String"
+    - name: "D_CURRENT_QUARTER"
+      dataType:
+        type: "String"
+    - name: "D_CURRENT_YEAR"
+      dataType:
+        type: "String"
+  - name: "SHIP_MODE"
+    columns:
+    - name: "SM_SHIP_MODE_SK"
+      dataType:
+        type: "Number"
+    - name: "SM_SHIP_MODE_ID"
+      dataType:
+        type: "String"
+    - name: "SM_TYPE"
+      dataType:
+        type: "String"
+    - name: "SM_CODE"
+      dataType:
+        type: "String"
+    - name: "SM_CARRIER"
+      dataType:
+        type: "String"
+    - name: "SM_CONTRACT"
+      dataType:
+        type: "String"

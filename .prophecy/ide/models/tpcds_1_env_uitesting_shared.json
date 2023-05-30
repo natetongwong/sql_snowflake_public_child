@@ -17,6 +17,108 @@
     }
   },
   "processes" : {
+    "eKIDf5PmPBoQTgmqdrj_q" : {
+      "id" : "eKIDf5PmPBoQTgmqdrj_q",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "WAREHOUSE",
+        "slug" : "WAREHOUSE",
+        "x" : -280,
+        "y" : 300,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "WAREHOUSE",
+          "sourceType" : "Source",
+          "sourceName" : "SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "VewHTL9cnwiB4OHl6J0h_",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "W_WAREHOUSE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_STREET_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STREET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STREET_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_SUITE_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_ZIP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_GMT_OFFSET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
     "SQLStatement_5##BzfUpivM" : {
       "id" : "SQLStatement_5##BzfUpivM",
       "component" : "SQLStatement",
@@ -43,6 +145,208 @@
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EXCESS_DISCOUNT_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "CmZML93m3CuIokoCF4EhK" : {
+      "id" : "CmZML93m3CuIokoCF4EhK",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "CATALOG_SALES",
+        "slug" : "CATALOG_SALES",
+        "x" : -280,
+        "y" : 160,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "CATALOG_SALES",
+          "sourceType" : "Source",
+          "sourceName" : "SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "sg8meWdNlBo5skHbOZ0AH",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "CS_SOLD_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SOLD_TIME_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_CUSTOMER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_CDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_HDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_ADDR_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_CUSTOMER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_CDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_HDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_ADDR_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_CALL_CENTER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_CATALOG_PAGE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_MODE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_WAREHOUSE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_ITEM_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_PROMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_ORDER_NUMBER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_QUANTITY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_WHOLESALE_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_LIST_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SALES_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_DISCOUNT_AMT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_SALES_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_WHOLESALE_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_LIST_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_TAX",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_COUPON_AMT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_SHIP_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID_INC_TAX",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID_INC_SHIP",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID_INC_SHIP_TAX",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PROFIT",
               "dataType" : {
                 "type" : "Number"
               }
@@ -704,6 +1008,294 @@
         "isCustomOutputSchema" : false
       }
     },
+    "GNxuVdzvab-WVRN6H9Jbi" : {
+      "id" : "GNxuVdzvab-WVRN6H9Jbi",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "DATE_DIM",
+        "slug" : "DATE_DIM",
+        "x" : -300,
+        "y" : 580,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "DATE_DIM",
+          "sourceType" : "Source",
+          "sourceName" : "SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "zjm3Qz2DZdIjGp73krfRj",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "D_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DATE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "D_MONTH_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_WEEK_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_QUARTER_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_YEAR",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DOW",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_MOY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DOM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_QOY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_FY_YEAR",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_FY_QUARTER_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_FY_WEEK_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_QUARTER_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_HOLIDAY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_WEEKEND",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_FOLLOWING_HOLIDAY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_FIRST_DOM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_LAST_DOM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_SAME_DAY_LY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_SAME_DAY_LQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_CURRENT_DAY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_WEEK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_MONTH",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_QUARTER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_YEAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "fS1YOjRl80iUXEZ6aluwP$$NmkLcnuqKNPTCx2Mw4Oya" : {
+      "id" : "fS1YOjRl80iUXEZ6aluwP$$NmkLcnuqKNPTCx2Mw4Oya",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "Limit_1",
+        "slug" : "Limit_1",
+        "x" : 160,
+        "y" : 400,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "10"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Jb0qU5Uq8TuMhSY3CO4U-$$gJpc0wDhe4hMAsuvFpEKJ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUBSTR(W_WAREHOUSE_NAME, 1, 20)",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "30 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "31-60 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "61-90 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "91-120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : ">120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UIbwiHehqaKfK3nKxD_3g$$ODaOoVawsk51mFY33k4yI",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUBSTR(W_WAREHOUSE_NAME, 1, 20)",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "30 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "31-60 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "61-90 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "91-120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : ">120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
     "SQLStatement_6##NxzeSalb" : {
       "id" : "SQLStatement_6##NxzeSalb",
       "component" : "SQLStatement",
@@ -1156,8 +1748,8 @@
       "component" : "Join",
       "metadata" : {
         "label" : "Join_1",
-        "x" : 280,
-        "y" : 620,
+        "x" : 320,
+        "y" : 600,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -1468,13 +2060,200 @@
         "isCustomOutputSchema" : false
       }
     },
+    "GzqPZ64CEnDCtO6RMBqUm" : {
+      "id" : "GzqPZ64CEnDCtO6RMBqUm",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "CALL_CENTER",
+        "slug" : "CALL_CENTER",
+        "x" : -280,
+        "y" : 440,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "CALL_CENTER",
+          "sourceType" : "Source",
+          "sourceName" : "SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "XH0U733Uo-i6aYjm5nGU7",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "CC_CALL_CENTER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_CALL_CENTER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_REC_START_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "CC_REC_END_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "CC_CLOSED_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_OPEN_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_EMPLOYEES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_HOURS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MANAGER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MKT_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_MKT_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MKT_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MARKET_MANAGER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_DIVISION",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_DIVISION_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_COMPANY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_COMPANY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STREET_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STREET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STREET_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_SUITE_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_COUNTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_ZIP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_GMT_OFFSET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_TAX_PERCENTAGE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
     "SQLStatement_0##O6Jh1wks" : {
       "id" : "SQLStatement_0##O6Jh1wks",
       "component" : "SQLStatement",
       "metadata" : {
         "label" : "SQLStatement_0",
-        "x" : 40,
-        "y" : 340,
+        "x" : 20,
+        "y" : 320,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -1483,11 +2262,611 @@
           "path" : "",
           "id" : "",
           "language" : "sql",
-          "content" : "select  \n   substr(w_warehouse_name,1,20)\n  ,sm_type\n  ,cc_name\n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk <= 30 ) then 1 else 0 end)  as \"30 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 30) and \n                 (cs_ship_date_sk - cs_sold_date_sk <= 60) then 1 else 0 end )  as \"31-60 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 60) and \n                 (cs_ship_date_sk - cs_sold_date_sk <= 90) then 1 else 0 end)  as \"61-90 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 90) and\n                 (cs_ship_date_sk - cs_sold_date_sk <= 120) then 1 else 0 end)  as \"91-120 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk  > 120) then 1 else 0 end)  as \">120 days\" \nfrom\n   catalog_sales\n  ,warehouse\n  ,ship_mode\n  ,call_center\n  ,date_dim\nwhere\n    d_month_seq between 1200 and 1200 + 11\nand cs_ship_date_sk   = d_date_sk\nand cs_warehouse_sk   = w_warehouse_sk\nand cs_ship_mode_sk   = sm_ship_mode_sk\nand cs_call_center_sk = cc_call_center_sk\ngroup by\n   substr(w_warehouse_name,1,20)\n  ,sm_type\n  ,cc_name\norder by substr(w_warehouse_name,1,20)\n        ,sm_type\n        ,cc_name\nlimit 100"
+          "content" : "select  \n   substr(w_warehouse_name,1,20)\n  ,sm_type\n  ,cc_name\n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk <= 30 ) then 1 else 0 end)  as \"30 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 30) and \n                 (cs_ship_date_sk - cs_sold_date_sk <= 60) then 1 else 0 end )  as \"31-60 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 60) and \n                 (cs_ship_date_sk - cs_sold_date_sk <= 90) then 1 else 0 end)  as \"61-90 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk > 90) and\n                 (cs_ship_date_sk - cs_sold_date_sk <= 120) then 1 else 0 end)  as \"91-120 days\" \n  ,sum(case when (cs_ship_date_sk - cs_sold_date_sk  > 120) then 1 else 0 end)  as \">120 days\" \nfrom\n   CATALOG_SALES\n  ,WAREHOUSE\n  ,SHIP_MODE\n  ,CALL_CENTER\n  ,DATE_DIM\nwhere\n    d_month_seq between 1200 and 1200 + 11\nand cs_ship_date_sk   = d_date_sk\nand cs_warehouse_sk   = w_warehouse_sk\nand cs_ship_mode_sk   = sm_ship_mode_sk\nand cs_call_center_sk = cc_call_center_sk\ngroup by\n   substr(w_warehouse_name,1,20)\n  ,sm_type\n  ,cc_name\norder by substr(w_warehouse_name,1,20)\n        ,sm_type\n        ,cc_name\nlimit 100"
         } ]
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "7zuwYTDw_WSOOh7rF4hwm$$ARIwiF0wOliXgnWlIlvgW",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "CS_SOLD_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SOLD_TIME_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_CUSTOMER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_CDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_HDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_BILL_ADDR_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_CUSTOMER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_CDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_HDEMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_ADDR_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_CALL_CENTER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_CATALOG_PAGE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SHIP_MODE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_WAREHOUSE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_ITEM_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_PROMO_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_ORDER_NUMBER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_QUANTITY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_WHOLESALE_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_LIST_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_SALES_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_DISCOUNT_AMT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_SALES_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_WHOLESALE_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_LIST_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_TAX",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_COUPON_AMT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_EXT_SHIP_COST",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID_INC_TAX",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID_INC_SHIP",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PAID_INC_SHIP_TAX",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CS_NET_PROFIT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "CATALOG_SALES"
+        }, {
+          "id" : "cQoF6JEHslnS4Gb4RWB0G$$Xbl-DnR2pJj77iIMUGb0Z",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "W_WAREHOUSE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_WAREHOUSE_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "W_STREET_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STREET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STREET_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_SUITE_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_ZIP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "W_GMT_OFFSET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "WAREHOUSE"
+        }, {
+          "id" : "HirMgKkkvlZU0hxwcr8Ux$$xiJQNsW6C4eUVdD5IoMKw",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "CC_CALL_CENTER_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_CALL_CENTER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_REC_START_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "CC_REC_END_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "CC_CLOSED_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_OPEN_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_EMPLOYEES",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_SQ_FT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_HOURS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MANAGER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MKT_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_MKT_CLASS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MKT_DESC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_MARKET_MANAGER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_DIVISION",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_DIVISION_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_COMPANY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_COMPANY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STREET_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STREET_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STREET_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_SUITE_NUMBER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_COUNTY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_ZIP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_GMT_OFFSET",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CC_TAX_PERCENTAGE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "CALL_CENTER"
+        }, {
+          "id" : "7dE-xxBKXZvbaQnU20D1q$$ZmCsJD-GPyjcoCS0fN-S-",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "D_DATE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DATE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "D_MONTH_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_WEEK_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_QUARTER_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_YEAR",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DOW",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_MOY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DOM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_QOY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_FY_YEAR",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_FY_QUARTER_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_FY_WEEK_SEQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_DAY_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_QUARTER_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_HOLIDAY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_WEEKEND",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_FOLLOWING_HOLIDAY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_FIRST_DOM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_LAST_DOM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_SAME_DAY_LY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_SAME_DAY_LQ",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "D_CURRENT_DAY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_WEEK",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_MONTH",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_QUARTER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "D_CURRENT_YEAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "DATE_DIM"
+        }, {
+          "id" : "Zw9PrU1dE9HnHj_M03Qis$$mh3prmRc_usmRiWWG8J1O",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "SM_SHIP_MODE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_SHIP_MODE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_CARRIER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_CONTRACT",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "SHIP_MODE"
+        } ],
         "outputs" : [ {
           "id" : "xu2Zqbcr",
           "schema" : {
@@ -2089,15 +3468,71 @@
         } ],
         "isCustomOutputSchema" : false
       }
+    },
+    "eGXBVbT7wekIFk_4HTgmM" : {
+      "id" : "eGXBVbT7wekIFk_4HTgmM",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "SHIP_MODE",
+        "slug" : "SHIP_MODE",
+        "x" : -200,
+        "y" : 720,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "SHIP_MODE",
+          "sourceType" : "Source",
+          "sourceName" : "SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Ea4U4NO13L4nd9tkzbMuO",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "SM_SHIP_MODE_SK",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SM_SHIP_MODE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_CARRIER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_CONTRACT",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
     }
   },
   "connections" : [ {
-    "id" : "LRegG8PW",
-    "source" : "SQLStatement_0##O6Jh1wks",
-    "sourcePort" : "xu2Zqbcr",
-    "target" : "Join_1##fEQboaro",
-    "targetPort" : "g5OSRC93"
-  }, {
     "id" : "TLGggURy",
     "source" : "SQLStatement_3##blpGNJdt",
     "sourcePort" : "A4YrsjMS",
@@ -2181,6 +3616,48 @@
     "sourcePort" : "FMq5Dkal",
     "target" : "tpcds_1_env_uitesting_shared##wmn2S9Qx",
     "targetPort" : "nWAbtYHu"
+  }, {
+    "id" : "3dSLsju-GFbDsRoS_OVQd",
+    "source" : "CmZML93m3CuIokoCF4EhK",
+    "sourcePort" : "sg8meWdNlBo5skHbOZ0AH",
+    "target" : "SQLStatement_0##O6Jh1wks",
+    "targetPort" : "7zuwYTDw_WSOOh7rF4hwm$$ARIwiF0wOliXgnWlIlvgW"
+  }, {
+    "id" : "CsldZCuYZ3ZMu-oB3GfhH",
+    "source" : "eKIDf5PmPBoQTgmqdrj_q",
+    "sourcePort" : "VewHTL9cnwiB4OHl6J0h_",
+    "target" : "SQLStatement_0##O6Jh1wks",
+    "targetPort" : "cQoF6JEHslnS4Gb4RWB0G$$Xbl-DnR2pJj77iIMUGb0Z"
+  }, {
+    "id" : "85J7mTdcdsRhnoPra9fkw",
+    "source" : "GzqPZ64CEnDCtO6RMBqUm",
+    "sourcePort" : "XH0U733Uo-i6aYjm5nGU7",
+    "target" : "SQLStatement_0##O6Jh1wks",
+    "targetPort" : "HirMgKkkvlZU0hxwcr8Ux$$xiJQNsW6C4eUVdD5IoMKw"
+  }, {
+    "id" : "83RaGc_q37td1V2LMfq9o",
+    "source" : "GNxuVdzvab-WVRN6H9Jbi",
+    "sourcePort" : "zjm3Qz2DZdIjGp73krfRj",
+    "target" : "SQLStatement_0##O6Jh1wks",
+    "targetPort" : "7dE-xxBKXZvbaQnU20D1q$$ZmCsJD-GPyjcoCS0fN-S-"
+  }, {
+    "id" : "90uk65nIGnP4yelyU4aGu",
+    "source" : "eGXBVbT7wekIFk_4HTgmM",
+    "sourcePort" : "Ea4U4NO13L4nd9tkzbMuO",
+    "target" : "SQLStatement_0##O6Jh1wks",
+    "targetPort" : "Zw9PrU1dE9HnHj_M03Qis$$mh3prmRc_usmRiWWG8J1O"
+  }, {
+    "id" : "IAv2rkJduMrrc-ysVW3gM$$svJEyrXCuljlRi8NGiekT",
+    "source" : "SQLStatement_0##O6Jh1wks",
+    "sourcePort" : "xu2Zqbcr",
+    "target" : "fS1YOjRl80iUXEZ6aluwP$$NmkLcnuqKNPTCx2Mw4Oya",
+    "targetPort" : "Jb0qU5Uq8TuMhSY3CO4U-$$gJpc0wDhe4hMAsuvFpEKJ"
+  }, {
+    "id" : "GwU9KuSZKstZyFMwkgUQ9",
+    "source" : "fS1YOjRl80iUXEZ6aluwP$$NmkLcnuqKNPTCx2Mw4Oya",
+    "sourcePort" : "UIbwiHehqaKfK3nKxD_3g$$ODaOoVawsk51mFY33k4yI",
+    "target" : "Join_1##fEQboaro",
+    "targetPort" : "g5OSRC93"
   } ],
   "component" : "Model"
 }

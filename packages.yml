@@ -1,5 +1,5 @@
 ---
 packages:
-- revision: "SQL_ParentSnowflake/v3.0.1.0"
+- revision: "SQL_ParentSnowflake/v3.0.2.0"
   git: "https://github.com/abhisheks-prophecy/sql_snowflake_public_parent"
   subdirectory: ""
