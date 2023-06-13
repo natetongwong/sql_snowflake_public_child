@@ -18,7 +18,7 @@ jobs:
     cloudProvider: null
     jobSize: null
     scheduleCron: 0 0 17 * *
-    timeout: null
+    timeout: 3600
     alerting:
       emails: ''
       onStart: false
@@ -31,7 +31,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-04-21 13:53:13'
-    modifiedAt: '2023-06-13 04:38:39'
+    modifiedAt: '2023-06-13 13:09:20'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_ProphecyManaged_Airflow:
     name: REL_SNOW_ProphecyManaged_Airflow
@@ -55,7 +55,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-13 04:55:07'
-    modifiedAt: '2023-06-13 10:05:25'
+    modifiedAt: '2023-06-13 15:21:16'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_MWAA:
     name: REL_SNOW_MWAA
@@ -79,7 +79,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-13 07:30:40'
-    modifiedAt: '2023-06-13 10:05:17'
+    modifiedAt: '2023-06-13 13:17:01'
     author: abhisheks+shared@prophecy.io
 functions:
   author: null

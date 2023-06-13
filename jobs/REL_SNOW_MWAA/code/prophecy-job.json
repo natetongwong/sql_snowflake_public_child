@@ -45,8 +45,8 @@
       "metadata" : {
         "label" : "DBT_0",
         "slug" : "DBT_0",
-        "x" : 280,
-        "y" : 180
+        "x" : 240,
+        "y" : 100
       },
       "ports" : {
         "inputs" : [ {
@@ -152,8 +152,8 @@
       "metadata" : {
         "label" : "Script_1",
         "slug" : "Script_1",
-        "x" : 60,
-        "y" : 160
+        "x" : 40,
+        "y" : 80
       },
       "ports" : {
         "inputs" : [ {
@@ -178,8 +178,8 @@
       "metadata" : {
         "label" : "Script_2",
         "slug" : "Script_2",
-        "x" : 520,
-        "y" : 220
+        "x" : 280,
+        "y" : 260
       },
       "ports" : {
         "inputs" : [ {
@@ -197,19 +197,109 @@
         "language" : "bash",
         "taskId" : null
       }
+    },
+    "Yz9BDZhHnr54o_7k-9JAf" : {
+      "id" : "Yz9BDZhHnr54o_7k-9JAf",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0_1",
+        "slug" : "DBT_0_1",
+        "x" : -140,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ySQzg5z-4qOOarlNktsu8",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "NOoeUa8MstCjE0vkZwZQ_",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "email" : "abhisheks@prophecy.io",
+        "email_on_failure" : true,
+        "email_on_retry" : false,
+        "retries" : 1,
+        "retry_delay" : 1,
+        "retry_exponential_backoff" : true,
+        "max_retry_delay" : 1,
+        "execution_timeout_int" : 3600,
+        "trigger_rule" : "always"
+      },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "warnErrorOptions" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : "Cautious",
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "24116",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : true,
+        "noStaticParser" : null,
+        "runTest" : false,
+        "select" : null,
+        "recordTimingInfo" : "output.profile",
+        "fullRefresh" : true,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "profile" : "run_profile_snowflake",
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : "100",
+        "sqlFabricId" : "5287",
+        "gitEntityValue" : "main",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "models" : null,
+        "target" : null,
+        "exclude" : "env_uitesting_shared_excluded_model",
+        "runDeps" : true,
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : "2",
+        "warnError" : null,
+        "currentProjectModels" : "",
+        "profilesDir" : "/home/airflow/gcs/data",
+        "taskId" : null,
+        "logPath" : "logssnow.txt",
+        "storeFailures" : null
+      }
     }
   },
   "connections" : [ {
-    "id" : "rOVND1eP1F0oiMl9cvJcl",
+    "id" : "S6kcKfUzYxb16WXDozi-j$$vRWrWljxOsOlp2gecaj8W",
+    "source" : "Yz9BDZhHnr54o_7k-9JAf",
+    "target" : "31Fb6oXR1c5vVKpN6lHcl$$ucuev2ie29z2YxzgEhMd3",
+    "sourcePort" : "NOoeUa8MstCjE0vkZwZQ_",
+    "targetPort" : "SLY9esG3sPXr6G8u5Ep2-$$YeV4ayBe6T4v3I9ksRp_z"
+  }, {
+    "id" : "dHuiUTSQnTvLvNC4_9qdY$$xUSC6-q9x3Jw7f6dZvrIA",
     "source" : "31Fb6oXR1c5vVKpN6lHcl$$ucuev2ie29z2YxzgEhMd3",
     "target" : "1OKFK1PV0yqhIwRcK0w4q$$Ykh-4q_FNxKA2rFE_6pHX",
     "sourcePort" : "EvHHXUqI0uW-EXcCXal-C$$NMGVa82G1BvWwxwbpjkGr",
     "targetPort" : "BnSB6mOZ3P_yYcN6YE01O$$udPfNf4mjiqKgJfFIVcZm"
   }, {
-    "id" : "7rxYQpNStYw83ClC9oy7R$$fBtyYU5QtXqemgMPgV5fL",
-    "source" : "1OKFK1PV0yqhIwRcK0w4q$$Ykh-4q_FNxKA2rFE_6pHX",
+    "id" : "W9QbvR2VuaF2OnM83ebi-",
+    "source" : "31Fb6oXR1c5vVKpN6lHcl$$ucuev2ie29z2YxzgEhMd3",
     "target" : "uuqgypX2a9BtYoXSx3m_I$$JgEy6kkBY_sRosccjCVW0",
-    "sourcePort" : "yQqah0jmzYLrj4UhqkIR9$$9y8EqKgek1Hvk0xybQeyj",
+    "sourcePort" : "EvHHXUqI0uW-EXcCXal-C$$NMGVa82G1BvWwxwbpjkGr",
     "targetPort" : "aqg9CX5fhgGj-lKx2jznw$$Hn763lONN6yg5h4m7nrHK"
   } ]
 }

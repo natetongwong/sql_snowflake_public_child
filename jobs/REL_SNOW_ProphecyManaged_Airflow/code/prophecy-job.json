@@ -147,26 +147,36 @@
         "storeFailures" : null
       }
     },
-    "3-Zo5qewlHjSlxFY8d1Nz" : {
-      "id" : "3-Zo5qewlHjSlxFY8d1Nz",
+    "DXi9gjmnlSnnN6X_ZZPts" : {
+      "id" : "DXi9gjmnlSnnN6X_ZZPts",
       "component" : "DBT",
       "metadata" : {
-        "label" : "DBT_0_1",
-        "slug" : "DBT_0_1",
-        "x" : 40,
-        "y" : 300
+        "label" : "DBT_0_2",
+        "slug" : "DBT_0_2",
+        "x" : -400,
+        "y" : 140
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "fKGBMJO2GlxoXWJrBAXgg",
+          "id" : "O4qP82KFRLHH3d7rt-oRn",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "wG7D2PFEg7nNdeJkvIXdx",
+          "id" : "H_XhdSp34H-sWngIEaAYo",
           "slug" : ""
         } ]
       },
-      "settings" : { },
+      "settings" : {
+        "email" : "abhisheks@prophecy.io",
+        "email_on_failure" : true,
+        "email_on_retry" : false,
+        "retries" : 1,
+        "retry_delay" : 1,
+        "retry_exponential_backoff" : true,
+        "max_retry_delay" : 1,
+        "execution_timeout_int" : 3600,
+        "trigger_rule" : "always"
+      },
       "properties" : {
         "cacheSelectedOnly" : null,
         "gitSubPath" : null,
@@ -177,11 +187,10 @@
         "gitEntity" : "branch",
         "noPartialParse" : null,
         "warnErrorOptions" : null,
-        "gitTokenSecret" : null,
         "state" : null,
         "useExperimentalParser" : null,
         "gitSshUrl" : null,
-        "indirectSelection" : null,
+        "indirectSelection" : "Cautious",
         "partialParse" : null,
         "runRun" : true,
         "vars" : null,
@@ -190,23 +199,22 @@
         "projectId" : "24116",
         "runOnlyModel" : false,
         "favorState" : null,
-        "failFast" : null,
+        "failFast" : true,
         "noStaticParser" : null,
         "runTest" : false,
-        "recordTimingInfo" : null,
+        "select" : null,
+        "recordTimingInfo" : "output.profile",
         "fullRefresh" : true,
         "noCacheSelectedOnly" : null,
         "noFavorState" : null,
-        "isProphecyManaged" : false,
-        "profile" : null,
+        "profile" : "run_profile_snowflake",
         "noVersionCheck" : null,
         "noWriteJson" : false,
-        "printerWidth" : null,
+        "printerWidth" : "100",
         "sqlFabricId" : "5287",
         "gitEntityValue" : "dev",
         "logFormat" : null,
         "runModelWithChildren" : false,
-        "dbtProfileSecret" : null,
         "models" : null,
         "target" : null,
         "exclude" : "env_uitesting_shared_excluded_model",
@@ -214,8 +222,8 @@
         "noAnonymousUsageStats" : true,
         "selector" : null,
         "targetPath" : null,
-        "threads" : null,
-        "warnError" : true,
+        "threads" : "2",
+        "warnError" : null,
         "currentProjectModels" : [ {
           "label" : "env_uitesting_shared_excluded_model",
           "value" : "env_uitesting_shared_excluded_model",
@@ -247,18 +255,18 @@
           "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1",
           "name" : "env_uitesting_shared_parent_model_1"
         } ],
-        "profilesDir" : null,
+        "profilesDir" : "/home/airflow/gcs/data",
         "taskId" : null,
-        "logPath" : null,
+        "logPath" : "logssnow.txt",
         "storeFailures" : null
       }
     }
   },
   "connections" : [ {
-    "id" : "6CHsB6LNZDnbLBnwI7P5O",
-    "source" : "ZK-7aM3x44Z0VdUTem5td$$BlSkPpKAxTtwQfZItlrnO",
-    "target" : "3-Zo5qewlHjSlxFY8d1Nz",
-    "sourcePort" : "aR2vdhAY135viu3CXCvFg$$Q1wm5EaSEommIgsgX1-Oo",
-    "targetPort" : "fKGBMJO2GlxoXWJrBAXgg"
+    "id" : "fevix2bwp_Wz4X1S5ca1L",
+    "source" : "DXi9gjmnlSnnN6X_ZZPts",
+    "target" : "ZK-7aM3x44Z0VdUTem5td$$BlSkPpKAxTtwQfZItlrnO",
+    "sourcePort" : "H_XhdSp34H-sWngIEaAYo",
+    "targetPort" : "TQfHDIWNsb9oG2RnM3C9l$$kFj-E4I4yo7KRBg0DGseA"
   } ]
 }

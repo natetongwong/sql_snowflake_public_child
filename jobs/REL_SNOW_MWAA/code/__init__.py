@@ -1,2 +1,2 @@
-from .dag import *
 from .tasks import *
+from .dag import *
