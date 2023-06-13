@@ -8,8 +8,8 @@ def DBT_0_2():
     envs["DBT_LOG_PATH"] = "logssnow.txt"
     envs["DBT_FULL_REFRESH"] = "true"
 
-    if "Cautious":
-        envs["DBT_INDIRECT_SELECTION"] = "Cautious"
+    if "Eager":
+        envs["DBT_INDIRECT_SELECTION"] = "Eager"
 
     envs["DBT_PROFILE_SECRET"] = "hwcTnR9DmvB6YVPYFtkxa"
     envs["GIT_TOKEN_SECRET"] = ""

@@ -190,7 +190,7 @@
         "state" : null,
         "useExperimentalParser" : null,
         "gitSshUrl" : null,
-        "indirectSelection" : "Cautious",
+        "indirectSelection" : "Eager",
         "partialParse" : null,
         "runRun" : true,
         "vars" : null,
