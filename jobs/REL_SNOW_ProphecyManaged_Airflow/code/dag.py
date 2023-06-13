@@ -14,7 +14,8 @@ with DAG(
     default_args = {"owner" : "Prophecy", "ignore_first_depends_on_past" : True, "pool" : "tB-MN8Ps", "do_xcom_push" : True}, 
     start_date = pendulum.today('UTC'), 
     end_date = pendulum.datetime(2023, 7, 3, tz = "UTC"), 
-    catchup = True
+    catchup = True, 
+    tags = []
 ) as dag:
     DBT_0_op = DBT_0()
     DBT_0_1_op = DBT_0_1()

@@ -6,7 +6,7 @@
     "name" : "REL_SNOW_ProphecyManaged_Airflow",
     "dagName" : "ovapyfz7oI7ZGqokO1KblQ_",
     "schedule" : "0 0 19 * *",
-    "enabled" : false,
+    "enabled" : true,
     "alerting" : {
       "emails" : "",
       "onStart" : false,
@@ -36,6 +36,7 @@
       "name" : "dev_airflow_mwaa"
     } ],
     "catchup" : true,
+    "tags" : [ ],
     "endDate" : "2023-07-03",
     "scheduleTimeZone" : "UTC"
   },
