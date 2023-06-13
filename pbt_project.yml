@@ -55,7 +55,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-13 04:55:07'
-    modifiedAt: '2023-06-13 15:27:18'
+    modifiedAt: '2023-06-13 16:04:23'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_MWAA:
     name: REL_SNOW_MWAA

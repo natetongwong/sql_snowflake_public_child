@@ -167,9 +167,6 @@
         } ]
       },
       "settings" : {
-        "email" : "abhisheks@prophecy.io",
-        "email_on_failure" : true,
-        "email_on_retry" : false,
         "retries" : 1,
         "retry_delay" : 1,
         "retry_exponential_backoff" : true,
@@ -190,7 +187,6 @@
         "state" : null,
         "useExperimentalParser" : null,
         "gitSshUrl" : null,
-        "indirectSelection" : "Eager",
         "partialParse" : null,
         "runRun" : true,
         "vars" : null,
