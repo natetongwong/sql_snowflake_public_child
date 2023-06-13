@@ -31,7 +31,31 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-04-21 13:53:13'
-    modifiedAt: '2023-05-30 15:24:04'
+    modifiedAt: '2023-06-13 04:38:39'
+    author: abhisheks+shared@prophecy.io
+  jobs/REL_SNOW_ProphecyManaged_Airflow:
+    name: REL_SNOW_ProphecyManaged_Airflow
+    description: REL_SNOW_ProphecyManaged_Airflow
+    fabricUID: 7039
+    scheduler:
+      Prophecy: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 19 * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-06-13 04:55:07'
+    modifiedAt: '2023-06-13 05:46:03'
     author: abhisheks+shared@prophecy.io
 functions:
   author: null
@@ -43,6 +67,30 @@ functions:
   expressions: {}
 subgraphs: {}
 sqlModels:
+  .prophecy/metadata/sqlmodels/env_uitesting_shared_excluded_model:
+    name: env_uitesting_shared_excluded_model
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - models/excluded/env_uitesting_shared_excluded_model.sql
+    - .prophecy/ide/models/env_uitesting_shared_excluded_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-06-13 05:01:33'
+    modifiedAt: '2023-06-13 05:01:33'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1:
     name: env_uitesting_shared_useallmodel_1
     schema:
