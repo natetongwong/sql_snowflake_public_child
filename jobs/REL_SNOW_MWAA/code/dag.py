@@ -5,7 +5,7 @@ from datetime import timedelta
 import airflow
 from airflow import DAG
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-from tasks import DBT_0, DBT_0_1, Script_1, Script_2
+from uitesting_shared_team_sql_childsnowflakeshared_rel_snow_mwaa.tasks import DBT_0, DBT_0_1, Script_1, Script_2
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"
 
 with DAG(

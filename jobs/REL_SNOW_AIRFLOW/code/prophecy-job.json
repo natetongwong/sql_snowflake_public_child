@@ -44,7 +44,8 @@
       "name" : "airflow_composer1"
     }, {
       "id" : "7039",
-      "name" : "dev_airflow_prohecy_managed"
+      "name" : "dev_airflow_prohecy_managed",
+      "trialStartDate" : 1686553669462
     }, {
       "id" : "7040",
       "name" : "dev_airflow_mwaa"
@@ -58,6 +59,32 @@
     "scheduleTimeZone" : "Pacific/Midway"
   },
   "processes" : {
+    "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt" : {
+      "id" : "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 360,
+        "y" : 0
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "W109QJjGfw_eVy1pxr8X_$$_vE3EmtZR2vYzmJTyeHML",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "kLmNcYH2GGhQvCpS-fTRt$$4dwSvod550OrtReyox2EL",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "print(\"hi\")",
+        "language" : "python",
+        "taskId" : null
+      }
+    },
     "AOvMbF8Q8Q4feQNnbPjHp$$x6jB7wObb4MI7Ys7281fL" : {
       "id" : "AOvMbF8Q8Q4feQNnbPjHp$$x6jB7wObb4MI7Ys7281fL",
       "component" : "DBT",
@@ -142,32 +169,6 @@
         "storeFailures" : null
       }
     },
-    "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt" : {
-      "id" : "zP6a24K9G6cUp772TS3mb$$WyliLJ82UjmslF_SaOUDt",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "Script_1",
-        "slug" : "Script_1",
-        "x" : 360,
-        "y" : 0
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "W109QJjGfw_eVy1pxr8X_$$_vE3EmtZR2vYzmJTyeHML",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "kLmNcYH2GGhQvCpS-fTRt$$4dwSvod550OrtReyox2EL",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "code" : "print(\"hi\")",
-        "language" : "python",
-        "taskId" : null
-      }
-    },
     "VPLuoM1yW6Um1SfQy-VoU$$r2Niz1E__81IQcU_uxC4N" : {
       "id" : "VPLuoM1yW6Um1SfQy-VoU$$r2Niz1E__81IQcU_uxC4N",
       "component" : "Script",
@@ -193,6 +194,222 @@
         "language" : "bash",
         "taskId" : null
       }
+    },
+    "4mNL55j7xGFmCeSNoC2Ip" : {
+      "id" : "4mNL55j7xGFmCeSNoC2Ip",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0_1",
+        "slug" : "DBT_0_1",
+        "x" : -240,
+        "y" : -180
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "I3s6QCMM71FQlJWtb8Sr4",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "mT7VPbNruqrRCGzVpjxbK",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "24116",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "runTest" : true,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : null,
+        "sqlFabricId" : "5287",
+        "gitEntityValue" : "dev",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "models" : null,
+        "target" : null,
+        "exclude" : "env_uitesting_shared_excluded_model",
+        "runDeps" : true,
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : true,
+        "currentProjectModels" : [ {
+          "label" : "env_uitesting_shared_excluded_model",
+          "value" : "env_uitesting_shared_excluded_model",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_excluded_model",
+          "name" : "env_uitesting_shared_excluded_model"
+        }, {
+          "label" : "tpcds_1_env_uitesting_shared",
+          "value" : "tpcds_1_env_uitesting_shared",
+          "id" : "24116/.prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared",
+          "name" : "tpcds_1_env_uitesting_shared"
+        }, {
+          "label" : "env_uitesting_shared_useallmodel_1",
+          "value" : "env_uitesting_shared_useallmodel_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1",
+          "name" : "env_uitesting_shared_useallmodel_1"
+        }, {
+          "label" : "env_uitesting_shared_child_model_1",
+          "value" : "env_uitesting_shared_child_model_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1",
+          "name" : "env_uitesting_shared_child_model_1"
+        }, {
+          "label" : "env_uitesting_shared_mid_model_1",
+          "value" : "env_uitesting_shared_mid_model_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1",
+          "name" : "env_uitesting_shared_mid_model_1"
+        }, {
+          "label" : "env_uitesting_shared_parent_model_1",
+          "value" : "env_uitesting_shared_parent_model_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1",
+          "name" : "env_uitesting_shared_parent_model_1"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      }
+    },
+    "EBgEHSsE_W947zq9OWbel" : {
+      "id" : "EBgEHSsE_W947zq9OWbel",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0_2",
+        "slug" : "DBT_0_2",
+        "x" : -560,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ipuTBSdTBlAWFHDYMp886",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "hjrdQl0ChmHSavEFxICwF",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "retries" : 1,
+        "retry_delay" : 1,
+        "retry_exponential_backoff" : true,
+        "max_retry_delay" : 1,
+        "execution_timeout_int" : 3600,
+        "trigger_rule" : "always"
+      },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "warnErrorOptions" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "gitSshUrl" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "24116",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : true,
+        "noStaticParser" : null,
+        "runTest" : false,
+        "select" : null,
+        "recordTimingInfo" : "output.profile",
+        "fullRefresh" : true,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "profile" : "run_profile_snowflake",
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : "100",
+        "sqlFabricId" : "5287",
+        "gitEntityValue" : "dev",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "models" : null,
+        "target" : null,
+        "exclude" : "env_uitesting_shared_excluded_model",
+        "runDeps" : true,
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : "2",
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "env_uitesting_shared_excluded_model",
+          "value" : "env_uitesting_shared_excluded_model",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_excluded_model",
+          "name" : "env_uitesting_shared_excluded_model"
+        }, {
+          "label" : "tpcds_1_env_uitesting_shared",
+          "value" : "tpcds_1_env_uitesting_shared",
+          "id" : "24116/.prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared",
+          "name" : "tpcds_1_env_uitesting_shared"
+        }, {
+          "label" : "env_uitesting_shared_useallmodel_1",
+          "value" : "env_uitesting_shared_useallmodel_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1",
+          "name" : "env_uitesting_shared_useallmodel_1"
+        }, {
+          "label" : "env_uitesting_shared_child_model_1",
+          "value" : "env_uitesting_shared_child_model_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1",
+          "name" : "env_uitesting_shared_child_model_1"
+        }, {
+          "label" : "env_uitesting_shared_mid_model_1",
+          "value" : "env_uitesting_shared_mid_model_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1",
+          "name" : "env_uitesting_shared_mid_model_1"
+        }, {
+          "label" : "env_uitesting_shared_parent_model_1",
+          "value" : "env_uitesting_shared_parent_model_1",
+          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1",
+          "name" : "env_uitesting_shared_parent_model_1"
+        } ],
+        "profilesDir" : "/home/airflow/gcs/data",
+        "taskId" : null,
+        "logPath" : "logssnow.txt",
+        "storeFailures" : null
+      }
     }
   },
   "connections" : [ {
@@ -207,5 +424,11 @@
     "target" : "VPLuoM1yW6Um1SfQy-VoU$$r2Niz1E__81IQcU_uxC4N",
     "sourcePort" : "7NEhHt9jNFkWYPjLoqxNR$$ohbuGDlNJt1jh3eobCQBU",
     "targetPort" : "i_Qh4r5tuyhgtglTpP1qE$$gFpxQzc0I-z-f1c7znI6r"
+  }, {
+    "id" : "Qu2TyPyBO5nTQatOhPBRv",
+    "source" : "EBgEHSsE_W947zq9OWbel",
+    "target" : "4mNL55j7xGFmCeSNoC2Ip",
+    "sourcePort" : "hjrdQl0ChmHSavEFxICwF",
+    "targetPort" : "I3s6QCMM71FQlJWtb8Sr4"
   } ]
 }

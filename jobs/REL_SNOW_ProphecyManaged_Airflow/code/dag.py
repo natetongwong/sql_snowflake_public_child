@@ -5,7 +5,7 @@ from datetime import timedelta
 import airflow
 from airflow import DAG
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-from tasks import DBT_0, DBT_0_2
+from ovapyfz7oi7zgqoko1kblq_.tasks import DBT_0_1
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"
 
 with DAG(
@@ -17,6 +17,4 @@ with DAG(
     catchup = True, 
     tags = []
 ) as dag:
-    DBT_0_op = DBT_0()
-    DBT_0_2_op = DBT_0_2()
-    DBT_0_2_op >> DBT_0_op
+    DBT_0_1_op = DBT_0_1()

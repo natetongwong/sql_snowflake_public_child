@@ -30,7 +30,8 @@
       "name" : "airflow_composer1"
     }, {
       "id" : "7039",
-      "name" : "dev_airflow_prohecy_managed"
+      "name" : "dev_airflow_prohecy_managed",
+      "trialStartDate" : 1686553669462
     }, {
       "id" : "7040",
       "name" : "dev_airflow_mwaa"
@@ -41,132 +42,29 @@
     "scheduleTimeZone" : "UTC"
   },
   "processes" : {
-    "ZK-7aM3x44Z0VdUTem5td$$BlSkPpKAxTtwQfZItlrnO" : {
-      "id" : "ZK-7aM3x44Z0VdUTem5td$$BlSkPpKAxTtwQfZItlrnO",
+    "ggqqPCac5csOm_IwFLu95" : {
+      "id" : "ggqqPCac5csOm_IwFLu95",
       "component" : "DBT",
       "metadata" : {
-        "label" : "DBT_0",
-        "slug" : "DBT_0",
-        "x" : -180,
-        "y" : 140
+        "label" : "DBT_0_1",
+        "slug" : "DBT_0_1",
+        "x" : -660,
+        "y" : -120
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "TQfHDIWNsb9oG2RnM3C9l$$kFj-E4I4yo7KRBg0DGseA",
+          "id" : "vQYNHOhKTPXUwLu8BiExY",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "aR2vdhAY135viu3CXCvFg$$Q1wm5EaSEommIgsgX1-Oo",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "cacheSelectedOnly" : null,
-        "gitSubPath" : null,
-        "runModelWithParents" : false,
-        "defer" : null,
-        "noDefer" : null,
-        "runSeed" : true,
-        "gitEntity" : "branch",
-        "noPartialParse" : null,
-        "warnErrorOptions" : null,
-        "gitTokenSecret" : null,
-        "state" : null,
-        "useExperimentalParser" : null,
-        "gitSshUrl" : null,
-        "indirectSelection" : null,
-        "partialParse" : null,
-        "runRun" : true,
-        "vars" : null,
-        "noPrint" : null,
-        "quiet" : null,
-        "projectId" : "24116",
-        "runOnlyModel" : false,
-        "favorState" : null,
-        "failFast" : null,
-        "noStaticParser" : null,
-        "runTest" : true,
-        "recordTimingInfo" : null,
-        "fullRefresh" : true,
-        "noCacheSelectedOnly" : null,
-        "noFavorState" : null,
-        "isProphecyManaged" : false,
-        "profile" : null,
-        "noVersionCheck" : null,
-        "noWriteJson" : false,
-        "printerWidth" : null,
-        "sqlFabricId" : "5287",
-        "gitEntityValue" : "dev",
-        "logFormat" : null,
-        "runModelWithChildren" : false,
-        "dbtProfileSecret" : null,
-        "models" : null,
-        "target" : null,
-        "exclude" : "env_uitesting_shared_excluded_model",
-        "runDeps" : true,
-        "noAnonymousUsageStats" : true,
-        "selector" : null,
-        "targetPath" : null,
-        "threads" : null,
-        "warnError" : true,
-        "currentProjectModels" : [ {
-          "label" : "env_uitesting_shared_excluded_model",
-          "value" : "env_uitesting_shared_excluded_model",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_excluded_model",
-          "name" : "env_uitesting_shared_excluded_model"
-        }, {
-          "label" : "tpcds_1_env_uitesting_shared",
-          "value" : "tpcds_1_env_uitesting_shared",
-          "id" : "24116/.prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared",
-          "name" : "tpcds_1_env_uitesting_shared"
-        }, {
-          "label" : "env_uitesting_shared_useallmodel_1",
-          "value" : "env_uitesting_shared_useallmodel_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1",
-          "name" : "env_uitesting_shared_useallmodel_1"
-        }, {
-          "label" : "env_uitesting_shared_child_model_1",
-          "value" : "env_uitesting_shared_child_model_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1",
-          "name" : "env_uitesting_shared_child_model_1"
-        }, {
-          "label" : "env_uitesting_shared_mid_model_1",
-          "value" : "env_uitesting_shared_mid_model_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1",
-          "name" : "env_uitesting_shared_mid_model_1"
-        }, {
-          "label" : "env_uitesting_shared_parent_model_1",
-          "value" : "env_uitesting_shared_parent_model_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1",
-          "name" : "env_uitesting_shared_parent_model_1"
-        } ],
-        "profilesDir" : null,
-        "taskId" : null,
-        "logPath" : null,
-        "storeFailures" : null
-      }
-    },
-    "DXi9gjmnlSnnN6X_ZZPts" : {
-      "id" : "DXi9gjmnlSnnN6X_ZZPts",
-      "component" : "DBT",
-      "metadata" : {
-        "label" : "DBT_0_2",
-        "slug" : "DBT_0_2",
-        "x" : -400,
-        "y" : 140
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "O4qP82KFRLHH3d7rt-oRn",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "H_XhdSp34H-sWngIEaAYo",
+          "id" : "C7Qqe4H912ZKfn8XqUwOK",
           "slug" : ""
         } ]
       },
       "settings" : {
+        "email" : "abhisheks@prophecy.io",
+        "email_on_failure" : true,
+        "email_on_retry" : false,
         "retries" : 1,
         "retry_delay" : 1,
         "retry_exponential_backoff" : true,
@@ -187,6 +85,7 @@
         "state" : null,
         "useExperimentalParser" : null,
         "gitSshUrl" : null,
+        "indirectSelection" : "Cautious",
         "partialParse" : null,
         "runRun" : true,
         "vars" : null,
@@ -208,7 +107,7 @@
         "noWriteJson" : false,
         "printerWidth" : "100",
         "sqlFabricId" : "5287",
-        "gitEntityValue" : "dev",
+        "gitEntityValue" : "main",
         "logFormat" : null,
         "runModelWithChildren" : false,
         "models" : null,
@@ -220,37 +119,7 @@
         "targetPath" : null,
         "threads" : "2",
         "warnError" : null,
-        "currentProjectModels" : [ {
-          "label" : "env_uitesting_shared_excluded_model",
-          "value" : "env_uitesting_shared_excluded_model",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_excluded_model",
-          "name" : "env_uitesting_shared_excluded_model"
-        }, {
-          "label" : "tpcds_1_env_uitesting_shared",
-          "value" : "tpcds_1_env_uitesting_shared",
-          "id" : "24116/.prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared",
-          "name" : "tpcds_1_env_uitesting_shared"
-        }, {
-          "label" : "env_uitesting_shared_useallmodel_1",
-          "value" : "env_uitesting_shared_useallmodel_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1",
-          "name" : "env_uitesting_shared_useallmodel_1"
-        }, {
-          "label" : "env_uitesting_shared_child_model_1",
-          "value" : "env_uitesting_shared_child_model_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1",
-          "name" : "env_uitesting_shared_child_model_1"
-        }, {
-          "label" : "env_uitesting_shared_mid_model_1",
-          "value" : "env_uitesting_shared_mid_model_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1",
-          "name" : "env_uitesting_shared_mid_model_1"
-        }, {
-          "label" : "env_uitesting_shared_parent_model_1",
-          "value" : "env_uitesting_shared_parent_model_1",
-          "id" : "24116/.prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1",
-          "name" : "env_uitesting_shared_parent_model_1"
-        } ],
+        "currentProjectModels" : "",
         "profilesDir" : "/home/airflow/gcs/data",
         "taskId" : null,
         "logPath" : "logssnow.txt",
@@ -258,11 +127,5 @@
       }
     }
   },
-  "connections" : [ {
-    "id" : "fevix2bwp_Wz4X1S5ca1L",
-    "source" : "DXi9gjmnlSnnN6X_ZZPts",
-    "target" : "ZK-7aM3x44Z0VdUTem5td$$BlSkPpKAxTtwQfZItlrnO",
-    "sourcePort" : "H_XhdSp34H-sWngIEaAYo",
-    "targetPort" : "TQfHDIWNsb9oG2RnM3C9l$$kFj-E4I4yo7KRBg0DGseA"
-  } ]
+  "connections" : [ ]
 }
