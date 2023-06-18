@@ -350,6 +350,46 @@ Join_4 AS (
 
 ),
 
+Limit_4 AS (
+
+  SELECT * 
+  
+  FROM Aggregate_1 AS in0
+  
+  LIMIT 10
+
+),
+
+Limit_2 AS (
+
+  SELECT * 
+  
+  FROM Join_3 AS in0
+  
+  LIMIT 10
+
+),
+
+Limit_3 AS (
+
+  SELECT * 
+  
+  FROM Join_1 AS in0
+  
+  LIMIT 10
+
+),
+
+Limit_1 AS (
+
+  SELECT * 
+  
+  FROM Join_4 AS in0
+  
+  LIMIT 10
+
+),
+
 SQLStatement_1 AS (
 
   SELECT 
@@ -386,10 +426,16 @@ SQLStatement_1 AS (
 
 combine_multiple_tables_1 AS (
 
-  {{ SQL_SnowflakeSharedBasic.combine_multiple_tables(table_1 = 'Join_1', table_2 = 'SQLStatement_1', table_3 = 'Aggregate_1', table_4 = 'Join_3', table_5 = 'Join_4', col_table_1 = 'c_int') }}
+  {{ SQL_SnowflakeSharedBasic.combine_multiple_tables(table_1 = 'Limit_3', table_2 = 'SQLStatement_1', table_3 = 'Limit_4', table_4 = 'Limit_2', table_5 = 'Limit_1', col_table_1 = 'c_int') }}
 
 )
 
 SELECT *
 
-FROM combine_multiple_tables_1
+FROM -- where 
+-- combine_multiple_tables_1.C_INTEGER!= (
+--     (select count(*) from SQLStatement_1) + 
+--     (select count(*) from Limit_1) + 
+--     (select count(*) from Join_4)
+-- )
+combine_multiple_tables_1
