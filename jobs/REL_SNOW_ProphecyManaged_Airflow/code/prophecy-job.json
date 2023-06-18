@@ -5,7 +5,7 @@
     "jobId" : "jobs/REL_SNOW_ProphecyManaged_Airflow",
     "name" : "REL_SNOW_ProphecyManaged_Airflow",
     "dagName" : "ovapyfz7oI7ZGqokO1KblQ_",
-    "schedule" : "0 0 19 * *",
+    "schedule" : "0 0/5 * * *",
     "enabled" : true,
     "alerting" : {
       "emails" : "",
@@ -26,7 +26,10 @@
       "id" : "5295",
       "name" : "dev_airflow"
     }, {
-      "id" : "6470",
+      "id" : "5839",
+      "name" : "airflow_test"
+    }, {
+      "id" : "6144",
       "name" : "airflow_composer1"
     }, {
       "id" : "7039",

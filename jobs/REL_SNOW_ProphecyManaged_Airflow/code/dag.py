@@ -10,7 +10,7 @@ PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLA
 
 with DAG(
     dag_id = "ovapyfz7oI7ZGqokO1KblQ_", 
-    schedule_interval = "0 0 19 * *", 
+    schedule_interval = "0 0/5 * * *", 
     default_args = {"owner" : "Prophecy", "ignore_first_depends_on_past" : True, "pool" : "tB-MN8Ps", "do_xcom_push" : True}, 
     start_date = pendulum.today('UTC'), 
     end_date = pendulum.datetime(2023, 7, 3, tz = "UTC"), 

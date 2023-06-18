@@ -31,7 +31,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-04-21 13:53:13'
-    modifiedAt: '2023-06-16 11:46:37'
+    modifiedAt: '2023-06-18 16:51:44'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_ProphecyManaged_Airflow:
     name: REL_SNOW_ProphecyManaged_Airflow
@@ -41,7 +41,7 @@ jobs:
       Prophecy: {}
     cloudProvider: null
     jobSize: null
-    scheduleCron: 0 0 19 * *
+    scheduleCron: 0 0/5 * * *
     timeout: null
     alerting:
       emails: ''
@@ -55,7 +55,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-13 04:55:07'
-    modifiedAt: '2023-06-16 11:46:28'
+    modifiedAt: '2023-06-18 16:56:40'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_MWAA:
     name: REL_SNOW_MWAA
@@ -79,7 +79,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-13 07:30:40'
-    modifiedAt: '2023-06-16 11:54:33'
+    modifiedAt: '2023-06-18 16:51:42'
     author: abhisheks+shared@prophecy.io
 functions:
   author: null
@@ -117,7 +117,96 @@ sqlModels:
     modifiedAt: '2023-06-13 05:01:33'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1:
     name: env_uitesting_shared_useallmodel_1
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
