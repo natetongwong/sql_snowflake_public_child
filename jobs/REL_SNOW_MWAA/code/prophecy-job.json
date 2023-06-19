@@ -25,10 +25,7 @@
       "id" : "5295",
       "name" : "dev_airflow"
     }, {
-      "id" : "5839",
-      "name" : "airflow_test"
-    }, {
-      "id" : "6144",
+      "id" : "6470",
       "name" : "airflow_composer1"
     }, {
       "id" : "7039",
@@ -69,7 +66,7 @@
         "runModelWithParents" : false,
         "defer" : null,
         "noDefer" : null,
-        "runSeed" : false,
+        "runSeed" : true,
         "gitEntity" : "branch",
         "noPartialParse" : null,
         "warnErrorOptions" : null,
@@ -88,7 +85,7 @@
         "favorState" : null,
         "failFast" : null,
         "noStaticParser" : null,
-        "runTest" : true,
+        "runTest" : false,
         "select" : null,
         "recordTimingInfo" : null,
         "fullRefresh" : true,
@@ -107,7 +104,7 @@
         "models" : null,
         "target" : null,
         "exclude" : null,
-        "runDeps" : false,
+        "runDeps" : true,
         "noAnonymousUsageStats" : null,
         "selector" : null,
         "targetPath" : null,
