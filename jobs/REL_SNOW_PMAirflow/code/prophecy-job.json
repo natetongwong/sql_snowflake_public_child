@@ -1,11 +1,11 @@
 {
   "metainfo" : {
     "type" : "Prophecy",
-    "fabricId" : "7039",
-    "jobId" : "jobs/REL_SNOW_ProphecyManaged_Airflow",
-    "name" : "REL_SNOW_ProphecyManaged_Airflow",
-    "dagName" : "ovapyfz7oI7ZGqokO1KblQ_",
-    "schedule" : "0 0/5 * * *",
+    "fabricId" : "7557",
+    "jobId" : "jobs/REL_SNOW_PMAirflow",
+    "name" : "REL_SNOW_PMAirflow",
+    "dagName" : "_7BQLEVlcFHA_uxwCoWZMQ_",
+    "schedule" : "0 0 17 * *",
     "enabled" : true,
     "alerting" : {
       "emails" : "",
@@ -16,7 +16,7 @@
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
       "ignore_first_depends_on_past" : true,
-      "pool" : "tB-MN8Ps",
+      "pool" : "n7pJN9mh",
       "do_xcom_push" : true
     },
     "jobClusterMode" : {
@@ -29,35 +29,34 @@
       "id" : "6470",
       "name" : "airflow_composer1"
     }, {
-      "id" : "7039",
-      "name" : "dev_airflow_prohecy_managed",
-      "trialStartDate" : 1686553669462
-    }, {
       "id" : "7040",
       "name" : "dev_airflow_mwaa"
+    }, {
+      "id" : "7557",
+      "name" : "dev_airflow_prohecy_managed",
+      "trialStartDate" : 1687261887500
     } ],
     "catchup" : true,
-    "tags" : [ ],
-    "endDate" : "2023-07-03",
+    "endDate" : "2023-07-11",
     "scheduleTimeZone" : "UTC"
   },
   "processes" : {
-    "Q8ekzXB5HWRqMXCH1W-ce" : {
-      "id" : "Q8ekzXB5HWRqMXCH1W-ce",
+    "nnsq_fMyTwzFBWzKzxix7" : {
+      "id" : "nnsq_fMyTwzFBWzKzxix7",
       "component" : "DBT",
       "metadata" : {
         "label" : "DBT_0_2",
         "slug" : "DBT_0_2",
-        "x" : -880,
-        "y" : -40
+        "x" : 140,
+        "y" : 380
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "DRUQEdbQFIX05JjJpJIDR",
+          "id" : "UFRvFTapxfzUaYJ4ZQInY",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "-Nu9TOk0gYfR-w-ZpKHI5",
+          "id" : "dgNK4ZR5ywcukv9ktPoaU",
           "slug" : ""
         } ]
       },
@@ -155,22 +154,22 @@
         "storeFailures" : null
       }
     },
-    "qOi1mchWc3uvx-OrytqNH" : {
-      "id" : "qOi1mchWc3uvx-OrytqNH",
+    "Qv8qDiSXxxG5ZOAk41jQx" : {
+      "id" : "Qv8qDiSXxxG5ZOAk41jQx",
       "component" : "DBT",
       "metadata" : {
         "label" : "DBT_0_2_1",
         "slug" : "DBT_0_2_1",
-        "x" : -180,
-        "y" : -40
+        "x" : 840,
+        "y" : 380
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "KP8Ay4qMoB2FRl0H_jbHt",
+          "id" : "ZfNGZ1lNNu9fxVuP3CkCH",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "lMrcgkTK7EF5LLvQHR8Nb",
+          "id" : "e75utUn_bXaxOI2WKNF-d",
           "slug" : ""
         } ]
       },
@@ -267,10 +266,10 @@
     }
   },
   "connections" : [ {
-    "id" : "s_cded06JIsuJtPHcYdGD",
-    "source" : "Q8ekzXB5HWRqMXCH1W-ce",
-    "target" : "qOi1mchWc3uvx-OrytqNH",
-    "sourcePort" : "-Nu9TOk0gYfR-w-ZpKHI5",
-    "targetPort" : "KP8Ay4qMoB2FRl0H_jbHt"
+    "id" : "DWHKlXQVyF7FAzwDu2mIk",
+    "source" : "nnsq_fMyTwzFBWzKzxix7",
+    "target" : "Qv8qDiSXxxG5ZOAk41jQx",
+    "sourcePort" : "dgNK4ZR5ywcukv9ktPoaU",
+    "targetPort" : "ZfNGZ1lNNu9fxVuP3CkCH"
   } ]
 }
