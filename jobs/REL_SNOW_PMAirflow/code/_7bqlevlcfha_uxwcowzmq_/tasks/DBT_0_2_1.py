@@ -7,7 +7,7 @@ def DBT_0_2_1():
     envs["DBT_FAIL_FAST"] = "true"
     envs["DBT_LOG_PATH"] = "logssnow.txt"
     envs["DBT_FULL_REFRESH"] = "true"
-    envs["DBT_PROFILE_SECRET"] = "Ob5BkoQu89-VipMWbI-l8"
+    envs["DBT_PROFILE_SECRET"] = "sBhJHMg-N93f4yYJBxzHe"
     envs["GIT_TOKEN_SECRET"] = ""
     envs["GIT_ENTITY"] = "branch"
     envs["GIT_ENTITY_VALUE"] = "dev"

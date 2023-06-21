@@ -28,12 +28,12 @@
       "id" : "6470",
       "name" : "airflow_composer1"
     }, {
-      "id" : "7039",
-      "name" : "dev_airflow_prohecy_managed",
-      "trialStartDate" : 1686553669462
-    }, {
       "id" : "7040",
       "name" : "dev_airflow_mwaa"
+    }, {
+      "id" : "7557",
+      "name" : "dev_airflow_prohecy_managed",
+      "trialStartDate" : 1687261887500
     } ],
     "catchup" : true,
     "tags" : [ ],

@@ -31,7 +31,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-04-21 13:53:13'
-    modifiedAt: '2023-06-19 13:09:16'
+    modifiedAt: '2023-06-21 05:41:03'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_MWAA:
     name: REL_SNOW_MWAA
@@ -55,7 +55,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-13 07:30:40'
-    modifiedAt: '2023-06-19 17:40:17'
+    modifiedAt: '2023-06-21 04:55:23'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_PMAirflow:
     name: REL_SNOW_PMAirflow
@@ -79,7 +79,7 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-20 12:45:09'
-    modifiedAt: '2023-06-20 12:48:12'
+    modifiedAt: '2023-06-21 05:29:55'
     author: abhisheks+shared@prophecy.io
 functions:
   author: null
