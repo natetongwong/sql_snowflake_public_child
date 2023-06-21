@@ -641,166 +641,6 @@ sqlSources:
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:39:06'
       modifiedAt: '2023-05-25 04:39:06'
-  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SIMPLE_SCHEMA:
-    name: QA_DATABASE.QA_SIMPLE_SCHEMA
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - prophecy-sources/sources.yml
-    createdAt: '2023-04-12 10:13:07'
-    modifiedAt: '2023-04-12 10:13:07'
-    tables:
-    - name: ALL_TYPE_TABLE_SMALLER
-      schema:
-        providerType: snowflake
-        fields:
-        - name: C_NUM
-          dataType:
-            type: Number
-        - name: C_NUM10
-          dataType:
-            type: Number
-        - name: C_DEC
-          dataType:
-            type: Number
-        - name: C_NUMERIC
-          dataType:
-            type: Number
-        - name: C_INT
-          dataType:
-            type: Number
-        - name: C_INTEGER
-          dataType:
-            type: Number
-        - name: C_DOUBLE
-          dataType:
-            type: Float
-        - name: C_FLOAT
-          dataType:
-            type: Float
-        - name: C_COUBLE_PRECISION
-          dataType:
-            type: Float
-        - name: C_REAL
-          dataType:
-            type: Float
-        - name: C_VARCHAR
-          dataType:
-            type: String
-        - name: C_VARCHAR50
-          dataType:
-            type: String
-        - name: C_CHAR
-          dataType:
-            type: String
-        - name: C_CHAR10
-          dataType:
-            type: String
-        - name: C_STRING
-          dataType:
-            type: String
-        - name: C_STRING20
-          dataType:
-            type: String
-        - name: C_TEXT
-          dataType:
-            type: String
-        - name: C_TEXT30
-          dataType:
-            type: String
-        - name: C_BINARY
-          dataType:
-            type: Binary
-        - name: C_BINARY100
-          dataType:
-            type: Binary
-        - name: C_VARBINARY
-          dataType:
-            type: Binary
-        - name: C_BOOL
-          dataType:
-            type: Boolean
-        - name: C_TIMESTAMP
-          dataType:
-            type: Timestamp
-        - name: C_DATE
-          dataType:
-            type: Date
-        - name: C_DATETIME
-          dataType:
-            type: Timestamp
-        - name: C_TIME
-          dataType:
-            type: Time
-        - name: C_ARRAY
-          dataType:
-            type: Array
-        - name: C_OBJECT
-          dataType:
-            type: Object
-        - name: C_GEOGRAPHY
-          dataType:
-            type: Geography
-      description: null
-      author: abhisheks+e2etests@prophecy.io
-      createdAt: '2023-04-12 10:13:07'
-      modifiedAt: '2023-04-12 10:13:07'
-    - name: TABLE_COMPLEX_TYPES_1
-      schema:
-        providerType: snowflake
-        fields:
-        - name: C_ARRAY_INT
-          dataType:
-            type: Array
-        - name: C_ARRAY_FLOAT
-          dataType:
-            type: Array
-        - name: C_ARRAY_STRING
-          dataType:
-            type: Array
-        - name: C_ARRAY_OBJECT
-          dataType:
-            type: Array
-        - name: C_ARRAY_ARRAY
-          dataType:
-            type: Array
-        - name: C_ARRAY_VARIANT
-          dataType:
-            type: Array
-        - name: C_OBJECT_1
-          dataType:
-            type: Object
-        - name: C_OBJECT_2
-          dataType:
-            type: Object
-        - name: C_OBJECT_3
-          dataType:
-            type: Object
-        - name: C_OBJECT_4
-          dataType:
-            type: Object
-        - name: C_OBJECT_5
-          dataType:
-            type: Object
-        - name: C_VARIANT_1
-          dataType:
-            type: Variant
-        - name: C_VARIANT_2
-          dataType:
-            type: Variant
-        - name: C_VARIANT_3
-          dataType:
-            type: Variant
-        - name: C_VARIANT_4
-          dataType:
-            type: Variant
-        - name: C_VARIANT_5
-          dataType:
-            type: Variant
-      description: null
-      author: abhisheks+shared@prophecy.io
-      createdAt: '2023-04-21 17:46:30'
-      modifiedAt: '2023-04-21 17:46:30'
   .prophecy/metadata/sqlsources/SNOWFLAKE_SAMPLE_DATA_TPCDS_SF10TCL:
     name: SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL
     description: null
@@ -1227,6 +1067,1736 @@ sqlSources:
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:39:55'
       modifiedAt: '2023-05-25 04:39:55'
+  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SIMPLE_SCHEMA:
+    name: QA_DATABASE.QA_SIMPLE_SCHEMA
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-04-12 10:13:07'
+    modifiedAt: '2023-04-12 10:13:07'
+    tables:
+    - name: ALL_TYPE_TABLE_SMALLER
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2023-04-12 10:13:07'
+      modifiedAt: '2023-04-12 10:13:07'
+    - name: TABLE_COMPLEX_TYPES_1
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_ARRAY_INT
+          dataType:
+            type: Array
+        - name: C_ARRAY_FLOAT
+          dataType:
+            type: Array
+        - name: C_ARRAY_STRING
+          dataType:
+            type: Array
+        - name: C_ARRAY_OBJECT
+          dataType:
+            type: Array
+        - name: C_ARRAY_ARRAY
+          dataType:
+            type: Array
+        - name: C_ARRAY_VARIANT
+          dataType:
+            type: Array
+        - name: C_OBJECT_1
+          dataType:
+            type: Object
+        - name: C_OBJECT_2
+          dataType:
+            type: Object
+        - name: C_OBJECT_3
+          dataType:
+            type: Object
+        - name: C_OBJECT_4
+          dataType:
+            type: Object
+        - name: C_OBJECT_5
+          dataType:
+            type: Object
+        - name: C_VARIANT_1
+          dataType:
+            type: Variant
+        - name: C_VARIANT_2
+          dataType:
+            type: Variant
+        - name: C_VARIANT_3
+          dataType:
+            type: Variant
+        - name: C_VARIANT_4
+          dataType:
+            type: Variant
+        - name: C_VARIANT_5
+          dataType:
+            type: Variant
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-04-21 17:46:30'
+      modifiedAt: '2023-04-21 17:46:30'
+  .prophecy/metadata/sqlsources/QA_DATABASE__qa_suggestion_database_:
+    name: QA_DATABASE."qa_suggestion_database"
+    description: null
+    author: abhisheks+shared@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-06-21 07:25:11'
+    modifiedAt: '2023-06-21 07:25:11'
+    tables:
+    - name: CALL_CENTER
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CC_CALL_CENTER_SK
+          dataType:
+            type: Number
+        - name: CC_CALL_CENTER_ID
+          dataType:
+            type: String
+        - name: CC_REC_START_DATE
+          dataType:
+            type: Date
+        - name: CC_REC_END_DATE
+          dataType:
+            type: Date
+        - name: CC_CLOSED_DATE_SK
+          dataType:
+            type: Number
+        - name: CC_OPEN_DATE_SK
+          dataType:
+            type: Number
+        - name: CC_NAME
+          dataType:
+            type: String
+        - name: CC_CLASS
+          dataType:
+            type: String
+        - name: CC_EMPLOYEES
+          dataType:
+            type: Number
+        - name: CC_SQ_FT
+          dataType:
+            type: Number
+        - name: CC_HOURS
+          dataType:
+            type: String
+        - name: CC_MANAGER
+          dataType:
+            type: String
+        - name: CC_MKT_ID
+          dataType:
+            type: Number
+        - name: CC_MKT_CLASS
+          dataType:
+            type: String
+        - name: CC_MKT_DESC
+          dataType:
+            type: String
+        - name: CC_MARKET_MANAGER
+          dataType:
+            type: String
+        - name: CC_DIVISION
+          dataType:
+            type: Number
+        - name: CC_DIVISION_NAME
+          dataType:
+            type: String
+        - name: CC_COMPANY
+          dataType:
+            type: Number
+        - name: CC_COMPANY_NAME
+          dataType:
+            type: String
+        - name: CC_STREET_NUMBER
+          dataType:
+            type: String
+        - name: CC_STREET_NAME
+          dataType:
+            type: String
+        - name: CC_STREET_TYPE
+          dataType:
+            type: String
+        - name: CC_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: CC_CITY
+          dataType:
+            type: String
+        - name: CC_COUNTY
+          dataType:
+            type: String
+        - name: CC_STATE
+          dataType:
+            type: String
+        - name: CC_ZIP
+          dataType:
+            type: String
+        - name: CC_COUNTRY
+          dataType:
+            type: String
+        - name: CC_GMT_OFFSET
+          dataType:
+            type: Number
+        - name: CC_TAX_PERCENTAGE
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: CATALOG_PAGE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CP_CATALOG_PAGE_SK
+          dataType:
+            type: Number
+        - name: CP_CATALOG_PAGE_ID
+          dataType:
+            type: String
+        - name: CP_START_DATE_SK
+          dataType:
+            type: Number
+        - name: CP_END_DATE_SK
+          dataType:
+            type: Number
+        - name: CP_DEPARTMENT
+          dataType:
+            type: String
+        - name: CP_CATALOG_NUMBER
+          dataType:
+            type: Number
+        - name: CP_CATALOG_PAGE_NUMBER
+          dataType:
+            type: Number
+        - name: CP_DESCRIPTION
+          dataType:
+            type: String
+        - name: CP_TYPE
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: CATALOG_RETURNS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CR_RETURNED_DATE_SK
+          dataType:
+            type: Number
+        - name: CR_RETURNED_TIME_SK
+          dataType:
+            type: Number
+        - name: CR_ITEM_SK
+          dataType:
+            type: Number
+        - name: CR_REFUNDED_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: CR_REFUNDED_CDEMO_SK
+          dataType:
+            type: Number
+        - name: CR_REFUNDED_HDEMO_SK
+          dataType:
+            type: Number
+        - name: CR_REFUNDED_ADDR_SK
+          dataType:
+            type: Number
+        - name: CR_RETURNING_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: CR_RETURNING_CDEMO_SK
+          dataType:
+            type: Number
+        - name: CR_RETURNING_HDEMO_SK
+          dataType:
+            type: Number
+        - name: CR_RETURNING_ADDR_SK
+          dataType:
+            type: Number
+        - name: CR_CALL_CENTER_SK
+          dataType:
+            type: Number
+        - name: CR_CATALOG_PAGE_SK
+          dataType:
+            type: Number
+        - name: CR_SHIP_MODE_SK
+          dataType:
+            type: Number
+        - name: CR_WAREHOUSE_SK
+          dataType:
+            type: Number
+        - name: CR_REASON_SK
+          dataType:
+            type: Number
+        - name: CR_ORDER_NUMBER
+          dataType:
+            type: Number
+        - name: CR_RETURN_QUANTITY
+          dataType:
+            type: Number
+        - name: CR_RETURN_AMOUNT
+          dataType:
+            type: Number
+        - name: CR_RETURN_TAX
+          dataType:
+            type: Number
+        - name: CR_RETURN_AMT_INC_TAX
+          dataType:
+            type: Number
+        - name: CR_FEE
+          dataType:
+            type: Number
+        - name: CR_RETURN_SHIP_COST
+          dataType:
+            type: Number
+        - name: CR_REFUNDED_CASH
+          dataType:
+            type: Number
+        - name: CR_REVERSED_CHARGE
+          dataType:
+            type: Number
+        - name: CR_STORE_CREDIT
+          dataType:
+            type: Number
+        - name: CR_NET_LOSS
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: CATALOG_SALES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CS_SOLD_DATE_SK
+          dataType:
+            type: Number
+        - name: CS_SOLD_TIME_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_DATE_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_CDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_HDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_BILL_ADDR_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_CDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_HDEMO_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_ADDR_SK
+          dataType:
+            type: Number
+        - name: CS_CALL_CENTER_SK
+          dataType:
+            type: Number
+        - name: CS_CATALOG_PAGE_SK
+          dataType:
+            type: Number
+        - name: CS_SHIP_MODE_SK
+          dataType:
+            type: Number
+        - name: CS_WAREHOUSE_SK
+          dataType:
+            type: Number
+        - name: CS_ITEM_SK
+          dataType:
+            type: Number
+        - name: CS_PROMO_SK
+          dataType:
+            type: Number
+        - name: CS_ORDER_NUMBER
+          dataType:
+            type: Number
+        - name: CS_QUANTITY
+          dataType:
+            type: Number
+        - name: CS_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: CS_LIST_PRICE
+          dataType:
+            type: Number
+        - name: CS_SALES_PRICE
+          dataType:
+            type: Number
+        - name: CS_EXT_DISCOUNT_AMT
+          dataType:
+            type: Number
+        - name: CS_EXT_SALES_PRICE
+          dataType:
+            type: Number
+        - name: CS_EXT_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: CS_EXT_LIST_PRICE
+          dataType:
+            type: Number
+        - name: CS_EXT_TAX
+          dataType:
+            type: Number
+        - name: CS_COUPON_AMT
+          dataType:
+            type: Number
+        - name: CS_EXT_SHIP_COST
+          dataType:
+            type: Number
+        - name: CS_NET_PAID
+          dataType:
+            type: Number
+        - name: CS_NET_PAID_INC_TAX
+          dataType:
+            type: Number
+        - name: CS_NET_PAID_INC_SHIP
+          dataType:
+            type: Number
+        - name: CS_NET_PAID_INC_SHIP_TAX
+          dataType:
+            type: Number
+        - name: CS_NET_PROFIT
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: CUSTOMER
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: C_CUSTOMER_ID
+          dataType:
+            type: String
+        - name: C_CURRENT_CDEMO_SK
+          dataType:
+            type: Number
+        - name: C_CURRENT_HDEMO_SK
+          dataType:
+            type: Number
+        - name: C_CURRENT_ADDR_SK
+          dataType:
+            type: Number
+        - name: C_FIRST_SHIPTO_DATE_SK
+          dataType:
+            type: Number
+        - name: C_FIRST_SALES_DATE_SK
+          dataType:
+            type: Number
+        - name: C_SALUTATION
+          dataType:
+            type: String
+        - name: C_FIRST_NAME
+          dataType:
+            type: String
+        - name: C_LAST_NAME
+          dataType:
+            type: String
+        - name: C_PREFERRED_CUST_FLAG
+          dataType:
+            type: String
+        - name: C_BIRTH_DAY
+          dataType:
+            type: Number
+        - name: C_BIRTH_MONTH
+          dataType:
+            type: Number
+        - name: C_BIRTH_YEAR
+          dataType:
+            type: Number
+        - name: C_BIRTH_COUNTRY
+          dataType:
+            type: String
+        - name: C_LOGIN
+          dataType:
+            type: String
+        - name: C_EMAIL_ADDRESS
+          dataType:
+            type: String
+        - name: C_LAST_REVIEW_DATE
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: CUSTOMER_ADDRESS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CA_ADDRESS_SK
+          dataType:
+            type: Number
+        - name: CA_ADDRESS_ID
+          dataType:
+            type: String
+        - name: CA_STREET_NUMBER
+          dataType:
+            type: String
+        - name: CA_STREET_NAME
+          dataType:
+            type: String
+        - name: CA_STREET_TYPE
+          dataType:
+            type: String
+        - name: CA_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: CA_CITY
+          dataType:
+            type: String
+        - name: CA_COUNTY
+          dataType:
+            type: String
+        - name: CA_STATE
+          dataType:
+            type: String
+        - name: CA_ZIP
+          dataType:
+            type: String
+        - name: CA_COUNTRY
+          dataType:
+            type: String
+        - name: CA_GMT_OFFSET
+          dataType:
+            type: Number
+        - name: CA_LOCATION_TYPE
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: CUSTOMER_DEMOGRAPHICS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CD_DEMO_SK
+          dataType:
+            type: Number
+        - name: CD_GENDER
+          dataType:
+            type: String
+        - name: CD_MARITAL_STATUS
+          dataType:
+            type: String
+        - name: CD_EDUCATION_STATUS
+          dataType:
+            type: String
+        - name: CD_PURCHASE_ESTIMATE
+          dataType:
+            type: Number
+        - name: CD_CREDIT_RATING
+          dataType:
+            type: String
+        - name: CD_DEP_COUNT
+          dataType:
+            type: Number
+        - name: CD_DEP_EMPLOYED_COUNT
+          dataType:
+            type: Number
+        - name: CD_DEP_COLLEGE_COUNT
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: CUSTOMERS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: ID
+          dataType:
+            type: Number
+        - name: FIRST_NAME
+          dataType:
+            type: String
+        - name: LAST_NAME
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: DATE_DIM
+      schema:
+        providerType: snowflake
+        fields:
+        - name: D_DATE_SK
+          dataType:
+            type: Number
+        - name: D_DATE_ID
+          dataType:
+            type: String
+        - name: D_DATE
+          dataType:
+            type: Date
+        - name: D_MONTH_SEQ
+          dataType:
+            type: Number
+        - name: D_WEEK_SEQ
+          dataType:
+            type: Number
+        - name: D_QUARTER_SEQ
+          dataType:
+            type: Number
+        - name: D_YEAR
+          dataType:
+            type: Number
+        - name: D_DOW
+          dataType:
+            type: Number
+        - name: D_MOY
+          dataType:
+            type: Number
+        - name: D_DOM
+          dataType:
+            type: Number
+        - name: D_QOY
+          dataType:
+            type: Number
+        - name: D_FY_YEAR
+          dataType:
+            type: Number
+        - name: D_FY_QUARTER_SEQ
+          dataType:
+            type: Number
+        - name: D_FY_WEEK_SEQ
+          dataType:
+            type: Number
+        - name: D_DAY_NAME
+          dataType:
+            type: String
+        - name: D_QUARTER_NAME
+          dataType:
+            type: String
+        - name: D_HOLIDAY
+          dataType:
+            type: String
+        - name: D_WEEKEND
+          dataType:
+            type: String
+        - name: D_FOLLOWING_HOLIDAY
+          dataType:
+            type: String
+        - name: D_FIRST_DOM
+          dataType:
+            type: Number
+        - name: D_LAST_DOM
+          dataType:
+            type: Number
+        - name: D_SAME_DAY_LY
+          dataType:
+            type: Number
+        - name: D_SAME_DAY_LQ
+          dataType:
+            type: Number
+        - name: D_CURRENT_DAY
+          dataType:
+            type: String
+        - name: D_CURRENT_WEEK
+          dataType:
+            type: String
+        - name: D_CURRENT_MONTH
+          dataType:
+            type: String
+        - name: D_CURRENT_QUARTER
+          dataType:
+            type: String
+        - name: D_CURRENT_YEAR
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: DBGEN_VERSION
+      schema:
+        providerType: snowflake
+        fields:
+        - name: DV_VERSION
+          dataType:
+            type: String
+        - name: DV_CREATE_DATE
+          dataType:
+            type: Date
+        - name: DV_CREATE_TIME
+          dataType:
+            type: String
+        - name: DV_CMDLINE_ARGS
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: EMPLOYEES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: TITLE
+          dataType:
+            type: String
+        - name: EMPLOYEE_ID
+          dataType:
+            type: Number
+        - name: MANAGER_ID
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: HOUSEHOLD_DEMOGRAPHICS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: HD_DEMO_SK
+          dataType:
+            type: Number
+        - name: HD_INCOME_BAND_SK
+          dataType:
+            type: Number
+        - name: HD_BUY_POTENTIAL
+          dataType:
+            type: String
+        - name: HD_DEP_COUNT
+          dataType:
+            type: Number
+        - name: HD_VEHICLE_COUNT
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: INCOME_BAND
+      schema:
+        providerType: snowflake
+        fields:
+        - name: IB_INCOME_BAND_SK
+          dataType:
+            type: Number
+        - name: IB_LOWER_BOUND
+          dataType:
+            type: Number
+        - name: IB_UPPER_BOUND
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: INVENTORY
+      schema:
+        providerType: snowflake
+        fields:
+        - name: INV_DATE_SK
+          dataType:
+            type: Number
+        - name: INV_ITEM_SK
+          dataType:
+            type: Number
+        - name: INV_WAREHOUSE_SK
+          dataType:
+            type: Number
+        - name: INV_QUANTITY_ON_HAND
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: ITEM
+      schema:
+        providerType: snowflake
+        fields:
+        - name: I_ITEM_SK
+          dataType:
+            type: Number
+        - name: I_ITEM_ID
+          dataType:
+            type: String
+        - name: I_REC_START_DATE
+          dataType:
+            type: Date
+        - name: I_REC_END_DATE
+          dataType:
+            type: Date
+        - name: I_ITEM_DESC
+          dataType:
+            type: String
+        - name: I_CURRENT_PRICE
+          dataType:
+            type: Number
+        - name: I_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: I_BRAND_ID
+          dataType:
+            type: Number
+        - name: I_BRAND
+          dataType:
+            type: String
+        - name: I_CLASS_ID
+          dataType:
+            type: Number
+        - name: I_CLASS
+          dataType:
+            type: String
+        - name: I_CATEGORY_ID
+          dataType:
+            type: Number
+        - name: I_CATEGORY
+          dataType:
+            type: String
+        - name: I_MANUFACT_ID
+          dataType:
+            type: Number
+        - name: I_MANUFACT
+          dataType:
+            type: String
+        - name: I_SIZE
+          dataType:
+            type: String
+        - name: I_FORMULATION
+          dataType:
+            type: String
+        - name: I_COLOR
+          dataType:
+            type: String
+        - name: I_UNITS
+          dataType:
+            type: String
+        - name: I_CONTAINER
+          dataType:
+            type: String
+        - name: I_MANAGER_ID
+          dataType:
+            type: Number
+        - name: I_PRODUCT_NAME
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: ORDERS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: ID
+          dataType:
+            type: Number
+        - name: USER_ID
+          dataType:
+            type: Number
+        - name: ORDER_DATE
+          dataType:
+            type: Date
+        - name: STATUS
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: PAYMENTS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: ID
+          dataType:
+            type: Number
+        - name: ORDER_ID
+          dataType:
+            type: Number
+        - name: PAYMENT_METHOD
+          dataType:
+            type: String
+        - name: AMOUNT
+          dataType:
+            type: Float
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: PROMOTION
+      schema:
+        providerType: snowflake
+        fields:
+        - name: P_PROMO_SK
+          dataType:
+            type: Number
+        - name: P_PROMO_ID
+          dataType:
+            type: String
+        - name: P_START_DATE_SK
+          dataType:
+            type: Number
+        - name: P_END_DATE_SK
+          dataType:
+            type: Number
+        - name: P_ITEM_SK
+          dataType:
+            type: Number
+        - name: P_COST
+          dataType:
+            type: Number
+        - name: P_RESPONSE_TARGET
+          dataType:
+            type: Number
+        - name: P_PROMO_NAME
+          dataType:
+            type: String
+        - name: P_CHANNEL_DMAIL
+          dataType:
+            type: String
+        - name: P_CHANNEL_EMAIL
+          dataType:
+            type: String
+        - name: P_CHANNEL_CATALOG
+          dataType:
+            type: String
+        - name: P_CHANNEL_TV
+          dataType:
+            type: String
+        - name: P_CHANNEL_RADIO
+          dataType:
+            type: String
+        - name: P_CHANNEL_PRESS
+          dataType:
+            type: String
+        - name: P_CHANNEL_EVENT
+          dataType:
+            type: String
+        - name: P_CHANNEL_DEMO
+          dataType:
+            type: String
+        - name: P_CHANNEL_DETAILS
+          dataType:
+            type: String
+        - name: P_PURPOSE
+          dataType:
+            type: String
+        - name: P_DISCOUNT_ACTIVE
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: REASON
+      schema:
+        providerType: snowflake
+        fields:
+        - name: R_REASON_SK
+          dataType:
+            type: Number
+        - name: R_REASON_ID
+          dataType:
+            type: String
+        - name: R_REASON_DESC
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: SHIP_MODE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: SM_SHIP_MODE_SK
+          dataType:
+            type: Number
+        - name: SM_SHIP_MODE_ID
+          dataType:
+            type: String
+        - name: SM_TYPE
+          dataType:
+            type: String
+        - name: SM_CODE
+          dataType:
+            type: String
+        - name: SM_CARRIER
+          dataType:
+            type: String
+        - name: SM_CONTRACT
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: STORE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: S_STORE_SK
+          dataType:
+            type: Number
+        - name: S_STORE_ID
+          dataType:
+            type: String
+        - name: S_REC_START_DATE
+          dataType:
+            type: Date
+        - name: S_REC_END_DATE
+          dataType:
+            type: Date
+        - name: S_CLOSED_DATE_SK
+          dataType:
+            type: Number
+        - name: S_STORE_NAME
+          dataType:
+            type: String
+        - name: S_NUMBER_EMPLOYEES
+          dataType:
+            type: Number
+        - name: S_FLOOR_SPACE
+          dataType:
+            type: Number
+        - name: S_HOURS
+          dataType:
+            type: String
+        - name: S_MANAGER
+          dataType:
+            type: String
+        - name: S_MARKET_ID
+          dataType:
+            type: Number
+        - name: S_GEOGRAPHY_CLASS
+          dataType:
+            type: String
+        - name: S_MARKET_DESC
+          dataType:
+            type: String
+        - name: S_MARKET_MANAGER
+          dataType:
+            type: String
+        - name: S_DIVISION_ID
+          dataType:
+            type: Number
+        - name: S_DIVISION_NAME
+          dataType:
+            type: String
+        - name: S_COMPANY_ID
+          dataType:
+            type: Number
+        - name: S_COMPANY_NAME
+          dataType:
+            type: String
+        - name: S_STREET_NUMBER
+          dataType:
+            type: String
+        - name: S_STREET_NAME
+          dataType:
+            type: String
+        - name: S_STREET_TYPE
+          dataType:
+            type: String
+        - name: S_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: S_CITY
+          dataType:
+            type: String
+        - name: S_COUNTY
+          dataType:
+            type: String
+        - name: S_STATE
+          dataType:
+            type: String
+        - name: S_ZIP
+          dataType:
+            type: String
+        - name: S_COUNTRY
+          dataType:
+            type: String
+        - name: S_GMT_OFFSET
+          dataType:
+            type: Number
+        - name: S_TAX_PRECENTAGE
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: STORE_RETURNS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: SR_RETURNED_DATE_SK
+          dataType:
+            type: Number
+        - name: SR_RETURN_TIME_SK
+          dataType:
+            type: Number
+        - name: SR_ITEM_SK
+          dataType:
+            type: Number
+        - name: SR_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: SR_CDEMO_SK
+          dataType:
+            type: Number
+        - name: SR_HDEMO_SK
+          dataType:
+            type: Number
+        - name: SR_ADDR_SK
+          dataType:
+            type: Number
+        - name: SR_STORE_SK
+          dataType:
+            type: Number
+        - name: SR_REASON_SK
+          dataType:
+            type: Number
+        - name: SR_TICKET_NUMBER
+          dataType:
+            type: Number
+        - name: SR_RETURN_QUANTITY
+          dataType:
+            type: Number
+        - name: SR_RETURN_AMT
+          dataType:
+            type: Number
+        - name: SR_RETURN_TAX
+          dataType:
+            type: Number
+        - name: SR_RETURN_AMT_INC_TAX
+          dataType:
+            type: Number
+        - name: SR_FEE
+          dataType:
+            type: Number
+        - name: SR_RETURN_SHIP_COST
+          dataType:
+            type: Number
+        - name: SR_REFUNDED_CASH
+          dataType:
+            type: Number
+        - name: SR_REVERSED_CHARGE
+          dataType:
+            type: Number
+        - name: SR_STORE_CREDIT
+          dataType:
+            type: Number
+        - name: SR_NET_LOSS
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: STORE_SALES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: SS_SOLD_DATE_SK
+          dataType:
+            type: Number
+        - name: SS_SOLD_TIME_SK
+          dataType:
+            type: Number
+        - name: SS_ITEM_SK
+          dataType:
+            type: Number
+        - name: SS_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: SS_CDEMO_SK
+          dataType:
+            type: Number
+        - name: SS_HDEMO_SK
+          dataType:
+            type: Number
+        - name: SS_ADDR_SK
+          dataType:
+            type: Number
+        - name: SS_STORE_SK
+          dataType:
+            type: Number
+        - name: SS_PROMO_SK
+          dataType:
+            type: Number
+        - name: SS_TICKET_NUMBER
+          dataType:
+            type: Number
+        - name: SS_QUANTITY
+          dataType:
+            type: Number
+        - name: SS_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: SS_LIST_PRICE
+          dataType:
+            type: Number
+        - name: SS_SALES_PRICE
+          dataType:
+            type: Number
+        - name: SS_EXT_DISCOUNT_AMT
+          dataType:
+            type: Number
+        - name: SS_EXT_SALES_PRICE
+          dataType:
+            type: Number
+        - name: SS_EXT_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: SS_EXT_LIST_PRICE
+          dataType:
+            type: Number
+        - name: SS_EXT_TAX
+          dataType:
+            type: Number
+        - name: SS_COUPON_AMT
+          dataType:
+            type: Number
+        - name: SS_NET_PAID
+          dataType:
+            type: Number
+        - name: SS_NET_PAID_INC_TAX
+          dataType:
+            type: Number
+        - name: SS_NET_PROFIT
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: TIME_DIM
+      schema:
+        providerType: snowflake
+        fields:
+        - name: T_TIME_SK
+          dataType:
+            type: Number
+        - name: T_TIME_ID
+          dataType:
+            type: String
+        - name: T_TIME
+          dataType:
+            type: Number
+        - name: T_HOUR
+          dataType:
+            type: Number
+        - name: T_MINUTE
+          dataType:
+            type: Number
+        - name: T_SECOND
+          dataType:
+            type: Number
+        - name: T_AM_PM
+          dataType:
+            type: String
+        - name: T_SHIFT
+          dataType:
+            type: String
+        - name: T_SUB_SHIFT
+          dataType:
+            type: String
+        - name: T_MEAL_TIME
+          dataType:
+            type: String
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: WAREHOUSE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: W_WAREHOUSE_SK
+          dataType:
+            type: Number
+        - name: W_WAREHOUSE_ID
+          dataType:
+            type: String
+        - name: W_WAREHOUSE_NAME
+          dataType:
+            type: String
+        - name: W_WAREHOUSE_SQ_FT
+          dataType:
+            type: Number
+        - name: W_STREET_NUMBER
+          dataType:
+            type: String
+        - name: W_STREET_NAME
+          dataType:
+            type: String
+        - name: W_STREET_TYPE
+          dataType:
+            type: String
+        - name: W_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: W_CITY
+          dataType:
+            type: String
+        - name: W_COUNTY
+          dataType:
+            type: String
+        - name: W_STATE
+          dataType:
+            type: String
+        - name: W_ZIP
+          dataType:
+            type: String
+        - name: W_COUNTRY
+          dataType:
+            type: String
+        - name: W_GMT_OFFSET
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: WEB_PAGE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: WP_WEB_PAGE_SK
+          dataType:
+            type: Number
+        - name: WP_WEB_PAGE_ID
+          dataType:
+            type: String
+        - name: WP_REC_START_DATE
+          dataType:
+            type: Date
+        - name: WP_REC_END_DATE
+          dataType:
+            type: Date
+        - name: WP_CREATION_DATE_SK
+          dataType:
+            type: Number
+        - name: WP_ACCESS_DATE_SK
+          dataType:
+            type: Number
+        - name: WP_AUTOGEN_FLAG
+          dataType:
+            type: String
+        - name: WP_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: WP_URL
+          dataType:
+            type: String
+        - name: WP_TYPE
+          dataType:
+            type: String
+        - name: WP_CHAR_COUNT
+          dataType:
+            type: Number
+        - name: WP_LINK_COUNT
+          dataType:
+            type: Number
+        - name: WP_IMAGE_COUNT
+          dataType:
+            type: Number
+        - name: WP_MAX_AD_COUNT
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: WEB_RETURNS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: WR_RETURNED_DATE_SK
+          dataType:
+            type: Number
+        - name: WR_RETURNED_TIME_SK
+          dataType:
+            type: Number
+        - name: WR_ITEM_SK
+          dataType:
+            type: Number
+        - name: WR_REFUNDED_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: WR_REFUNDED_CDEMO_SK
+          dataType:
+            type: Number
+        - name: WR_REFUNDED_HDEMO_SK
+          dataType:
+            type: Number
+        - name: WR_REFUNDED_ADDR_SK
+          dataType:
+            type: Number
+        - name: WR_RETURNING_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: WR_RETURNING_CDEMO_SK
+          dataType:
+            type: Number
+        - name: WR_RETURNING_HDEMO_SK
+          dataType:
+            type: Number
+        - name: WR_RETURNING_ADDR_SK
+          dataType:
+            type: Number
+        - name: WR_WEB_PAGE_SK
+          dataType:
+            type: Number
+        - name: WR_REASON_SK
+          dataType:
+            type: Number
+        - name: WR_ORDER_NUMBER
+          dataType:
+            type: Number
+        - name: WR_RETURN_QUANTITY
+          dataType:
+            type: Number
+        - name: WR_RETURN_AMT
+          dataType:
+            type: Number
+        - name: WR_RETURN_TAX
+          dataType:
+            type: Number
+        - name: WR_RETURN_AMT_INC_TAX
+          dataType:
+            type: Number
+        - name: WR_FEE
+          dataType:
+            type: Number
+        - name: WR_RETURN_SHIP_COST
+          dataType:
+            type: Number
+        - name: WR_REFUNDED_CASH
+          dataType:
+            type: Number
+        - name: WR_REVERSED_CHARGE
+          dataType:
+            type: Number
+        - name: WR_ACCOUNT_CREDIT
+          dataType:
+            type: Number
+        - name: WR_NET_LOSS
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: WEB_SALES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: WS_SOLD_DATE_SK
+          dataType:
+            type: Number
+        - name: WS_SOLD_TIME_SK
+          dataType:
+            type: Number
+        - name: WS_SHIP_DATE_SK
+          dataType:
+            type: Number
+        - name: WS_ITEM_SK
+          dataType:
+            type: Number
+        - name: WS_BILL_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: WS_BILL_CDEMO_SK
+          dataType:
+            type: Number
+        - name: WS_BILL_HDEMO_SK
+          dataType:
+            type: Number
+        - name: WS_BILL_ADDR_SK
+          dataType:
+            type: Number
+        - name: WS_SHIP_CUSTOMER_SK
+          dataType:
+            type: Number
+        - name: WS_SHIP_CDEMO_SK
+          dataType:
+            type: Number
+        - name: WS_SHIP_HDEMO_SK
+          dataType:
+            type: Number
+        - name: WS_SHIP_ADDR_SK
+          dataType:
+            type: Number
+        - name: WS_WEB_PAGE_SK
+          dataType:
+            type: Number
+        - name: WS_WEB_SITE_SK
+          dataType:
+            type: Number
+        - name: WS_SHIP_MODE_SK
+          dataType:
+            type: Number
+        - name: WS_WAREHOUSE_SK
+          dataType:
+            type: Number
+        - name: WS_PROMO_SK
+          dataType:
+            type: Number
+        - name: WS_ORDER_NUMBER
+          dataType:
+            type: Number
+        - name: WS_QUANTITY
+          dataType:
+            type: Number
+        - name: WS_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: WS_LIST_PRICE
+          dataType:
+            type: Number
+        - name: WS_SALES_PRICE
+          dataType:
+            type: Number
+        - name: WS_EXT_DISCOUNT_AMT
+          dataType:
+            type: Number
+        - name: WS_EXT_SALES_PRICE
+          dataType:
+            type: Number
+        - name: WS_EXT_WHOLESALE_COST
+          dataType:
+            type: Number
+        - name: WS_EXT_LIST_PRICE
+          dataType:
+            type: Number
+        - name: WS_EXT_TAX
+          dataType:
+            type: Number
+        - name: WS_COUPON_AMT
+          dataType:
+            type: Number
+        - name: WS_EXT_SHIP_COST
+          dataType:
+            type: Number
+        - name: WS_NET_PAID
+          dataType:
+            type: Number
+        - name: WS_NET_PAID_INC_TAX
+          dataType:
+            type: Number
+        - name: WS_NET_PAID_INC_SHIP
+          dataType:
+            type: Number
+        - name: WS_NET_PAID_INC_SHIP_TAX
+          dataType:
+            type: Number
+        - name: WS_NET_PROFIT
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
+    - name: WEB_SITE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: WEB_SITE_SK
+          dataType:
+            type: Number
+        - name: WEB_SITE_ID
+          dataType:
+            type: String
+        - name: WEB_REC_START_DATE
+          dataType:
+            type: Date
+        - name: WEB_REC_END_DATE
+          dataType:
+            type: Date
+        - name: WEB_NAME
+          dataType:
+            type: String
+        - name: WEB_OPEN_DATE_SK
+          dataType:
+            type: Number
+        - name: WEB_CLOSE_DATE_SK
+          dataType:
+            type: Number
+        - name: WEB_CLASS
+          dataType:
+            type: String
+        - name: WEB_MANAGER
+          dataType:
+            type: String
+        - name: WEB_MKT_ID
+          dataType:
+            type: Number
+        - name: WEB_MKT_CLASS
+          dataType:
+            type: String
+        - name: WEB_MKT_DESC
+          dataType:
+            type: String
+        - name: WEB_MARKET_MANAGER
+          dataType:
+            type: String
+        - name: WEB_COMPANY_ID
+          dataType:
+            type: Number
+        - name: WEB_COMPANY_NAME
+          dataType:
+            type: String
+        - name: WEB_STREET_NUMBER
+          dataType:
+            type: String
+        - name: WEB_STREET_NAME
+          dataType:
+            type: String
+        - name: WEB_STREET_TYPE
+          dataType:
+            type: String
+        - name: WEB_SUITE_NUMBER
+          dataType:
+            type: String
+        - name: WEB_CITY
+          dataType:
+            type: String
+        - name: WEB_COUNTY
+          dataType:
+            type: String
+        - name: WEB_STATE
+          dataType:
+            type: String
+        - name: WEB_ZIP
+          dataType:
+            type: String
+        - name: WEB_COUNTRY
+          dataType:
+            type: String
+        - name: WEB_GMT_OFFSET
+          dataType:
+            type: Number
+        - name: WEB_TAX_PERCENTAGE
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+shared@prophecy.io
+      createdAt: '2023-06-21 07:25:11'
+      modifiedAt: '2023-06-21 07:25:11'
 sqlUnreferencedSources:
   .prophecy/metadata/sqlunreferencedsources/qa_database_qa_simple_schema_ungrouped_customers:
     name: qa_database.qa_simple_schema.ungrouped_customers

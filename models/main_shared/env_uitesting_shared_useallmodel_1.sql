@@ -57,6 +57,96 @@ tpcds_1_env_uitesting_shared AS (
 
 ),
 
+TIME_DIM AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_suggestion_database"', 'TIME_DIM') }}
+
+),
+
+Reformat_5 AS (
+
+  SELECT * 
+  
+  FROM TIME_DIM AS in0
+
+),
+
+PAYMENTS AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_suggestion_database"', 'PAYMENTS') }}
+
+),
+
+Reformat_4 AS (
+
+  SELECT * 
+  
+  FROM PAYMENTS AS in0
+
+),
+
+INCOME_BAND AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_suggestion_database"', 'INCOME_BAND') }}
+
+),
+
+Reformat_6 AS (
+
+  SELECT * 
+  
+  FROM INCOME_BAND AS in0
+
+),
+
+ORDERS AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_suggestion_database"', 'ORDERS') }}
+
+),
+
+Reformat_7 AS (
+
+  SELECT 
+    ID AS ID,
+    USER_ID AS USER_ID,
+    ORDER_DATE AS ORDER_DATE,
+    STATUS AS STATUS
+  
+  FROM ORDERS AS in0
+
+),
+
+WEB_SALES AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_suggestion_database"', 'WEB_SALES') }}
+
+),
+
+Reformat_3 AS (
+
+  SELECT * 
+  
+  FROM WEB_SALES AS in0
+
+),
+
+combine_multiple_tables_2 AS (
+
+  {{ SQL_SnowflakeSharedBasic.combine_multiple_tables(table_1 = 'Reformat_7', table_2 = 'Reformat_6', table_3 = 'Reformat_5', table_4 = 'Reformat_4', table_5 = 'Reformat_3', col_table_1 = 'USER_ID') }}
+
+),
+
 env_uitesting_main_model_snow_1 AS (
 
   SELECT * 
