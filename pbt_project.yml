@@ -31,7 +31,6 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-04-21 13:53:13'
-    modifiedAt: '2023-06-21 05:41:03'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_MWAA:
     name: REL_SNOW_MWAA
@@ -55,7 +54,6 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-13 07:30:40'
-    modifiedAt: '2023-06-21 04:55:23'
     author: abhisheks+shared@prophecy.io
   jobs/REL_SNOW_PMAirflow:
     name: REL_SNOW_PMAirflow
@@ -79,12 +77,10 @@ jobs:
       clusterId: null
     enabled: true
     createdAt: '2023-06-20 12:45:09'
-    modifiedAt: '2023-06-21 05:29:55'
     author: abhisheks+shared@prophecy.io
 functions:
   author: null
   createdAt: '2023-04-12 10:10:10'
-  modifiedAt: '2023-04-12 10:10:10'
   gems: {}
   udfs: {}
   udafs: {}
@@ -114,7 +110,6 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2023-06-13 05:01:33'
-    modifiedAt: '2023-06-13 05:01:33'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_useallmodel_1:
     name: env_uitesting_shared_useallmodel_1
     schema:
@@ -216,7 +211,6 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2023-04-12 11:39:43'
-    modifiedAt: '2023-04-12 11:39:43'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_parent_model_1:
     name: env_uitesting_shared_parent_model_1
     schema:
@@ -318,7 +312,6 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2023-04-12 10:12:50'
-    modifiedAt: '2023-04-12 10:12:50'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_child_model_1:
     name: env_uitesting_shared_child_model_1
     schema:
@@ -420,7 +413,6 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2023-04-12 11:24:53'
-    modifiedAt: '2023-04-12 11:24:53'
   .prophecy/metadata/sqlmodels/env_uitesting_shared_mid_model_1:
     name: env_uitesting_shared_mid_model_1
     schema:
@@ -522,7 +514,6 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2023-04-12 10:14:29'
-    modifiedAt: '2023-04-12 10:14:29'
   .prophecy/metadata/sqlmodels/tpcds_1_env_uitesting_shared:
     name: tpcds_1_env_uitesting_shared
     schema:
@@ -564,7 +555,6 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2023-04-12 17:14:50'
-    modifiedAt: '2023-04-12 17:14:50'
 sqlMacros:
   .prophecy/metadata/sqlmacros/combine_multiple_tables:
     name: combine_multiple_tables
@@ -575,7 +565,6 @@ sqlMacros:
     - macros/functions/qa_concat_function_main.sql
     - macros/functions/functions.yml
     createdAt: '2023-05-24 13:53:36'
-    modifiedAt: '2023-05-24 13:53:36'
   .prophecy/metadata/sqlmacros/qa_concat_function_main:
     name: qa_concat_function_main
     macroType: expression
@@ -585,7 +574,6 @@ sqlMacros:
     - macros/functions/qa_concat_function_main.sql
     - .prophecy/ide/macros/qa_concat_function_main.json
     createdAt: '2023-04-12 10:11:18'
-    modifiedAt: '2023-04-12 10:11:18'
   .prophecy/metadata/sqlmacros/qa_select_all_not_null_gem:
     name: qa_select_all_not_null_gem
     macroType: query
@@ -595,7 +583,6 @@ sqlMacros:
     - macros/gem_based/qa_select_all_not_null_gem.sql
     - .prophecy/ide/macros/qa_select_all_not_null_gem.json
     createdAt: '2023-04-12 10:11:54'
-    modifiedAt: '2023-04-12 10:11:54'
 sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_customers:
     name: raw_customers
@@ -616,7 +603,6 @@ sqlSeeds:
     files:
     - seeds/raw/raw_customers.csv
     createdAt: '2023-04-12 10:12:13'
-    modifiedAt: '2023-04-12 10:12:13'
 sqlSources:
   .prophecy/metadata/sqlsources/QA_DATABASE_QA_SCHEMA:
     name: QA_DATABASE.QA_SCHEMA
@@ -625,7 +611,6 @@ sqlSources:
     files:
     - prophecy-sources/sources.yml
     createdAt: '2023-05-25 04:39:06'
-    modifiedAt: '2023-05-25 04:39:06'
     tables:
     - name: ALL_COMPLEX_COLUMN_NAMES
       schema:
@@ -640,7 +625,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:39:06'
-      modifiedAt: '2023-05-25 04:39:06'
   .prophecy/metadata/sqlsources/SNOWFLAKE_SAMPLE_DATA_TPCDS_SF10TCL:
     name: SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL
     description: null
@@ -648,7 +632,6 @@ sqlSources:
     files:
     - prophecy-sources/sources.yml
     createdAt: '2023-05-25 04:41:58'
-    modifiedAt: '2023-05-25 04:41:58'
     tables:
     - name: CATALOG_SALES
       schema:
@@ -759,7 +742,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:41:58'
-      modifiedAt: '2023-05-25 04:41:58'
     - name: WAREHOUSE
       schema:
         providerType: snowflake
@@ -809,7 +791,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:42:05'
-      modifiedAt: '2023-05-25 04:42:05'
     - name: CALL_CENTER
       schema:
         providerType: snowflake
@@ -910,7 +891,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:42:16'
-      modifiedAt: '2023-05-25 04:42:16'
     - name: DATE_DIM
       schema:
         providerType: snowflake
@@ -1002,7 +982,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:42:32'
-      modifiedAt: '2023-05-25 04:42:32'
     - name: SHIP_MODE
       schema:
         providerType: snowflake
@@ -1028,7 +1007,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:42:39'
-      modifiedAt: '2023-05-25 04:42:39'
   .prophecy/metadata/sqlsources/SNOWFLAKE_SAMPLE_DATA_TPCH_SF10:
     name: SNOWFLAKE_SAMPLE_DATA.TPCH_SF10
     description: null
@@ -1036,7 +1014,6 @@ sqlSources:
     files:
     - prophecy-sources/sources.yml
     createdAt: '2023-05-25 04:39:55'
-    modifiedAt: '2023-05-25 04:39:55'
     tables:
     - name: SUPPLIER
       schema:
@@ -1066,7 +1043,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-05-25 04:39:55'
-      modifiedAt: '2023-05-25 04:39:55'
   .prophecy/metadata/sqlsources/QA_DATABASE_QA_SIMPLE_SCHEMA:
     name: QA_DATABASE.QA_SIMPLE_SCHEMA
     description: null
@@ -1074,7 +1050,6 @@ sqlSources:
     files:
     - prophecy-sources/sources.yml
     createdAt: '2023-04-12 10:13:07'
-    modifiedAt: '2023-04-12 10:13:07'
     tables:
     - name: ALL_TYPE_TABLE_SMALLER
       schema:
@@ -1170,7 +1145,6 @@ sqlSources:
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-12 10:13:07'
-      modifiedAt: '2023-04-12 10:13:07'
     - name: TABLE_COMPLEX_TYPES_1
       schema:
         providerType: snowflake
@@ -1226,7 +1200,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-04-21 17:46:30'
-      modifiedAt: '2023-04-21 17:46:30'
   .prophecy/metadata/sqlsources/QA_DATABASE__qa_suggestion_database_:
     name: QA_DATABASE."qa_suggestion_database"
     description: null
@@ -1234,7 +1207,6 @@ sqlSources:
     files:
     - prophecy-sources/sources.yml
     createdAt: '2023-06-21 07:25:11'
-    modifiedAt: '2023-06-21 07:25:11'
     tables:
     - name: CALL_CENTER
       schema:
@@ -1336,7 +1308,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: CATALOG_PAGE
       schema:
         providerType: snowflake
@@ -1371,7 +1342,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: CATALOG_RETURNS
       schema:
         providerType: snowflake
@@ -1460,7 +1430,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: CATALOG_SALES
       schema:
         providerType: snowflake
@@ -1570,7 +1539,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: CUSTOMER
       schema:
         providerType: snowflake
@@ -1632,7 +1600,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: CUSTOMER_ADDRESS
       schema:
         providerType: snowflake
@@ -1679,7 +1646,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: CUSTOMER_DEMOGRAPHICS
       schema:
         providerType: snowflake
@@ -1714,7 +1680,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: CUSTOMERS
       schema:
         providerType: snowflake
@@ -1731,7 +1696,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: DATE_DIM
       schema:
         providerType: snowflake
@@ -1823,7 +1787,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: DBGEN_VERSION
       schema:
         providerType: snowflake
@@ -1843,7 +1806,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: EMPLOYEES
       schema:
         providerType: snowflake
@@ -1860,7 +1822,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: HOUSEHOLD_DEMOGRAPHICS
       schema:
         providerType: snowflake
@@ -1883,7 +1844,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: INCOME_BAND
       schema:
         providerType: snowflake
@@ -1900,7 +1860,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: INVENTORY
       schema:
         providerType: snowflake
@@ -1920,7 +1879,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: ITEM
       schema:
         providerType: snowflake
@@ -1994,7 +1952,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: ORDERS
       schema:
         providerType: snowflake
@@ -2014,7 +1971,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: PAYMENTS
       schema:
         providerType: snowflake
@@ -2034,7 +1990,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: PROMOTION
       schema:
         providerType: snowflake
@@ -2099,7 +2054,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: REASON
       schema:
         providerType: snowflake
@@ -2116,7 +2070,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: SHIP_MODE
       schema:
         providerType: snowflake
@@ -2142,7 +2095,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: STORE
       schema:
         providerType: snowflake
@@ -2237,7 +2189,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: STORE_RETURNS
       schema:
         providerType: snowflake
@@ -2305,7 +2256,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: STORE_SALES
       schema:
         providerType: snowflake
@@ -2382,7 +2332,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: TIME_DIM
       schema:
         providerType: snowflake
@@ -2420,7 +2369,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: WAREHOUSE
       schema:
         providerType: snowflake
@@ -2470,7 +2418,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: WEB_PAGE
       schema:
         providerType: snowflake
@@ -2520,7 +2467,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: WEB_RETURNS
       schema:
         providerType: snowflake
@@ -2600,7 +2546,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: WEB_SALES
       schema:
         providerType: snowflake
@@ -2710,7 +2655,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
     - name: WEB_SITE
       schema:
         providerType: snowflake
@@ -2796,7 +2740,6 @@ sqlSources:
       description: null
       author: abhisheks+shared@prophecy.io
       createdAt: '2023-06-21 07:25:11'
-      modifiedAt: '2023-06-21 07:25:11'
 sqlUnreferencedSources:
   .prophecy/metadata/sqlunreferencedsources/qa_database_qa_simple_schema_ungrouped_customers:
     name: qa_database.qa_simple_schema.ungrouped_customers
@@ -2817,13 +2760,11 @@ sqlUnreferencedSources:
     files:
     - prophecy-sources/unreferencedSources.yml
     createdAt: '2023-05-19 06:30:31'
-    modifiedAt: '2023-05-19 06:30:31'
 sqlPipeline:
   name: sqlPipeline
   description: null
   author: abhisheks+e2etests@prophecy.io
   createdAt: '2023-04-12 10:10:10'
-  modifiedAt: '2023-04-12 10:10:10'
 dependencies: '[]'
 projectDependencies: {}
 pipelineConfigurations: {}

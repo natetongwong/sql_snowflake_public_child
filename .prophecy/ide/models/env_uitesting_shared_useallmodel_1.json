@@ -771,8 +771,8 @@
       "metadata" : {
         "label" : "Reformat_5",
         "slug" : "Reformat_5",
-        "x" : 240,
-        "y" : 260,
+        "x" : 340,
+        "y" : 240,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -958,7 +958,27 @@
         "x" : 1320,
         "y" : 860,
         "phase" : 0,
-        "macroDependencies" : [ ]
+        "macroDependencies" : [ ],
+        "dataExplorerProps" : {
+          "filter" : [ {
+            "type" : "simple",
+            "lhs" : "C_NUM",
+            "operator" : "in",
+            "rhs" : [ "10", "11", "0", "-1" ]
+          }, {
+            "type" : "simple",
+            "lhs" : "C_NUM10",
+            "operator" : "<=",
+            "rhs" : "21"
+          } ],
+          "sort" : [ {
+            "column" : "C_NUM",
+            "order" : "asc"
+          }, {
+            "column" : "C_DEC",
+            "order" : "desc"
+          } ]
+        }
       },
       "properties" : {
         "customQueryDisabled" : false,
@@ -1572,7 +1592,7 @@
         "label" : "Reformat_6",
         "slug" : "Reformat_6",
         "x" : 500,
-        "y" : 160,
+        "y" : 140,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -1651,8 +1671,8 @@
       "metadata" : {
         "label" : "TIME_DIM",
         "slug" : "TIME_DIM",
-        "x" : -220,
-        "y" : 240,
+        "x" : 80,
+        "y" : 220,
         "phase" : 0
       },
       "properties" : {
@@ -1732,8 +1752,8 @@
       "metadata" : {
         "label" : "INCOME_BAND",
         "slug" : "INCOME_BAND",
-        "x" : -100,
-        "y" : 160,
+        "x" : 200,
+        "y" : 120,
         "phase" : 0
       },
       "properties" : {
@@ -1778,8 +1798,8 @@
       "metadata" : {
         "label" : "Reformat_4",
         "slug" : "Reformat_4",
-        "x" : 20,
-        "y" : 340,
+        "x" : 200,
+        "y" : 320,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -1873,8 +1893,8 @@
       "metadata" : {
         "label" : "Reformat_7",
         "slug" : "Reformat_7",
-        "x" : 720,
-        "y" : 120,
+        "x" : 680,
+        "y" : 40,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3091,8 +3111,8 @@
       "metadata" : {
         "label" : "Reformat_3",
         "slug" : "Reformat_3",
-        "x" : 240,
-        "y" : 420,
+        "x" : 680,
+        "y" : 340,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -5429,8 +5449,8 @@
       "component" : "Model",
       "metadata" : {
         "label" : "env_uitesting_shared_parent_model_1",
-        "x" : 200,
-        "y" : 860,
+        "x" : 80,
+        "y" : 840,
         "phase" : 0
       },
       "properties" : {
@@ -5994,8 +6014,8 @@
       "metadata" : {
         "label" : "WEB_SALES",
         "slug" : "WEB_SALES",
-        "x" : -20,
-        "y" : 500,
+        "x" : 500,
+        "y" : 360,
         "phase" : 0
       },
       "properties" : {
@@ -6535,8 +6555,8 @@
       "metadata" : {
         "label" : "PAYMENTS",
         "slug" : "PAYMENTS",
-        "x" : -140,
-        "y" : 380,
+        "x" : 20,
+        "y" : 360,
         "phase" : 0
       },
       "properties" : {
@@ -6585,10 +6605,30 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "AllStunningOne",
-        "x" : 380,
+        "x" : 300,
         "y" : 860,
         "phase" : 0,
-        "macroDependencies" : [ "SQL_SnowflakeSharedBasic.qa_concat_function_main", "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column", "SQL_SnoflakeMainProject.qa_concat_macro_column", "SQL_SnoflakeMainProject.snowflake__language_specific_concat", "dbt_date.snowflake__day_name" ]
+        "macroDependencies" : [ "SQL_SnowflakeSharedBasic.qa_concat_function_main", "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column", "SQL_SnoflakeMainProject.qa_concat_macro_column", "SQL_SnoflakeMainProject.snowflake__language_specific_concat", "dbt_date.snowflake__day_name" ],
+        "dataExplorerProps" : {
+          "filter" : [ {
+            "type" : "simple",
+            "lhs" : "C_ADD_EXPRESSION",
+            "operator" : ">=",
+            "rhs" : "10"
+          }, {
+            "type" : "simple",
+            "lhs" : "C_NUM",
+            "operator" : "in",
+            "rhs" : [ "1000", "0", "2000", "-100", "1" ]
+          } ],
+          "sort" : [ {
+            "column" : "C_NUM10",
+            "order" : "asc"
+          }, {
+            "column" : "C_TIMESTAMP",
+            "order" : "desc"
+          } ]
+        }
       },
       "properties" : {
         "columnsSelector" : [ "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUM", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUM10", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DEC", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_NUMERIC", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_INT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_INTEGER", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DOUBLE", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_FLOAT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_COUBLE_PRECISION", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_REAL", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARCHAR", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TEXT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_ARRAY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_OBJECT", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARCHAR50", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_CHAR", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_CHAR10", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_STRING", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_STRING20", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TEXT30", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BINARY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BINARY100", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_VARBINARY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_BOOL", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TIMESTAMP", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DATE", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_DATETIME", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_TIME", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##C_GEOGRAPHY", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##c_int", "BrZg1W55fkRQbOuM9k_ha$$S3XN7xLbhftlPKRFz10Fd##c_float" ],
@@ -7217,8 +7257,8 @@
       "metadata" : {
         "label" : "ORDERS",
         "slug" : "ORDERS",
-        "x" : 20,
-        "y" : 100,
+        "x" : 400,
+        "y" : -20,
         "phase" : 0
       },
       "properties" : {
