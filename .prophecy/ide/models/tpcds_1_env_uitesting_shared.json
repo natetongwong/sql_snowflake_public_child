@@ -365,25 +365,7 @@
         "x" : 260,
         "y" : 780,
         "phase" : 0,
-        "macroDependencies" : [ ],
-        "dataExplorerProps" : {
-          "filter" : [ {
-            "type" : "simple",
-            "lhs" : "S_STORE_NAME",
-            "operator" : "=",
-            "rhs" : "asdasd"
-          } ],
-          "sort" : [ {
-            "column" : "S_STORE_NAME",
-            "order" : "asc"
-          }, {
-            "column" : "ITEMREVENUE",
-            "order" : "desc"
-          }, {
-            "column" : "SS_NET_PROFIT",
-            "order" : "desc"
-          } ]
-        }
+        "macroDependencies" : [ ]
       },
       "properties" : {
         "conditions" : [ {
@@ -508,22 +490,7 @@
         "x" : 920,
         "y" : 820,
         "phase" : 0,
-        "macroDependencies" : [ ],
-        "dataExplorerProps" : {
-          "filter" : [ {
-            "type" : "simple",
-            "lhs" : "I_CURRENT_PRICE",
-            "operator" : ">=",
-            "rhs" : "22"
-          } ],
-          "sort" : [ {
-            "column" : "I_ITEM_ID",
-            "order" : "asc"
-          }, {
-            "column" : "REVENUERATIO",
-            "order" : "desc"
-          } ]
-        }
+        "macroDependencies" : [ ]
       },
       "properties" : {
         "customQueryDisabled" : true,
@@ -2035,25 +2002,7 @@
         "x" : 60,
         "y" : 620,
         "phase" : 0,
-        "macroDependencies" : [ ],
-        "dataExplorerProps" : {
-          "filter" : [ {
-            "type" : "simple",
-            "lhs" : "I_CURRENT_PRICE",
-            "operator" : ">=",
-            "rhs" : "2"
-          } ],
-          "sort" : [ {
-            "column" : "I_ITEM_ID",
-            "order" : "asc"
-          }, {
-            "column" : "I_CURRENT_PRICE",
-            "order" : "desc"
-          }, {
-            "column" : "REVENUERATIO",
-            "order" : "desc"
-          } ]
-        }
+        "macroDependencies" : [ ]
       },
       "properties" : {
         "fileTabs" : [ {
@@ -3223,22 +3172,7 @@
         "x" : 280,
         "y" : 1100,
         "phase" : 0,
-        "macroDependencies" : [ ],
-        "dataExplorerProps" : {
-          "filter" : [ {
-            "type" : "simple",
-            "lhs" : "W_WAREHOUSE_NAME",
-            "operator" : "=",
-            "rhs" : "asdsad"
-          } ],
-          "sort" : [ {
-            "column" : "W_WAREHOUSE_NAME",
-            "order" : "asc"
-          }, {
-            "column" : "JAN_SALES",
-            "order" : "desc"
-          } ]
-        }
+        "macroDependencies" : [ ]
       },
       "properties" : {
         "conditions" : [ {
