@@ -24,11 +24,11 @@ with DAG(
       "depends_on_past": True, 
       "ignore_first_depends_on_past": True, 
       "wait_for_downstream": True, 
+      "do_xcom_push": True, 
       "priority_weight": 1, 
       "weight_rule": "absolute", 
       "pool": "testAutomationPool", 
-      "pool_slots": 2, 
-      "do_xcom_push": True
+      "pool_slots": 2
     }, 
     start_date = pendulum.datetime(2023, 1, 1, tz = "Pacific/Midway"), 
     end_date = pendulum.datetime(2080, 1, 1, tz = "Pacific/Midway"), 
