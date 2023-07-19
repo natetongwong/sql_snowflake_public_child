@@ -3355,8 +3355,8 @@
       "metadata" : {
         "label" : "model_with_only_seed_base",
         "slug" : "model_with_only_seed_base",
-        "x" : 20,
-        "y" : 680,
+        "x" : -20,
+        "y" : 660,
         "phase" : 0
       },
       "properties" : {
