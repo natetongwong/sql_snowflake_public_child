@@ -1,6 +1,7 @@
 def Email_2():
     settings = {}
     from airflow.operators.email import EmailOperator
+    from datetime import timedelta
 
     return EmailOperator(
         task_id = "Email_2",

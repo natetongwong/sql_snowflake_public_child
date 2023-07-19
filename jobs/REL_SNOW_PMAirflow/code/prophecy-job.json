@@ -33,11 +33,13 @@
       "name" : "dev_airflow_mwaa"
     }, {
       "id" : "7557",
-      "name" : "dev_airflow_prohecy_managed",
+      "name" : "dev_airflow_prophecy_managed",
       "trialStartDate" : 1687261887500
     } ],
     "catchup" : true,
-    "endDate" : "2023-07-11",
+    "tags" : [ ],
+    "startDate" : "2023-07-11",
+    "endDate" : "2024-05-11",
     "scheduleTimeZone" : "UTC"
   },
   "processes" : {

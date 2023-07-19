@@ -4,6 +4,7 @@ import pendulum
 from datetime import timedelta
 import airflow
 from airflow import DAG
+from airflow.models.param import Param
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 from uitesting_shared_team_sql_snowflakesharedbasic_rel_snow_airflow.tasks import DBT_0, DBT_0_2, Script_1, Script_2
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"

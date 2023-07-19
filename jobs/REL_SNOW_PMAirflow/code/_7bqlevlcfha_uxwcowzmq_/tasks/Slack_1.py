@@ -1,6 +1,7 @@
 def Slack_1():
     settings = {}
     from airflow.providers.slack.operators.slack import SlackAPIPostOperator
+    from datetime import timedelta
 
     return SlackAPIPostOperator(
         task_id = "Slack_1",

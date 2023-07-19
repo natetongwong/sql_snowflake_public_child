@@ -1,6 +1,7 @@
 def S3FileSensor_1():
     settings = {}
     from airflow.providers.amazon.aws.sensors.s3 import S3KeySensor
+    from datetime import timedelta
 
     return S3KeySensor(
         task_id = "S3FileSensor_1",

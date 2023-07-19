@@ -654,6 +654,44 @@ Join_4 AS (
 
 ),
 
+Limit_1 AS (
+
+  SELECT * 
+  
+  FROM Join_4 AS in0
+  
+  LIMIT 10
+
+),
+
+SetOperation_1 AS (
+
+  SELECT * 
+  
+  FROM Join_4 AS in0
+  
+  INTERSECT
+  
+  SELECT * 
+  
+  FROM Limit_1 AS in1
+
+),
+
+SetOperation_2 AS (
+
+  SELECT * 
+  
+  FROM SetOperation_1 AS in0
+  
+  UNION ALL
+  
+  SELECT * 
+  
+  FROM Limit_1 AS in1
+
+),
+
 Limit_4 AS (
 
   SELECT * 
@@ -684,16 +722,6 @@ Limit_3 AS (
 
 ),
 
-Limit_1 AS (
-
-  SELECT * 
-  
-  FROM Join_4 AS in0
-  
-  LIMIT 10
-
-),
-
 SQLStatement_1 AS (
 
   SELECT 
@@ -711,14 +739,14 @@ SQLStatement_1 AS (
         randstr(5, random()) AS c_string
       
       FROM table(generator(rowCount => 132))
-     )
+    )
     
     ORDER BY seq2(0)
     
     LIMIT 100
     
     OFFSET 25
-   ) AS t1
+  ) AS t1
   
   WHERE t1.c_int1 > (
           SELECT count(*)
@@ -730,7 +758,7 @@ SQLStatement_1 AS (
 
 combine_multiple_tables_1 AS (
 
-  {{ SQL_SnowflakeSharedBasic.combine_multiple_tables(table_1 = 'Limit_3', table_2 = 'SQLStatement_1', table_3 = 'Limit_4', table_4 = 'Limit_2', table_5 = 'Limit_1', col_table_1 = 'c_int') }}
+  {{ SQL_SnowflakeSharedBasic.combine_multiple_tables(table_1 = 'Limit_3', table_2 = 'SQLStatement_1', table_3 = 'Limit_4', table_4 = 'Limit_2', table_5 = 'SetOperation_2', col_table_1 = 'c_int') }}
 
 )
 

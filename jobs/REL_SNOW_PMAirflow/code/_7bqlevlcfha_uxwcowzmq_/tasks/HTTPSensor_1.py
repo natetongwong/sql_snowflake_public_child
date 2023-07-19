@@ -1,6 +1,7 @@
 def HTTPSensor_1():
     settings = {}
     from airflow.providers.http.sensors.http import HttpSensor
+    from datetime import timedelta
 
     return HttpSensor(
         task_id = "HTTPSensor_1",
