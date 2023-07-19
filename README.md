@@ -27,3 +27,7 @@ v3.1.0.0-2
 *** Release notes for version: v3.1.0.0-5 ***
 
 v3.1.0.0-5
+
+*** Release notes for version: v3.1.2.0-1 ***
+
+v3.1.2.0-1
