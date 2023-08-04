@@ -46,12 +46,9 @@
       "id" : "7040",
       "name" : "dev_airflow_mwaa"
     }, {
-      "id" : "9004",
-      "name" : "Airflow_Composer_Automated"
-    }, {
-      "id" : "8980",
-      "name" : "Airflow_ProphecyManaged_Automated",
-      "trialStartDate" : 1689627389795
+      "id" : "7557",
+      "name" : "dev_airflow_prophecy_managed",
+      "trialStartDate" : 1687261887500
     } ],
     "catchup" : true,
     "maxActiveTasks" : 2,
