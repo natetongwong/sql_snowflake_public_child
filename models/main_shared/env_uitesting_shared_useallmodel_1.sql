@@ -214,6 +214,24 @@ TABLE_COMPLEX_TYPES_1_1 AS (
 
 ),
 
+env_uitesting_shared_child_model_1 AS (
+
+  SELECT * 
+  
+  FROM {{ ref('env_uitesting_shared_child_model_1')}}
+
+),
+
+Limit_7 AS (
+
+  SELECT * 
+  
+  FROM env_uitesting_shared_child_model_1 AS in0
+  
+  LIMIT 10
+
+),
+
 env_uitesting_shared_parent_model_1 AS (
 
   SELECT * 
@@ -500,19 +518,13 @@ Aggregate_1 AS (
 
 ),
 
-env_uitesting_shared_child_model_1 AS (
+Limit_5 AS (
 
   SELECT * 
   
-  FROM {{ ref('env_uitesting_shared_child_model_1')}}
-
-),
-
-env_uitesting_shared_mid_model_1 AS (
-
-  SELECT * 
+  FROM env_uitesting_main_model_snow_1 AS in0
   
-  FROM {{ ref('env_uitesting_shared_mid_model_1')}}
+  LIMIT 10
 
 ),
 
@@ -521,6 +533,24 @@ model_with_only_seed_base AS (
   SELECT * 
   
   FROM {{ ref('model_with_only_seed_base')}}
+
+),
+
+Limit_6 AS (
+
+  SELECT * 
+  
+  FROM model_with_only_seed_base AS in0
+  
+  LIMIT 10
+
+),
+
+env_uitesting_shared_mid_model_1 AS (
+
+  SELECT * 
+  
+  FROM {{ ref('env_uitesting_shared_mid_model_1')}}
 
 ),
 
@@ -557,12 +587,12 @@ Join_1 AS (
     in0.C_OBJECT AS C_OBJECT,
     in0.C_GEOGRAPHY AS C_GEOGRAPHY
   
-  FROM env_uitesting_shared_child_model_1 AS in0
+  FROM Limit_7 AS in0
   INNER JOIN env_uitesting_shared_mid_model_1 AS in1
      ON in0.c_num = in1.c_num
-  LEFT JOIN model_with_only_seed_base AS in2
+  LEFT JOIN Limit_6 AS in2
      ON in1.C_STRING != in2.CODE_1
-  RIGHT JOIN env_uitesting_main_model_snow_1 AS in3
+  RIGHT JOIN Limit_5 AS in3
      ON in1.C_INT != in3.C_NUM
 
 ),

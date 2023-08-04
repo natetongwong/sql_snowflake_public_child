@@ -1186,8 +1186,8 @@
       "metadata" : {
         "label" : "Limit_1",
         "slug" : "Limit_1",
-        "x" : 160,
-        "y" : 400,
+        "x" : 220,
+        "y" : 420,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -1994,6 +1994,121 @@
         "isCustomOutputSchema" : false
       }
     },
+    "iSjNx6eM0dYfonXZwZO81$$ivvK5wase4v6XOTFsZxCl" : {
+      "id" : "iSjNx6eM0dYfonXZwZO81$$ivvK5wase4v6XOTFsZxCl",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 280,
+        "y" : 180,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "0up-g33kAT4sNDhpRFRWb$$rVO_7X5iXuZPleSXoOHSV",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUBSTR(W_WAREHOUSE_NAME, 1, 20)",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "30 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "31-60 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "61-90 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "91-120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : ">120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "pE_I31z0IqB0wc6W8hSL7$$PJdC73bgc4XbsnU8aK-T9",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SUBSTR(W_WAREHOUSE_NAME, 1, 20)",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SM_TYPE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CC_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "30 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "31-60 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "61-90 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "91-120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : ">120 days",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
     "SQLStatement_1##SCdGZcue" : {
       "id" : "SQLStatement_1##SCdGZcue",
       "component" : "SQLStatement",
@@ -2252,10 +2367,14 @@
       "component" : "SQLStatement",
       "metadata" : {
         "label" : "SQLStatement_0",
-        "x" : 20,
-        "y" : 320,
+        "x" : -40,
+        "y" : 300,
         "phase" : 0,
-        "macroDependencies" : [ ]
+        "macroDependencies" : [ ],
+        "dataExplorerProps" : {
+          "filter" : [ ],
+          "sort" : [ ]
+        }
       },
       "properties" : {
         "fileTabs" : [ {
@@ -3658,6 +3777,12 @@
     "sourcePort" : "UIbwiHehqaKfK3nKxD_3g$$ODaOoVawsk51mFY33k4yI",
     "target" : "Join_1##fEQboaro",
     "targetPort" : "g5OSRC93"
+  }, {
+    "id" : "4NKdRBV-sDjFFq_XLSXln",
+    "source" : "SQLStatement_0##O6Jh1wks",
+    "sourcePort" : "xu2Zqbcr",
+    "target" : "iSjNx6eM0dYfonXZwZO81$$ivvK5wase4v6XOTFsZxCl",
+    "targetPort" : "0up-g33kAT4sNDhpRFRWb$$rVO_7X5iXuZPleSXoOHSV"
   } ],
   "component" : "Model"
 }
